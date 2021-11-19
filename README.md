@@ -1,14 +1,11 @@
 # The RowdyHacks 2022 Website Repository! 💻
 
-The current plan is to build an Angular based web application this year from scratch. Currently developing the project with this year's RowdyHacks Tech Team. If you have any input or would like to contribute, please reach out to us at **team@rowdyhacks.org**
+Building an Angular based web application this year from scratch! Currently developing the project with this year's RowdyHacks 2022 Tech Team. If you have any input create an issue! For any other inquirers please reach out to us at **team@rowdyhacks.org**
 
 ## The Current Plan
 
-* Research Angular with the Team
-* Work on deploying two environments to github pages
-  * main deployment branch
-  * secondary development branch
-* Create a backdrop after the design team finalizes colors/fonts/etc.
+* Working on "coming soon" landing page with guidance from the RH 2022 Design Team
+* A separate instance for the main webpage, hoping to release sometime after winter break
 * Continue development!
 
 ---
