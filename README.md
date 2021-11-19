@@ -1,4 +1,19 @@
-# RowdyHacks2022
+# The RowdyHacks 2022 Website Repository! 💻
+
+The current plan is to build an Angular based web application this year from scratch. Currently developing the project with this year's RowdyHacks Tech Team. If you have any input or would like to contribute, please reach out to us at **team@rowdyhacks.org**
+
+## The Current Plan
+
+* Research Angular with the Team
+* Work on deploying two environments to github pages
+  * main deployment branch
+  * secondary development branch
+* Create a backdrop after the design team finalizes colors/fonts/etc.
+* Continue development!
+
+---
+
+# Project: RowdyHacks2022
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
