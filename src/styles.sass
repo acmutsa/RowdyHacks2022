@@ -26,6 +26,13 @@ h1, h2, h3, h4, h5, h6
 p, a
   font-family: $font-secondary
 
+::selection, ::-moz-selection
+  background: $dark-bubblegum
+
+.spacing
+  float: left
+  width:25px
+
 .purple-block
   width: 100%
   height: 25px
@@ -33,5 +40,158 @@ p, a
   position: fixed
   bottom: 0
 
-::selection, ::-moz-selection
-  background: $dark-bubblegum
+.magenta-block
+  height: 5px
+  background: #fa448c
+
+.half-cyan-block
+  display: inline-block
+  width: 50%
+  height: 10px
+  background: #71e8d2
+
+.half-magenta-block
+  display: inline-block
+  width: 50%
+  height: 10px
+  background: #fa448c
+
+.yellow-block
+  height: 10px
+  background: #fec859
+
+.purple-block
+  height: 25px
+  background: #280959
+
+.cyan-background
+  float: left
+  background: #71e8d2
+
+.magenta-background
+  float: left
+  background: #fa448c
+
+.yellow-background
+  background: #fec859
+
+.header
+  background-color: #ffe4ac
+  border-top: solid 25px #280959
+  border-bottom: solid 25px #280959
+
+.main-container
+  display: grid
+  grid-gap: 20px
+  align-content: center
+  justify-content: center
+  align-items: center
+  min-height: 25vh
+  padding: 5% 0
+
+.inner-container
+  display: inline-flex
+  align-content: center
+  justify-content: center
+  align-items: center
+  margin: auto
+  flex-wrap: wrap
+  flex-direction: row
+
+.item
+  display: inline-block
+  font-weight: normal
+  font-size: 42px
+  text-align: center
+  color: #280959
+  line-height: 5rem
+
+.item h3
+  font-family: $font-secondary
+  font-weight: bold
+  font-size: 60px
+  letter-spacing: 0.25rem
+
+.body
+  max-width: 80%
+  margin: auto
+
+.body-inner-container
+  background-color: #481e8a
+  border: solid 2px #280959
+  margin: 50px auto
+
+.body-item
+  padding: 4%
+
+.body-item p
+  font-size: 55px
+  line-height: 4rem
+  text-align: center
+  color: #fec859
+
+
+@media screen and (max-width: 1255px)
+  .item
+    font-size: 40px
+  .item h3
+    font-size: 45px
+  .body-item p
+    font-size: 50px
+    line-height: 3.5rem
+
+@media screen and (max-width: 1120px)
+  .item
+    font-size:35px
+    line-height: 4rem
+
+@media screen and (max-width: 1000px)
+  .item
+    font-size:30px
+    line-height: 3rem
+
+@media screen and (max-width: 880px)
+  .item
+    font-size:30px
+    line-height: 3.5rem
+  .body-item p
+    font-size: 40px
+    line-height: 3rem
+
+@media screen and (max-width: 730px)
+  .spacing
+    display: none
+
+@media screen and (max-width: 600px)
+  .inner-container
+    display: inline-grid
+    align-content: center
+    justify-content: center
+    align-items: center
+    justify-items: center
+  .magenta-background
+    float: none
+  .cyan-background
+    float: none
+  .item
+    font-size: 26px
+  .body-item p
+    font-size: 35px
+    line-height: 2.5rem
+
+@media screen and (max-width: 530px)
+  .yellow-background
+    width: 80%
+    margin: auto
+  .item
+    font-size: 24px
+  .item h3
+    font-size: 35px
+  .body-item p
+    font-size: 35px
+    line-height: 2.5rem
+
+@media screen and (max-width: 374px)
+  .item
+    font-size: 20px
+    line-height: 2.75rem
