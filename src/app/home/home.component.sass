@@ -1,0 +1,66 @@
+@import './src/components/variables.sass'
+
+// setting container to center of page for all view modes
+.container
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  overflow-y: scroll
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+// aligning text and giving font attributes
+.item
+  font-weight: normal
+  font-size: 42px
+  text-align: center
+  color: $golden-yellow
+
+@media screen and (max-width: 767px)
+  .container
+    height: 70vh
+  .item
+    font-size: 28px
+
+@media screen and (max-width: 505px)
+  .item
+    font-size: 16px
+
+/*********************************************
+  Navigation bar pulled from
+  https://www.w3schools.com/css/css_navbar_horizontal.asp
+
+ul
+  &.nav
+    &-top
+      list-style-type: none
+      margin: 0
+      padding: 10px
+      overflow: hidden
+      background-color: $cadet-blue
+      & li
+        float: left
+        &:first-child a
+          padding: 0
+        & a
+          display: block
+          color: $white
+          text-align: center
+          padding: 20px 22px
+          text-decoration: none
+          font-size: 16px
+        & a:hover:not(.active)
+          color: $deep-dark-purple
+        &.right
+          float: right
+.nav-logo
+  width: 52px
+  height: 52px
+  background: url('../../assets/images/logos/rh_city_logo_white.png') no-repeat
+  background-size: contain
+  &:hover
+    background: url('../../assets/images/logos/RowdyHacks_City_Logo.png') no-repeat
+    background-size: contain
