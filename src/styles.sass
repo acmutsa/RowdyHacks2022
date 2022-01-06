@@ -2,12 +2,22 @@
 @import './src/components/variables.sass'
 
 html
-  background: url('../src/assets/images/background.jpg')
-  background-size: cover
-  overflow: hidden // removes scroll bar
+  //background: url('../src/assets/images/background.jpg')
+  background: url('../src/assets/images/repeating-background_1200w.png')
+  //background-size: cover
+  //overflow: hidden // removes scroll bar
 
 body
+  font-size: 1rem
+  line-height: 0
+  text-rendering: optimizeLegibility
+    
+body, ul, ol, dl
   margin: 0
+
+body, div, h1, h2, h3, h4, h5, h6, p, a
+  margin: 0
+  padding: 0
 
 // setting font familys for all types
 h1, h2, h3, h4, h5, h6
@@ -15,6 +25,13 @@ h1, h2, h3, h4, h5, h6
 
 p, a
   font-family: $font-secondary
+
+.purple-block
+  width: 100%
+  height: 25px
+  background: #280959
+  position: fixed
+  bottom: 0
 
 ::selection, ::-moz-selection
   background: $dark-bubblegum
