@@ -1,1 +1,41 @@
 @import './src/components/variables.sass'
+
+.faq
+    display: grid
+    grid-gap:20px
+
+.faq p
+    font-size: 40px
+    line-height:2.75rem
+
+.faq h1
+    text-align: center
+    font-size: 45px
+    line-height: 2.5rem
+    color: #280959
+
+.faq .item
+    line-height: 3rem
+
+
+@media screen and (max-width: 1100px)
+    .faq h1
+        font-size: 35px
+        line-height: 2rem
+    .faq p
+        font-size: 30px
+        line-height: 2.15rem
+
+@media screen and (max-width: 600px)
+    .faq .inner-container
+        display: inline-flex
+
+@media screen and (max-width: 530px)
+    .faq .item
+        line-height: 2rem
+    .faq h1
+        font-size: 25px
+        line-height: 1rem
+    .faq p
+        font-size: 20px
+        line-height: 1.5rem
