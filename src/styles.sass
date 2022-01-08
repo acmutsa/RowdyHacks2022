@@ -86,7 +86,7 @@ p, a
   align-content: center
   justify-content: center
   align-items: center
-  min-height: 25vh
+  min-height: 20vh
   padding: 5% 0
 
 .inner-container
@@ -113,21 +113,37 @@ p, a
 
 .body
   width: 75%
-  margin: auto
+  display: grid
+  grid-gap:10px
+  margin: 60px auto 75px auto
 
 .body-inner-container
   background-color: #481e8a
   border: solid 2px #280959
-  margin: 50px auto
+  margin: 25px 0
+
+.body .item h1
+    text-align: center
+    font-size: 45px
+    line-height: 2.5rem
+    color: #280959
 
 .body-item
   padding: 3.5%
+  display: grid
+  grid-gap:20px
 
 .body-item p
   font-size: 55px
   line-height: 4rem
   text-align: center
   color: #fec859
+
+.body-item h1
+  text-align: center
+  font-size: 45px
+  line-height: 2.5rem
+  color: #280959
 
 
 @media screen and (max-width: 1255px)
@@ -183,6 +199,7 @@ p, a
     font-size: 40px
   .body
     width: 90%
+    margin: 0 auto 25px auto
   .body-inner-container
     margin-top:30px
   .body-item
