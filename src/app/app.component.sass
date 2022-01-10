@@ -1,34 +1,5 @@
 @import './src/components/variables.sass'
 
-// setting container to center of page for all view modes
-.container
-  display: flex
-  justify-content: center
-  align-items: center
-  height: 100vh
-  overflow-y: scroll
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-
-// aligning text and giving font attributes
-.item
-  font-weight: normal
-  font-size: 42px
-  text-align: center
-  color: $golden-yellow
-
-@media screen and (max-width: 767px)
-  .container
-    height: 70vh
-  .item
-    font-size: 28px
-
-@media screen and (max-width: 505px)
-  .item
-    font-size: 16px
-
 /*********************************************
   Navigation bar pulled from
   https://www.w3schools.com/css/css_navbar_horizontal.asp
@@ -40,7 +11,7 @@ ul
       margin: 0
       padding: 10px
       overflow: hidden
-      background-color: $cadet-blue
+      background-color: #5cdcc5
       & li
         float: left
         &:first-child a

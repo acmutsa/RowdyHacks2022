@@ -2,12 +2,22 @@
 @import './src/components/variables.sass'
 
 html
-  background: url('../src/assets/images/background.jpg')
-  background-size: cover
-  overflow: hidden // removes scroll bar
+  //background: url('../src/assets/images/background.jpg')
+  background: url('../src/assets/images/repeating-background_1200w.png')
+  //background-size: cover
+  //overflow: hidden // removes scroll bar
 
 body
+  font-size: 1rem
+  line-height: 0
+  text-rendering: optimizeLegibility
+    
+body, ul, ol, dl
   margin: 0
+
+body, div, h1, h2, h3, h4, h5, h6, p, a
+  margin: 0
+  padding: 0
 
 // setting font familys for all types
 h1, h2, h3, h4, h5, h6
@@ -18,3 +28,193 @@ p, a
 
 ::selection, ::-moz-selection
   background: $dark-bubblegum
+
+.spacing
+  float: left
+  width:1.5vh
+
+.purple-block
+  width: 100%
+  height: 25px
+  background: #280959
+  position: fixed
+  bottom: 0
+
+.magenta-block
+  height: 5px
+  background: #fa448c
+
+.half-cyan-block
+  display: inline-block
+  width: 50%
+  height: 10px
+  background: #71e8d2
+
+.half-magenta-block
+  display: inline-block
+  width: 50%
+  height: 10px
+  background: #fa448c
+
+.yellow-block
+  height: 10px
+  background: #fec859
+
+.cyan-background
+  float: left
+  background: #71e8d2
+
+.magenta-background
+  float: left
+  background: #fa448c
+
+.yellow-background
+  background: #fec859
+
+.header
+  background-color: #ffe4ac
+  border-top: solid 25px #280959
+  border-bottom: solid 25px #280959
+
+.main-container
+  display: grid
+  grid-gap: 20px
+  align-content: center
+  justify-content: center
+  align-items: center
+  min-height: 20vh
+  padding: 5% 0
+
+.inner-container
+  display: inline-flex
+  align-content: center
+  justify-content: center
+  align-items: center
+  margin: auto
+  flex-wrap: wrap
+  flex-direction: row
+
+.item
+  display: inline-block
+  font-weight: normal
+  font-size: 42px
+  text-align: center
+  color: #280959
+  line-height: 5rem
+
+.item h3
+  font-family: $font-secondary
+  font-weight: bold
+  font-size: 65px
+
+.body
+  width: 75%
+  display: grid
+  grid-gap:10px
+  margin: 60px auto 75px auto
+
+.body-inner-container
+  background-color: #481e8a
+  border: solid 2px #280959
+  margin: 25px 0
+
+.body .item h1
+    text-align: center
+    font-size: 45px
+    line-height: 2.5rem
+    color: #280959
+
+.body-item
+  padding: 3.5%
+  display: grid
+  grid-gap:20px
+
+.body-item p
+  font-size: 55px
+  line-height: 4rem
+  text-align: center
+  color: #fec859
+
+.body-item h1
+  text-align: center
+  font-size: 45px
+  line-height: 2.5rem
+  color: #280959
+
+//footer
+  width: 100%
+  height: 25px
+  background: #280959
+  position: fixed
+  bottom: 0
+  padding: 50px 0
+
+@media screen and (max-width: 1255px)
+  .item
+    font-size: 40px
+  .body-item p
+    font-size: 50px
+    line-height: 3.5rem
+
+@media screen and (max-width: 1120px)
+  .item
+    font-size:35px
+    line-height: 4rem
+
+@media screen and (max-width: 1000px)
+  .item
+    font-size:30px
+    line-height: 3rem
+  .item h3
+    font-size: 50px
+
+@media screen and (max-width: 880px)
+  .item
+    font-size:29px
+  .body-item p
+    font-size: 40px
+    line-height: 3rem
+
+
+@media screen and (max-width: 600px)
+  .inner-container
+    display: inline-grid
+    align-content: center
+    justify-content: center
+    align-items: center
+    justify-items: center
+  .magenta-background
+    float: none
+  .cyan-background
+    float: none
+  .item
+    font-size: 26px
+  .body-item p
+    font-size: 35px
+    line-height: 2.5rem
+  .spacing
+    display: none
+
+@media screen and (max-width: 530px)
+  .item
+    font-size: 22px
+  .item h3
+    font-size: 40px
+  .body
+    width: 90%
+    margin: 0 auto 25px auto
+  .body-inner-container
+    margin-top:30px
+  .body-item
+    padding:3%
+  .body-item p
+    font-size: 35px
+    line-height: 2.5rem
+
+@media screen and (max-width: 374px)
+  .item
+    font-size: 20px
+    line-height: 2.75rem
+  .body-item p
+    font-size: 25px
+    line-height: 2rem
