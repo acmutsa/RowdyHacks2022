@@ -1,16 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import './src/components/variables.sass'
 
-html
-  //background: url('../src/assets/images/background.jpg')
-  background: url('../src/assets/images/repeating-background_1200w.png')
-  //background-size: cover
-  //overflow: hidden // removes scroll bar
-
 body
   font-size: 1rem
   line-height: 0
   text-rendering: optimizeLegibility
+  background: url('../src/assets/images/repeating-background_1200w.png')
     
 body, ul, ol, dl
   margin: 0
@@ -26,19 +21,25 @@ h1, h2, h3, h4, h5, h6
 p, a
   font-family: $font-secondary
 
+p
+  color: #fec859
+
 ::selection, ::-moz-selection
   background: $dark-bubblegum
 
+/* ----------------- Dividers and Spacing ---------------- */
+
 .spacing
   float: left
-  width:1.5vh
+  width: 1.75vh
 
-.purple-block
+.pixel-purple-block
   width: 100%
-  height: 25px
-  background: #280959
+  height: 10px
+  background-color: #280959
   position: fixed
   bottom: 0
+  background: url(./assets/images/pixels.png)
 
 .magenta-block
   height: 5px
@@ -71,6 +72,15 @@ p, a
 .yellow-background
   background: #fec859
 
+/* ----------------- Header and Layout ---------------- */
+
+#page-container
+  position: relative
+  min-height: 100vh
+
+#content-wrap
+  padding-bottom: 2.5rem
+
 .header
   background-color: #ffe4ac
   border-top: solid 25px #280959
@@ -90,14 +100,13 @@ p, a
   align-content: center
   justify-content: center
   align-items: center
-  margin: auto
   flex-wrap: wrap
   flex-direction: row
 
 .item
   display: inline-block
   font-weight: normal
-  font-size: 42px
+  font-size: 2.75rem
   text-align: center
   color: #280959
   line-height: 5rem
@@ -107,58 +116,101 @@ p, a
   font-weight: bold
   font-size: 65px
 
-.body
+/* ----------------- Body ---------------- */
+
+.primary
   width: 75%
   display: grid
   grid-gap:10px
-  margin: 60px auto 75px auto
+  margin: 60px auto 125px auto
 
-.body-inner-container
-  background-color: #481e8a
+.primary-inner-container
   border: solid 2px #280959
-  margin: 25px 0
+  margin-bottom: 30px
+  background-color: #481e8a
 
-.body .item h1
-    text-align: center
-    font-size: 45px
-    line-height: 2.5rem
-    color: #280959
+.primary
+  .item
+    h1
+      text-align: center
+      font-size: 45px
+      line-height: 2.5rem
+      color: #280959
 
-.body-item
+.primary-item
   padding: 3.5%
   display: grid
   grid-gap:20px
 
-.body-item p
-  font-size: 55px
-  line-height: 4rem
-  text-align: center
-  color: #fec859
+.primary-item
+  p
+    font-size: 55px
+    line-height: 4rem
+    text-align: center
+    color: #fec859
 
-.body-item h1
-  text-align: center
-  font-size: 45px
-  line-height: 2.5rem
-  color: #280959
+.primary-item
+  h1
+    text-align: center
+    font-size: 45px
+    line-height: 2.5rem
+    color: #280959
+  
+.texture-3op
+  background: url(./assets/images/pixels-3op.png)
 
-//footer
-  width: 100%
-  height: 25px
-  background: #280959
-  position: fixed
+.texture-5op
+  background: url(./assets/images/pixels-5op.png)
+
+.texture-7op
+  background: url(./assets/images/pixels-7op.png)
+
+
+/* ----------------- Footer ---------------- */
+footer
+  position: absolute
   bottom: 0
-  padding: 50px 0
+  width: 100%
+  background: #4e2a87
+  border-top: solid 3px #280959
+
+.footer-container
+  display: grid
+  grid-gap: 15px
+  align-content: center
+  justify-content: center
+  align-items: center
+  padding: 20px 0
+
+.footer-container
+  .inner-container
+    display: inline-flex
+    grid-column-gap: 15px
+
+.footer-container
+  .inner-container
+    img
+      border: solid 4px #280959
+      border-radius: 12px
+
+.footer-container
+  .inner-container
+    h1
+      font-size: 2.5rem
+      line-height: 1.75rem
+
+/* ----------------- Responsive ---------------- */
 
 @media screen and (max-width: 1255px)
   .item
-    font-size: 40px
-  .body-item p
+    font-size: 2.75rem
+  .primary-item p
     font-size: 50px
     line-height: 3.5rem
 
 @media screen and (max-width: 1120px)
   .item
-    font-size:35px
+    font-size: 2.5rem
     line-height: 4rem
 
 @media screen and (max-width: 1000px)
@@ -171,7 +223,7 @@ p, a
 @media screen and (max-width: 880px)
   .item
     font-size:29px
-  .body-item p
+  .primary-item p
     font-size: 40px
     line-height: 3rem
 
@@ -189,7 +241,7 @@ p, a
     float: none
   .item
     font-size: 26px
-  .body-item p
+  .primary-item p
     font-size: 35px
     line-height: 2.5rem
   .spacing
@@ -200,14 +252,12 @@ p, a
     font-size: 22px
   .item h3
     font-size: 40px
-  .body
+  .primary
     width: 90%
-    margin: 0 auto 25px auto
-  .body-inner-container
-    margin-top:30px
-  .body-item
+    margin: 30px auto 100px auto
+  .primary-item
     padding:3%
-  .body-item p
+  .primary-item p
     font-size: 35px
     line-height: 2.5rem
 
@@ -215,6 +265,6 @@ p, a
   .item
     font-size: 20px
     line-height: 2.75rem
-  .body-item p
+  .primary-item p
     font-size: 25px
     line-height: 2rem
