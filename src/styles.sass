@@ -116,6 +116,22 @@ p
   font-weight: bold
   font-size: 65px
 
+.arrows
+  width: 2rem
+  cursor: pointer
+
+.arrow-up
+  cursor: pointer
+  transform: rotate(0deg)
+
+.arrow-down
+  cursor: pointer
+  transform: rotate(90deg)
+
+.arrow-left
+  cursor: pointer
+  transform: rotate(180deg)
+
 /* ----------------- Body ---------------- */
 
 .primary
@@ -138,7 +154,7 @@ p
       color: #280959
 
 .primary-item
-  padding: 3.5%
+  padding: 3%
   display: grid
   grid-gap:20px
 
@@ -219,6 +235,8 @@ footer
     line-height: 3rem
   .item h3
     font-size: 50px
+  .arrows
+    width: 1.5rem
 
 @media screen and (max-width: 880px)
   .item
@@ -226,6 +244,11 @@ footer
   .primary-item p
     font-size: 40px
     line-height: 3rem
+  .footer-container
+    .inner-container
+      h1
+        font-size: 2rem
+        line-height: 1.5rem
 
 
 @media screen and (max-width: 600px)
@@ -260,6 +283,8 @@ footer
   .primary-item p
     font-size: 35px
     line-height: 2.5rem
+  .arrows
+    width: 1.25rem
 
 @media screen and (max-width: 374px)
   .item
