@@ -1,6 +1,6 @@
 $(function() {
-    $('.arrows').click( function() {
-        $(this).toggleClass('arrow-down');
-        $(this).parent().next().slideToggle();
+    $('.show').click( function() {
+        $(this).children(".arrows").toggleClass('arrow-down');
+        $(this).next().slideToggle();
     });
 });
