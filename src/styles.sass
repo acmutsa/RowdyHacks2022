@@ -44,9 +44,17 @@ a
   bottom: 0
   background: url(./assets/images/pixels.png)
 
+.yellow-short-block
+  height: 5px
+  background: #fec859
+
 .magenta-block
   height: 5px
   background: #fa448c
+
+.cyan-block
+  height: 5px
+  background: #71e8d2
 
 .half-cyan-block
   display: inline-block
@@ -146,21 +154,32 @@ a
   grid-gap:10px
   margin: 60px auto 125px auto
 
+.col-primary
+  display: inline-flex
+  grid-column-gap: 2%
+  margin-bottom: 50px
+
 .primary-inner-container
   border: solid 2px #280959
   margin-bottom: 30px
   background-color: #481e8a
 
+.col-primary-inner-container
+  border: solid 2px #280959
+  background-color: #481e8a
+  width: 100%
+  border-bottom: solid 5px #fec859
+
 .primary
   .item
     h1
       text-align: center
-      font-size: 45px
+      font-size: 3rem
       line-height: 2.5rem
       color: #280959
 
 .primary-item
-  padding: 3%
+  padding: 5%
   display: grid
   grid-gap:20px
 
@@ -174,10 +193,35 @@ a
 .primary-item
   h1
     text-align: center
-    font-size: 45px
+    font-size: 3rem
     line-height: 2.5rem
     color: #280959
-  
+
+.col-primary-inner-container
+  .primary-item
+    justify-items: center
+
+
+.col-primary-inner-container
+  .primary-item
+    h1
+      text-align: center
+      font-size: 2.3rem
+      line-height: 2rem
+      color: #280959
+
+.col-primary-inner-container
+  .primary-item
+    p
+      text-align: center
+      font-size: 2.2rem
+      line-height: 2.1rem
+
+.col-primary-inner-container
+  img
+    width: 50%
+    margin: 0 auto
+
 .texture-3op
   background: url(./assets/images/pixels-3op.png)
 
@@ -186,7 +230,6 @@ a
 
 .texture-7op
   background: url(./assets/images/pixels-7op.png)
-
 
 /* ----------------- Footer ---------------- */
 footer
@@ -202,7 +245,7 @@ footer
   align-content: center
   justify-content: center
   align-items: center
-  padding: 20px 0
+  padding: 25px 0
 
 .footer-container
   .inner-container
@@ -221,9 +264,225 @@ footer
       font-size: 2.5rem
       line-height: 1.75rem
 
+
+
+/* ----------------- Button ----------------*/
+$white: #fff
+$white-darkest: #dde3e6
+
+$black-lightest: #485f67
+$black-light: #222a2c
+$black: #000
+
+// COLORS
+
+$magenta: #fa448c
+$magenta-darker: #ac275b
+
+$pink: #fa55ca
+
+a
+  text-decoration: none
+  transition: color 0.3s
+
+.btn
+  position: relative
+  display: inline-block
+  margin: 5px 10px
+  padding: 17px 22px
+  width: 60%
+  z-index: 1
+  border: 0
+  outline: 0
+  cursor: pointer
+
+  color: $white
+  text-align: center
+  line-height: normal
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  font-weight: bold
+  
+  .hover
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: -1
+    overflow: hidden
+
+    span
+      position: relative
+      display: block
+      left: -15px
+      height: 10px
+      width: 0
+      content: ''
+    
+    span:after
+      position: absolute
+      display: block
+      right: -10px
+      width: 10px
+      height: 10px
+      background: $white
+      content: ''
+
+    span:nth-child(odd)
+      &:after
+        background: rgba($black, 0.35)
+
+    span:first-child
+      left: -75px
+      transition: all 0.3s steps(8)
+
+    span:nth-child(2)
+      left: -45px
+      transition: all 0.325s steps(8)
+
+    span:nth-child(3)
+      left: -55px
+      transition: all 0.35s steps(8)
+
+    span:nth-child(4)
+      transition: all 0.4s steps(8)
+
+    span:nth-child(5)
+      left: -25px
+      transition: all 0.375s steps(8)
+
+  &:after 
+    position: absolute
+    right: 0
+    bottom: 0
+    left: 0
+    height: 5px
+    z-index: -2
+    content: ''
+
+  &:hover
+    color: $white
+
+  &:hover,
+  &:focus
+    color: $white
+
+    .hover
+      span:first-child 
+        width: calc(100% + 76px)
+        &:after
+          animation: whiteBlack 0.3s 0s 1
+
+      span:nth-child(2)
+        width: calc(100% + 46px)
+        transition: all 0.375s steps(8)
+        &:after
+          animation: whiteBlack 0.3s 0.06s 1 reverse backwards
+
+      span:nth-child(3)
+        width: calc(100% + 56px)
+        transition: all 0.35s steps(8)
+        &:after
+          animation: whiteBlack 0.3s 0.05s 1 forwards
+
+      span:nth-child(4)
+        width: calc(100% + 16px)
+        transition: all 0.3s steps(8)
+        &:after
+          animation: whiteBlack 0.3s 0s 1 reverse backwards
+
+      span:nth-child(5)
+        width: calc(100% + 26px)
+        transition: all 0.325s steps(8)
+        &:after
+          animation: whiteBlack 0.3s 0.07s 1 forwards
+
+  &.btn-magenta 
+    background: $magenta
+
+    span,
+    &:after
+      background: $magenta-darker
+
+@-webkit-keyframes whiteBlack 
+  0%,
+  24%
+    background:  $white
+
+  25%,
+  49%
+    background: rgba($black, 0.35)
+
+  50%,
+  74%
+    background: $white
+
+  75%,
+  100%
+    background: rgba($black, 0.35)
+
+@-moz-keyframes whiteBlack
+  0%,
+  24%
+    background:  $white
+
+  25%,
+  49%
+    background: rgba($black, 0.35)
+
+  50%,
+  74%
+    background: $white
+
+  75%,
+  100%
+    background: rgba($black, 0.35)
+
+@-ms-keyframes whiteBlack
+  0%,
+  24%
+    background:  $white
+    
+  25%,
+  49%
+    background: rgba($black, 0.35)
+
+  50%,
+  74%
+    background: $white
+
+  75%,
+  100%
+    background: rgba($black, 0.35)
+
+@keyframes whiteBlack
+  0%,
+  24%
+    background:  $white
+  
+  25%,
+  49%
+    background: rgba($black, 0.35)
+
+  50%,
+  74%
+    background: $white
+
+  75%,
+  100%
+    background: rgba($black, 0.35)
+
+
 /* ----------------- Responsive ---------------- */
 
-@media screen and (max-width: 1255px)
+@media screen and (min-width: 1500px)
+  .primary
+    width: 65%
+
+@media screen and (max-width: 1400px)
+  .primary
+    width: 90%
   .item
     font-size: 2.75rem
   .primary-item p
@@ -234,6 +493,16 @@ footer
   .item
     font-size: 2.5rem
     line-height: 4rem
+  .col-primary-inner-container
+    .primary-item
+      h1
+        font-size: 2rem
+        line-height: 1.7rem
+  .col-primary-inner-container
+    .primary-item
+      p
+        font-size: 1.8rem
+        line-height: 2rem
 
 @media screen and (max-width: 1000px)
   .item
@@ -243,8 +512,21 @@ footer
     font-size: 50px
   .arrows
     width: 1.5rem
+  .btn
+    width: 75%
+    padding: 10px 10px 15px 10px
 
 @media screen and (max-width: 880px)
+  .col-primary-inner-container
+    .primary-item
+      h1
+        font-size: 1.6rem
+        line-height: 1.2rem
+  .col-primary-inner-container
+    .primary-item
+      p
+        font-size: 1.4rem
+        line-height: 1.4rem
   .item
     font-size:29px
   .primary-item p
@@ -256,6 +538,13 @@ footer
         font-size: 2rem
         line-height: 1.5rem
 
+@media screen and (max-width: 675px)
+  .primary
+    width: 80%
+  .col-primary
+    flex-direction: column
+    grid-column-gap: 0
+    grid-row-gap: 30px
 
 @media screen and (max-width: 600px)
   .inner-container
@@ -281,9 +570,6 @@ footer
     font-size: 22px
   .item h3
     font-size: 40px
-  .primary
-    width: 90%
-    margin: 30px auto 100px auto
   .primary-item
     padding:3%
   .primary-item p
@@ -291,6 +577,10 @@ footer
     line-height: 2.5rem
   .arrows
     width: 1.25rem
+
+@media screen and (max-width: 450px)
+  .primary
+    width: 90%
 
 @media screen and (max-width: 374px)
   .item
