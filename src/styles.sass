@@ -69,7 +69,7 @@ a
   background: #fa448c
 
 .yellow-block
-  height: 10px
+  height: 5px
   background: #fec859
 
 .cyan-background
@@ -90,12 +90,12 @@ a
   min-height: 100vh
 
 #content-wrap
-  padding-bottom: 2.5rem
+  padding-bottom: 10rem
 
 .header
   background-color: #ffe4ac
-  border-top: solid 25px #280959
-  border-bottom: solid 25px #280959
+  border-top: solid 20px #280959
+  border-bottom: solid 20px #280959
 
 .main-container
   display: grid
@@ -158,6 +158,7 @@ a
   display: inline-flex
   grid-column-gap: 2%
   margin-bottom: 50px
+  align-items: flex-start
 
 .primary-inner-container
   border: solid 2px #280959
@@ -174,8 +175,8 @@ a
   .item
     h1
       text-align: center
-      font-size: 3rem
-      line-height: 2.5rem
+      font-size: 3.25rem
+      line-height: 2.75rem
       color: #280959
 
 .primary-item
@@ -214,13 +215,24 @@ a
   .primary-item
     p
       text-align: center
-      font-size: 2.2rem
+      font-size: 2rem
       line-height: 2.1rem
 
 .col-primary-inner-container
   img
     width: 50%
     margin: 0 auto
+
+.section-container
+  width: 100%
+  background-color: #ffe4ac
+  border-bottom: solid 20px #280959
+  border-top: solid 20px #280959
+
+.section-container
+  .primary-item
+    padding: 3%
+
 
 .texture-3op
   background: url(./assets/images/pixels-3op.png)
@@ -231,13 +243,25 @@ a
 .texture-7op
   background: url(./assets/images/pixels-7op.png)
 
+/* ---------------- Sponsors ---------------*/
+.sponsors-background
+  background-color: #fff2d6
+  border-bottom: none
+
+.sponsors-background
+  img
+    width: 90%
+
 /* ----------------- Footer ---------------- */
+
 footer
   position: absolute
   bottom: 0
   width: 100%
   background: #4e2a87
-  border-top: solid 3px #280959
+
+.footer-holder
+  border-top: solid 20px #280959
 
 .footer-container
   display: grid
@@ -245,7 +269,7 @@ footer
   align-content: center
   justify-content: center
   align-items: center
-  padding: 25px 0
+  padding: 50px 0
 
 .footer-container
   .inner-container
@@ -522,6 +546,7 @@ a
       h1
         font-size: 1.6rem
         line-height: 1.2rem
+
   .col-primary-inner-container
     .primary-item
       p
@@ -529,9 +554,18 @@ a
         line-height: 1.4rem
   .item
     font-size:29px
-  .primary-item p
-    font-size: 40px
-    line-height: 3rem
+
+  .primary-item
+    p
+      font-size: 40px
+      line-height: 3rem
+
+  .primary
+    .item
+      h1
+        font-size: 3rem
+        line-height: 2.75rem
+
   .footer-container
     .inner-container
       h1
@@ -564,23 +598,35 @@ a
     line-height: 2.5rem
   .spacing
     display: none
+  .sponsors-background
+    img
+      width: 60%
 
 @media screen and (max-width: 530px)
   .item
     font-size: 22px
-  .item h3
-    font-size: 40px
+  .item
+    h3
+      font-size: 40px
   .primary-item
-    padding:3%
-  .primary-item p
-    font-size: 35px
-    line-height: 2.5rem
+    p
+      font-size: 35px
+      line-height: 2.5rem
   .arrows
     width: 1.25rem
 
 @media screen and (max-width: 450px)
   .primary
     width: 90%
+  .primary
+    .item
+      h1
+        font-size: 2.75rem
+        line-height: 2.25rem
+  .primary-item
+    h1
+      font-size: 2.25rem
+      line-height: 2rem
 
 @media screen and (max-width: 374px)
   .item
