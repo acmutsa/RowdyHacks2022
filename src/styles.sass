@@ -91,6 +91,7 @@ a
 
 #content-wrap
   padding-bottom: 10rem
+  overflow-x: hidden
 
 .header
   background-color: #ffe4ac
@@ -152,7 +153,10 @@ a
   width: 75%
   display: grid
   grid-gap:10px
-  margin: 60px auto 125px auto
+  margin: 60px auto 50px auto
+
+.end
+  margin: 60px auto 210px auto
 
 .col-primary
   display: inline-flex
@@ -262,10 +266,11 @@ footer
   position: absolute
   bottom: 0
   width: 100%
-  background: #4e2a87
+  overflow-x: hidden
 
 .footer-holder
   border-top: solid 20px #280959
+  background-color: #4e2a87
 
 .footer-container
   display: grid
@@ -291,8 +296,6 @@ footer
     h1
       font-size: 2.5rem
       line-height: 1.75rem
-
-
 
 /* ----------------- Button ----------------*/
 $white: #fff
@@ -502,6 +505,48 @@ a
     background: rgba($black, 0.35)
 
 
+/* ----------------- Animation ----------------- */
+.roadrunner,
+.roadrunner-1,
+.roadrunner-2
+  width: 200px
+  left:-15%
+  position: relative
+  animation-name: roadrunner
+  animation-duration: 9s
+  animation-timing-function: linear
+  animation-delay: 3s
+  animation-iteration-count: infinite
+
+.roadrunner
+  animation-duration: 9s
+  animation-delay: 3s
+
+.roadrunner-1
+  animation-duration: 12s
+  animation-delay: 4s
+
+.roadrunner-2
+  animation-duration: 9s
+  animation-delay: 2s
+
+@keyframes roadrunner
+  25%
+    left:25%
+  50%
+    left:50%
+  75% 
+    left:75%
+  100%
+    left:100%
+
+
+.roadrunner,
+.roadrunner-1,
+.roadrunner-2
+  img
+    width: 100%
+
 /* ----------------- Responsive ---------------- */
 
 @media screen and (min-width: 1500px)
@@ -516,6 +561,10 @@ a
   .primary-item p
     font-size: 50px
     line-height: 3.5rem
+  .roadrunner,
+  .roadrunner-1,
+  .roadrunner-2
+    left: -20%
 
 @media screen and (max-width: 1120px)
   .item
@@ -531,6 +580,17 @@ a
       p
         font-size: 1.8rem
         line-height: 2rem
+  .roadrunner
+    animation-duration: 7s
+    animation-delay: 1s
+
+  .roadrunner-1
+    animation-duration: 6s
+    animation-delay: 2s
+
+  .roadrunner-2
+    animation-duration: 8s
+    animation-delay: 2s
 
 @media screen and (max-width: 1000px)
   .item
@@ -569,6 +629,10 @@ a
       h1
         font-size: 2rem
         line-height: 1.5rem
+  .roadrunner,
+  .roadrunner-1,
+  .roadrunner-2
+    left: -30%
 
 @media screen and (max-width: 840px)
   .col-primary-inner-container
@@ -577,6 +641,15 @@ a
         h1
           font-size: 1.3rem
           line-height: 1rem
+  .roadrunner
+    animation-duration: 5s
+    animation-delay: 1s
+  .roadrunner-1
+    animation-duration: 4s
+    animation-delay: 1s
+  .roadrunner-2
+    animation-duration: 6s
+    animation-delay: 1s
 
 @media screen and (max-width: 675px)
   .primary
@@ -591,6 +664,10 @@ a
         h1
           font-size: 2.2rem
           line-height: 1.7rem
+  .roadrunner,
+  .roadrunner-1,
+  .roadrunner-2
+    left: -32%
 
 @media screen and (max-width: 600px)
   .inner-container
@@ -613,6 +690,15 @@ a
   .sponsors-background
     img
       width: 60%
+  .roadrunner
+    animation-duration: 2s
+    animation-delay: 0s
+  .roadrunner-1
+    animation-duration: 2s
+    animation-delay: 0s
+  .roadrunner-2
+    animation-duration: 2s
+    animation-delay: 0s
 
 @media screen and (max-width: 530px)
   .item
@@ -639,6 +725,19 @@ a
     h1
       font-size: 2.25rem
       line-height: 2rem
+  .roadrunner,
+  .roadrunner-1,
+  .roadrunner-2
+    left: -55%
+  .roadrunner
+    animation-duration: 2s
+    animation-delay: 1s
+  .roadrunner-1
+    animation-duration: 2s
+    animation-delay: 1s
+  .roadrunner-2
+    animation-duration: 2s
+    animation-delay: 1s
 
 @media screen and (max-width: 374px)
   .item
@@ -647,3 +746,7 @@ a
   .primary-item p
     font-size: 25px
     line-height: 2rem
+  .roadrunner,
+  .roadrunner-1,
+  .roadrunner-2
+    left: -65%
