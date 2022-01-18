@@ -233,6 +233,10 @@ a
   .primary-item
     padding: 3%
 
+.col-primary-inner-container
+  .mentors
+    .item
+      line-height: 0rem
 
 .texture-3op
   background: url(./assets/images/pixels-3op.png)
@@ -314,7 +318,7 @@ a
   display: inline-block
   margin: 5px 10px
   padding: 17px 22px
-  width: 60%
+  min-width: 35%
   z-index: 1
   border: 0
   outline: 0
@@ -560,17 +564,19 @@ a
       font-size: 40px
       line-height: 3rem
 
-  .primary
-    .item
-      h1
-        font-size: 3rem
-        line-height: 2.75rem
-
   .footer-container
     .inner-container
       h1
         font-size: 2rem
         line-height: 1.5rem
+
+@media screen and (max-width: 840px)
+  .col-primary-inner-container
+    .primary-item
+      .mentors
+        h1
+          font-size: 1.3rem
+          line-height: 1rem
 
 @media screen and (max-width: 675px)
   .primary
@@ -579,6 +585,12 @@ a
     flex-direction: column
     grid-column-gap: 0
     grid-row-gap: 30px
+  .col-primary-inner-container
+    .primary-item
+      .mentors
+        h1
+          font-size: 2.2rem
+          line-height: 1.7rem
 
 @media screen and (max-width: 600px)
   .inner-container
