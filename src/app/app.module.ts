@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AttendComponent } from './attend/attend.component';
-import { SponsorsComponent } from './sponsors/sponsors.component';
-import { FollowComponent } from './follow/follow.component';
-import { GuideComponent } from './guide/guide.component';
+import { PartnersComponent } from './partners/partners.component';
+import { MentorsComponent } from './mentors/mentors.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
@@ -15,9 +15,9 @@ import { FaqComponent } from './faq/faq.component';
     AppComponent,
     HomeComponent,
     AttendComponent,
-    SponsorsComponent,
-    FollowComponent,
-    GuideComponent,
+    PartnersComponent,
+    MentorsComponent,
+    ScheduleComponent,
     FaqComponent
   ],
   imports: [

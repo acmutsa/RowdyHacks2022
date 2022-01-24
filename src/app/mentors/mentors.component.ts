@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-follow',
-  templateUrl: './follow.component.html',
-  styleUrls: ['./follow.component.sass']
+  templateUrl: './mentors.component.html',
+  styleUrls: ['./mentors.component.sass']
 })
-export class FollowComponent implements OnInit {
+export class MentorsComponent implements OnInit {
 
   constructor() { }
 
