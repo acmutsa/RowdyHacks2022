@@ -20,10 +20,10 @@ function playSong(){
                 song.loop = true;
                 if(song.paused){
                     song.play();
-                    icon.src = "../assets/images/volume-icon-pink.gif";
+                    icon.src = "assets/images/volume-icon-pink.gif";
                 }else{
                     song.pause();
-                    icon.src = "../assets/images/volume-icon-pink-mute.png";
+                    icon.src = "assets/images/volume-icon-pink-mute.png";
                 }
             }
         }).catch(error => {
@@ -33,10 +33,10 @@ function playSong(){
                 song.loop = true;
                 if(song.paused){
                     song.play();
-                    icon.src = "../assets/images/volume-icon-pink.gif";
+                    icon.src = "assets/images/volume-icon-pink.gif";
                 }else{
                     song.pause();
-                    icon.src = "../assets/images/volume-icon-pink-mute.png";
+                    icon.src = "assets/images/volume-icon-pink-mute.png";
                 }
             }
         });
