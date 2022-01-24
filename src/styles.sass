@@ -5,7 +5,7 @@ body
   font-size: 1rem
   line-height: 0
   text-rendering: optimizeLegibility
-  background: url('../src/assets/images/repeating-background_1200w.png')
+  background: url('./assets/images/repeating-background_1200w.png')
     
 body, ul, ol, dl
   margin: 0
@@ -93,6 +93,9 @@ a
 #content-wrap
   padding-bottom: 10rem
   overflow-x: hidden
+
+.layoutadj
+  padding-top: 90px
 
 .header
   background-color: #ffe4ac
@@ -258,11 +261,16 @@ a
   display: grid
   position: absolute
   justify-items: end
-  top: 130px
+  top: 150px
 
 .volume
   img
     cursor: pointer
+    opacity:.8
+
+.volume
+  img:hover
+    opacity:1
 
 /* ---------------- Sponsors ---------------- */
 .sponsors-background
@@ -582,8 +590,8 @@ a
 
 @media screen and (max-width: 1120px)
   .item
-    font-size: 2.5rem
-    line-height: 4rem
+    font-size: 2rem
+    line-height: 3rem
   .col-primary-inner-container
     .primary-item
       h1
@@ -617,6 +625,10 @@ a
   .btn
     width: 75%
     padding: 10px 10px 15px 10px
+  .nav-top
+    li
+      a
+        font-size: 1.1rem !important
 
 @media screen and (max-width: 880px)
   .col-primary-inner-container

@@ -15,28 +15,28 @@ function playSong(){
         playPromise.then(_ => {
         // Automatic playback started!
         // Show playing UI.
-            song.pause();
+            song.muted = true;
             icon.onclick = function(){
-                song.loop = true;
-                if(song.paused){
-                    song.play();
-                    icon.src = "assets/images/volume-icon-pink.gif";
+                if(song.muted){
+                    song.muted = false;
+                    icon.src = "../assets/images/volume-icon-pink.gif";
                 }else{
-                    song.pause();
-                    icon.src = "assets/images/volume-icon-pink-mute.png";
+                    song.muted = true;
+                    icon.src = "../assets/images/volume-icon-pink-mute.png";
                 }
             }
         }).catch(error => {
         // Auto-play was prevented
         // Show paused UI.
+            song.muted = true;
             icon.onclick = function(){
-                song.loop = true;
-                if(song.paused){
-                    song.play();
-                    icon.src = "assets/images/volume-icon-pink.gif";
+                song.play();
+                if(song.muted){
+                    song.muted = false;
+                    icon.src = "../assets/images/volume-icon-pink.gif";
                 }else{
-                    song.pause();
-                    icon.src = "assets/images/volume-icon-pink-mute.png";
+                    song.muted = true;
+                    icon.src = "../assets/images/volume-icon-pink-mute.png";
                 }
             }
         });
