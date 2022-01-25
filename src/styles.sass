@@ -95,7 +95,7 @@ a
   overflow-x: hidden
 
 .layoutadj
-  padding-top: 90px
+  padding-top: 70px
 
 .header
   background-color: #ffe4ac
@@ -188,7 +188,7 @@ a
       color: #280959
 
 .primary-item
-  padding: 5%
+  padding: 3%
   display: grid
   grid-gap:20px
 
@@ -261,7 +261,7 @@ a
   display: grid
   position: absolute
   justify-items: end
-  top: 150px
+  top: 120px
 
 .volume
   img
@@ -676,24 +676,70 @@ a
   .roadrunner-2
     animation-duration: 6s
     animation-delay: 1s
+    
+  .full-menu
+    height:100%
+    overflow: hidden
+
+  .icon
+    display: block !important
+    position: fixed
+    top: 10px
+    right: 10px
+
+  .nav-top
+    li:not(:first-child)
+      display: none
+
+  .right
+    float: none!important
+    min-height: 0!important
+
+  .responsive
+    position: relative
+    display: block !important
+
+  .responsive
+    li
+      display: block !important
+  
+  .nav-top
+    li
+      a
+        font-size: 2.3rem !important
+        line-height: 2rem
+  
+  .logo
+    padding: 10px!important
+    line-height: 0!important
+  
+  .img-adj
+    width: 80px
 
 @media screen and (max-width: 675px)
   .primary
     width: 80%
+
   .col-primary
     flex-direction: column
     grid-column-gap: 0
     grid-row-gap: 30px
+
   .col-primary-inner-container
     .primary-item
       .mentors
         h1
           font-size: 2.2rem
           line-height: 1.7rem
+
   .roadrunner,
   .roadrunner-1,
   .roadrunner-2
     left: -32%
+  
+  .volume
+    img
+      width: 50px
 
 @media screen and (max-width: 600px)
   .inner-container

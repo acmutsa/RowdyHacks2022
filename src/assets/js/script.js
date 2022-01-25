@@ -2,6 +2,7 @@ window.onload = function(){
     var exists = document.getElementById("song");
     buttonAnimation();
     showFAQ();
+    showMenu();
     if(exists)
         playSong();
 }
@@ -51,5 +52,15 @@ function showFAQ(){
     $('.show').click( function() {
         $(this).children(".arrows").toggleClass('arrow-down');
         $(this).next().slideToggle();
+    });
+}
+
+function showMenu() {
+    $('.icon').click(function(){
+        $('body').toggleClass('full-menu');
+        $('#mytopnav').toggleClass('full-menu');
+        $('.top').toggleClass('full-menu');
+        $('.nav-top').toggleClass('responsive');
+        $('#logo-img').toggleClass('img-adj');
     });
 }
