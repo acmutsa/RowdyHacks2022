@@ -3,6 +3,8 @@ window.onload = function(){
     buttonAnimation();
     showFAQ();
     showMenu();
+    arrowAppear();
+    arrowScrollUp();
     if(exists)
         playSong();
 }
@@ -62,5 +64,25 @@ function showMenu() {
         $('.top').toggleClass('full-menu');
         $('.nav-top').toggleClass('responsive');
         $('#logo-img').toggleClass('img-adj');
+        $('#xmenu').toggleClass('menu-show');
+        $('#noxmenu').toggleClass('menu-hide');
+    });
+}
+
+function arrowAppear(){
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('#arrowscroll').fadeIn();
+        } else {
+            $('#arrowscroll').fadeOut();
+        }
+    });
+}
+
+function arrowScrollUp(){
+    $('#arrowscroll').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
     });
 }

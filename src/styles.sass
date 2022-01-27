@@ -154,13 +154,16 @@ a
 /* ----------------- Body ---------------- */
 
 .primary
-  width: 75%
+  width: 80%
   display: grid
   grid-gap:10px
   margin: 60px auto 50px auto
 
 .end
   margin: 60px auto 210px auto
+
+.primary-faq
+  width: 90%
 
 .col-primary
   display: inline-flex
@@ -280,6 +283,20 @@ a
 .sponsors-background
   img
     width: 90%
+
+/* ----------------- arrow scroll --------------*/
+#arrowscroll
+  position: fixed
+  opacity: .8
+  cursor: pointer
+  left: 92%
+  right: 0
+  z-index: 9
+  bottom: 3%
+
+#arrowscroll:hover
+  opacity: 1
+
 
 /* ----------------- Footer ---------------- */
 
@@ -571,10 +588,6 @@ a
 
 /* ----------------- Responsive ---------------- */
 
-@media screen and (min-width: 1500px)
-  .primary
-    width: 65%
-
 @media screen and (max-width: 1400px)
   .primary
     width: 90%
@@ -588,7 +601,7 @@ a
   .roadrunner-2
     left: -20%
 
-@media screen and (max-width: 1120px)
+@media screen and (max-width: 1180px)
   .item
     font-size: 2rem
     line-height: 3rem
@@ -622,9 +635,10 @@ a
     font-size: 50px
   .arrows
     width: 1.5rem
-  .btn
-    width: 75%
-    padding: 10px 10px 15px 10px
+  .primary
+    .btn
+      width: 75%
+      padding: 10px 10px 15px 10px
   .nav-top
     li
       a
@@ -686,6 +700,12 @@ a
     position: fixed
     top: 10px
     right: 10px
+
+  .menu-hide
+    display: none
+    
+  .menu-show
+    display: block
 
   .nav-top
     li:not(:first-child)
@@ -772,6 +792,9 @@ a
   .roadrunner-2
     animation-duration: 2s
     animation-delay: 0s
+  
+  #arrowscroll
+    left: 90%
 
 @media screen and (max-width: 530px)
   .item
@@ -785,6 +808,9 @@ a
       line-height: 2.5rem
   .arrows
     width: 1.25rem
+  
+  #arrowscroll
+    left: 85%
 
 @media screen and (max-width: 450px)
   .primary
