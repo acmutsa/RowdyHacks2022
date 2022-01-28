@@ -21,7 +21,7 @@ function playSong(){
             icon.onclick = function(){
                 if(song.muted){
                     song.muted = false;
-                    icon.src = "../assets/images/volume-icon-pink.gif";
+                    icon.src = "../assets/images/volume-icon-pink-yellow.gif";
                 }else{
                     song.muted = true;
                     icon.src = "../assets/images/volume-icon-pink-mute.png";
@@ -35,7 +35,7 @@ function playSong(){
                 song.play();
                 if(song.muted){
                     song.muted = false;
-                    icon.src = "../assets/images/volume-icon-pink.gif";
+                    icon.src = "../assets/images/volume-icon-pink-yellow.gif";
                 }else{
                     song.muted = true;
                     icon.src = "../assets/images/volume-icon-pink-mute.png";
