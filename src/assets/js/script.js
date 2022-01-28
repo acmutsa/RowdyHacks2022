@@ -1,10 +1,9 @@
 window.onload = function(){
     var exists = document.getElementById("song");
+    arrowAppear();
     buttonAnimation();
     showFAQ();
     showMenu();
-    arrowAppear();
-    arrowScrollUp();
     if(exists)
         playSong();
 }
@@ -74,15 +73,14 @@ function arrowAppear(){
         if ($(this).scrollTop() > 200) {
             $('#arrowscroll').fadeIn();
         } else {
+            $('#arrowscroll img').attr('src', '../assets/images/arrow-icon.png');
             $('#arrowscroll').fadeOut();
         }
     });
 }
 
 function arrowScrollUp(){
-    $('#arrowscroll').click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 600);
-    });
+    $("html, body").animate({
+        scrollTop: 0
+    }, 600);
 }

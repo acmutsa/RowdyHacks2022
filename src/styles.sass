@@ -287,15 +287,20 @@ a
 /* ----------------- arrow scroll --------------*/
 #arrowscroll
   position: fixed
-  opacity: .8
   cursor: pointer
-  left: 92%
-  right: 0
+  opacity: .7
+  right: 1%
   z-index: 9
   bottom: 3%
+  display: grid
+  justify-items: center
+
+#arrowscroll
+  p
+    margin-bottom: 15px
 
 #arrowscroll:hover
-  opacity: 1
+    opacity: 1
 
 
 /* ----------------- Footer ---------------- */
@@ -694,6 +699,8 @@ a
   .full-menu
     height:100%
     overflow: hidden
+    display: grid
+    align-items: center
 
   .icon
     display: block !important
@@ -792,9 +799,6 @@ a
   .roadrunner-2
     animation-duration: 2s
     animation-delay: 0s
-  
-  #arrowscroll
-    left: 90%
 
 @media screen and (max-width: 530px)
   .item
@@ -808,9 +812,6 @@ a
       line-height: 2.5rem
   .arrows
     width: 1.25rem
-  
-  #arrowscroll
-    left: 85%
 
 @media screen and (max-width: 450px)
   .primary
