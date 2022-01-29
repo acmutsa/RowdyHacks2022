@@ -4,8 +4,19 @@ window.onload = function(){
     buttonAnimation();
     showFAQ();
     showMenu();
-    if(exists)
+    if(exists){
         playSong();
+    }
+    
+    let map;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            mapId: "994332be080ad6ed",
+            center: { lat: 29.5827351, lng: -98.6188974 },
+            zoom: 8,
+        });
+    }
 }
 
 function playSong(){
