@@ -7,16 +7,7 @@ window.onload = function(){
     if(exists){
         playSong();
     }
-    
-    let map;
-
-    function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-            mapId: "994332be080ad6ed",
-            center: { lat: 29.5827351, lng: -98.6188974 },
-            zoom: 8,
-        });
-    }
+    initMap();
 }
 
 function playSong(){
@@ -94,4 +85,38 @@ function arrowScrollUp(){
     $("html, body").animate({
         scrollTop: 0
     }, 600);
+}
+
+function initMap() {
+    var UTSA = { lat: 29.5827351, lng: -98.6188974 };
+
+    var map = new google.maps.Map(document.getElementById("map"), {
+        mapId: "994332be080ad6ed" ,
+        center: UTSA,
+        zoom: 15,
+    });
+    // const contentString =
+    // '<div id="content">' +
+    // '<div id="siteNotice">' +
+    // "</div>" +
+    // '<h1 id="firstHeading" class="firstHeading">UTSA</h1>' +
+    // "</div>" +
+    // "</div>";
+    // const infowindow = new google.maps.InfoWindow({
+    //     content: contentString,
+    //     maxWidth: 200,
+    // });
+
+    // var marker = new google.maps.Marker({
+    //     position: UTSA,
+    //     map,
+    //     title: "UTSA",
+    // });
+
+    // infowindow.open({
+    //     anchor: marker,
+    //     map,
+    //     shouldFocus: false,
+    // });
+    
 }
