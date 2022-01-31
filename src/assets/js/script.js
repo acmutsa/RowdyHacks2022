@@ -1,5 +1,6 @@
 window.onload = function(){
     var exists = document.getElementById("song");
+    var mapExists = document.getElementById("map");
     arrowAppear();
     buttonAnimation();
     showFAQ();
@@ -7,7 +8,10 @@ window.onload = function(){
     if(exists){
         playSong();
     }
-    initMap();
+    if(mapExists){
+        initMap();
+    }
+    getMentors();
 }
 
 function playSong(){
@@ -119,4 +123,33 @@ function initMap() {
     //     shouldFocus: false,
     // });
     
+}
+
+// ----receive function----v
+function get_json(url, callback) {
+    http.get(url, function(res) {
+        var body = '';
+        res.on('data', function(chunk) {
+            body += chunk;
+        });
+
+        res.on('end', function() {
+            var response = JSON.parse(body);
+// call function ----v
+            callback(response);
+        });
+    });
+}
+
+function getMentors(){
+    var mentorData = fetch('http://localhost:4200/assets/js/mentors.json')
+    .then(res => res.json())
+    .then((out) => {
+        console.log(out[0]);
+    })
+    .catch(err => {
+        throw err
+    });
+    // var obj = JSON.parse('http://localhost:4200/assets/js/mentors.json');
+    // console.log(obj);
 }

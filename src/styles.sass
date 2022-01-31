@@ -160,16 +160,13 @@ a
 /* ----------------- Body ---------------- */
 
 .primary
-  width: 75%
+  width: 85%
   display: grid
   grid-gap:10px
   margin: 60px auto 50px auto
 
 .end
   margin: 60px auto 210px auto
-
-.primary-faq
-  width: 90%
 
 .col-primary
   display: inline-flex
@@ -224,8 +221,16 @@ a
   .primary-item
     h1
       text-align: center
-      font-size: 2.3rem
+      font-size: 2.4rem
       line-height: 2rem
+      color: #280959
+
+.col-primary-inner-container
+  .primary-item
+    h2
+      text-align: center
+      font-size: 2rem
+      line-height:1.7rem
       color: #280959
 
 .col-primary-inner-container
@@ -269,7 +274,10 @@ a
 
 #map
   width: 100%
-  height: 500px
+  height: 550px
+
+.frame
+  border: solid 6px #fa448c
 
 /* ---------------- Volume ----------------- */
 .volume
@@ -668,6 +676,12 @@ a
       h1
         font-size: 1.6rem
         line-height: 1.2rem
+  
+  .col-primary-inner-container
+    .primary-item
+      h2
+        font-size: 1.3rem
+        line-height: 1.1rem
 
   .col-primary-inner-container
     .primary-item
@@ -691,6 +705,9 @@ a
   .roadrunner-1,
   .roadrunner-2
     left: -30%
+  
+  .mentors-spacing
+    display: none
 
 @media screen and (max-width: 840px)
   .col-primary-inner-container
@@ -772,6 +789,13 @@ a
         h1
           font-size: 2.2rem
           line-height: 1.7rem
+  
+  .col-primary-inner-container
+    .primary-item
+      .mentors
+        h2
+          font-size: 2rem
+          line-height: 1.6rem
 
   .roadrunner,
   .roadrunner-1,
