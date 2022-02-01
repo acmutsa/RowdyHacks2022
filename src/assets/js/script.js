@@ -149,7 +149,7 @@ function getMentors(){
     var lastname;
     var title;
     var mentorImage;
-    fetch('http://localhost:4200/assets/js/mentors.json')
+    fetch('/assets/js/mentors.json')
     .then(res => res.json())
     .then((out) => {
         var randomNumHolder = [];
