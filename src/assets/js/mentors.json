@@ -2,8 +2,8 @@
     {
         "Number": 1,
         "Image": "people-guy-2.png",
-        "First Name": "FirstName",
-        "Last Name": "LastName",
+        "FirstName": "FirstName",
+        "LastName": "LastName",
         "Link": "#FirstName",
         "Title": "Software Engineering",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
@@ -11,8 +11,8 @@
     {
         "Number": 2,
         "Image": "people-guy-3.png",
-        "First Name": "FirstName",
-        "Last Name": "LastName",
+        "FirstName": "FirstName",
+        "LastName": "LastName",
         "Link": "#FirstName",
         "Title": "Software Engineering",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
@@ -20,8 +20,35 @@
     {
         "Number": 3,
         "Image": "people-guy-1.png",
-        "First Name": "FirstName",
-        "Last Name": "LastName",
+        "FirstName": "FirstName",
+        "LastName": "LastName",
+        "Link": "#FirstName",
+        "Title": "Software Engineering",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
+    },
+    {
+        "Number": 4,
+        "Image": "people-gal-1.png",
+        "FirstName": "FirstName",
+        "LastName": "LastName",
+        "Link": "#FirstName",
+        "Title": "Software Engineering",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
+    },
+    {
+        "Number": 5,
+        "Image": "people-gal-3.png",
+        "FirstName": "FirstName",
+        "LastName": "LastName",
+        "Link": "#FirstName",
+        "Title": "Software Engineering",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
+    },
+    {
+        "Number": 6,
+        "Image": "people-gal-2.png",
+        "FirstName": "FirstName",
+        "LastName": "LastName",
         "Link": "#FirstName",
         "Title": "Software Engineering",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
