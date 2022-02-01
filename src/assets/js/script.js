@@ -1,17 +1,21 @@
 window.onload = function(){
     var exists = document.getElementById("song");
     var mapExists = document.getElementById("map");
+    var randomExists = document.getElementById("random");
     arrowAppear();
     buttonAnimation();
     showFAQ();
     showMenu();
+
     if(exists){
         playSong();
     }
     if(mapExists){
         initMap();
     }
-    getMentors();
+    if(randomExists){
+        getMentors();
+    }
 }
 
 function playSong(){
@@ -123,22 +127,6 @@ function initMap() {
     //     shouldFocus: false,
     // });
     
-}
-
-// ----receive function----v
-function get_json(url, callback) {
-    http.get(url, function(res) {
-        var body = '';
-        res.on('data', function(chunk) {
-            body += chunk;
-        });
-
-        res.on('end', function() {
-            var response = JSON.parse(body);
-// call function ----v
-            callback(response);
-        });
-    });
 }
 
 function getMentors(){
@@ -292,6 +280,4 @@ function getMentors(){
     .catch(err => {
         throw err
     });
-    // var obj = JSON.parse('http://localhost:4200/assets/js/mentors.json');
-    // console.log(obj);
 }
