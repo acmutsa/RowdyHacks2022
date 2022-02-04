@@ -103,40 +103,35 @@ function initMap() {
         center: UTSA,
         zoom: 15,
     });
-    // const contentString =
-    // '<div id="content">' +
-    // '<div id="siteNotice">' +
-    // "</div>" +
-    // '<h1 id="firstHeading" class="firstHeading">UTSA</h1>' +
-    // "</div>" +
-    // "</div>";
-    // const infowindow = new google.maps.InfoWindow({
-    //     content: contentString,
-    //     maxWidth: 200,
-    // });
+    const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading" style="text-align: left; font-size:1.2rem;">UTSA</h1>' +
+    '<p style="text-align:left; font-size: .9rem; line-height:1rem; color: black; text-shadow:none">1 UTSA Circle <br/>San Antonio, TX 78249</p>' +
+    '<a style="font-size:.8rem;color:#fa448c;" href="https://maps.google.com/maps?ll=29.582735,-98.618897&z=15&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=2658632929587635980" target="_blank">View on Google Maps</a>' +
+    "</div>" +
+    "</div>";
+    const infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 200,
+    });
 
-    // var marker = new google.maps.Marker({
-    //     position: UTSA,
-    //     map,
-    //     title: "UTSA",
-    // });
+    var marker = new google.maps.Marker({
+        position: UTSA,
+        map,
+        title: "UTSA",
+    });
 
-    // infowindow.open({
-    //     anchor: marker,
-    //     map,
-    //     shouldFocus: false,
-    // });
+    infowindow.open({
+        anchor: marker,
+        map,
+        shouldFocus: false,
+    });
     
 }
 
 function getMentors(){
-    var number;
-    var link;
-    var description;
-    var firstname;
-    var lastname;
-    var title;
-    var mentorImage;
     fetch('/assets/js/mentors.json')
     .then(res => res.json())
     .then((out) => {
@@ -149,13 +144,12 @@ function getMentors(){
                 }
             })
             randomNumHolder.push(random);
-            number = out[random].Number;
-            link = out[random].Link;
-            description = out[random].Description;
-            firstname = out[random].FirstName;
-            lastname = out[random].LastName;
-            title = out[random].Title;
-            mentorImage = out[random].Image;
+            var link = out[random].Link;
+            var description = out[random].Description;
+            var firstname = out[random].FirstName;
+            var lastname = out[random].LastName;
+            var title = out[random].Title;
+            var mentorImage = out[random].Image;
 
             var divHolder = document.getElementById("random");
             var colPrimaryInnerContainer = document.createElement("div");

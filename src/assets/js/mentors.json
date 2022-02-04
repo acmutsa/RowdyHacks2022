@@ -4,7 +4,7 @@
         "Image": "people-guy-2.png",
         "FirstName": "FirstName",
         "LastName": "LastName",
-        "Link": "#FirstName",
+        "Link": "#mentor1",
         "Title": "Software Engineering",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
     },
@@ -13,7 +13,7 @@
         "Image": "people-guy-3.png",
         "FirstName": "FirstName",
         "LastName": "LastName",
-        "Link": "#FirstName",
+        "Link": "#mentor2",
         "Title": "Software Engineering",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
     },
@@ -22,7 +22,7 @@
         "Image": "people-guy-1.png",
         "FirstName": "FirstName",
         "LastName": "LastName",
-        "Link": "#FirstName",
+        "Link": "#mentor3",
         "Title": "Software Engineering",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
     },
@@ -31,7 +31,7 @@
         "Image": "people-gal-1.png",
         "FirstName": "FirstName",
         "LastName": "LastName",
-        "Link": "#FirstName",
+        "Link": "#mentor4",
         "Title": "Software Engineering",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
     },
@@ -40,7 +40,7 @@
         "Image": "people-gal-3.png",
         "FirstName": "FirstName",
         "LastName": "LastName",
-        "Link": "#FirstName",
+        "Link": "#mentor5",
         "Title": "Software Engineering",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
     },
@@ -49,7 +49,7 @@
         "Image": "people-gal-2.png",
         "FirstName": "FirstName",
         "LastName": "LastName",
-        "Link": "#FirstName",
+        "Link": "#mentor6",
         "Title": "Software Engineering",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
     }
