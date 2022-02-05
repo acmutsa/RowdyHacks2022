@@ -153,7 +153,7 @@ function getMentors(){
 
             var divHolder = document.getElementById("random");
             var colPrimaryInnerContainer = document.createElement("div");
-            var texture3op = document.createElement("div");
+            var texture7op = document.createElement("div");
             var primaryItem = document.createElement("div");
             var innercontainer = document.createElement("div");
             var item1 = document.createElement("div");
@@ -179,13 +179,13 @@ function getMentors(){
             item2.className = "item";
             cyanBackground.className = "cyan-background";
             magentaBackground.className = "magenta-background";
-            colPrimaryInnerContainer.className = "col-primary-inner-container";
-            texture3op.className = "texture-3op";
+            colPrimaryInnerContainer.className = "col-primary-inner-container callouts";
+            texture7op.className = "texture-7op";
             primaryItem.className = "primary-item";
 
             divHolder.appendChild(colPrimaryInnerContainer);
-            colPrimaryInnerContainer.appendChild(texture3op);
-            texture3op.appendChild(primaryItem);
+            colPrimaryInnerContainer.appendChild(texture7op);
+            texture7op.appendChild(primaryItem);
             primaryItem.appendChild(img);
             primaryItem.appendChild(innercontainer);
             innercontainer.appendChild(item1);
@@ -207,7 +207,7 @@ function getMentors(){
 
             // Above simmulates whats at the bottom at random
             // <div class="col-primary-inner-container">
-            //     <div class="texture-3op">
+            //     <div class="texture-7op">
             //       <div class="primary-item">
             //         <img src="./assets/images/people-guy-3.png" alt="name" />
             //         <div class="inner-container mentors">
@@ -228,7 +228,7 @@ function getMentors(){
             //     </div>
             //   </div>
             //   <div class="col-primary-inner-container">
-            //     <div class="texture-3op">
+            //     <div class="texture-7op">
             //       <div id="random2" class="primary-item">
             //         <img src="./assets/images/people-guy-2.png" alt="name" />
             //         <div class="inner-container mentors">
@@ -249,7 +249,7 @@ function getMentors(){
             //     </div>
             //   </div>
             //   <div class="col-primary-inner-container">
-            //     <div class="texture-3op">
+            //     <div class="texture-7op">
             //       <div id="random3" class="primary-item">
             //         <img src="./assets/images/people-gal-1.png" alt="name" />
             //         <div class="inner-container mentors">

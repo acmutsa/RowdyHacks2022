@@ -170,20 +170,38 @@ a
 
 .col-primary
   display: inline-flex
+  grid-row-gap: 20px
   grid-column-gap: 2%
-  margin-bottom: 50px
-  align-items: flex-start
+  flex-wrap: wrap
+  align-items: center
+  // margin-bottom: 50px
+  // align-items: flex-start
+
+.col-primary.callouts
+  display: inline-flex
+  grid-row-gap: 20px
+  grid-column-gap: 2%
+  flex-wrap: wrap
+  align-items: unset
 
 .primary-inner-container
   border: solid 2px #280959
-  margin-bottom: 30px
+  margin-bottom: 10px
   background-color: #481e8a
 
 .col-primary-inner-container
   border: solid 2px #280959
   background-color: #481e8a
-  width: 100%
   border-bottom: solid 5px #fec859
+  flex: 1 0 30%
+
+.col-primary-inner-container.mentors
+  display: flex
+  border: solid 2px #280959
+  background-color: #481e8a
+  border-bottom: solid 5px #fec859
+  flex: 1 0 30%
+
 
 .primary
   .item
@@ -617,9 +635,9 @@ a
     width: 100%
 
 /* ----------------- Responsive ---------------- */
-@media screen and (min-width: 1700px)
-  .primary
-    width: 65%
+// @media screen and (min-width: 1700px)
+//   .primary
+//     width: 70%
 
 @media screen and (max-width: 1500px)
   .primary
@@ -627,8 +645,8 @@ a
   .item
     font-size: 2.5rem
   .primary-item p
-    font-size: 50px
-    line-height: 3.5rem
+    font-size: 2rem
+    line-height: 2.2rem
   .roadrunner,
   .roadrunner-1,
   .roadrunner-2
@@ -641,13 +659,13 @@ a
   .col-primary-inner-container
     .primary-item
       h1
-        font-size: 2rem
-        line-height: 1.7rem
+        font-size: 1.5rem
+        line-height: 1.3rem
   .col-primary-inner-container
     .primary-item
       p
-        font-size: 1.8rem
-        line-height: 2rem
+        font-size: 1.4rem
+        line-height: 1.6rem
   .roadrunner
     animation-duration: 7s
     animation-delay: 1s
@@ -678,17 +696,17 @@ a
         font-size: 1.1rem !important
 
 @media screen and (max-width: 880px)
-  .col-primary-inner-container
-    .primary-item
-      h1
-        font-size: 1.6rem
-        line-height: 1.2rem
+  // .col-primary-inner-container
+  //   .primary-item
+  //     h1
+  //       font-size: 1.6rem
+  //       line-height: 1.2rem
   
-  .col-primary-inner-container
-    .primary-item
-      h2
-        font-size: 1.3rem
-        line-height: 1.1rem
+  // .col-primary-inner-container
+  //   .primary-item
+  //     h2
+  //       font-size: 1.3rem
+  //       line-height: 1.1rem
 
   .col-primary-inner-container
     .primary-item
@@ -723,6 +741,15 @@ a
         h1
           font-size: 1.3rem
           line-height: 1rem
+  .col-primary
+    align-items: unset
+
+  .col-primary-inner-container
+    flex: 1 0 35%
+  
+  .col-primary-inner-container.callouts
+    flex: 1 0 30%
+
   .roadrunner
     animation-duration: 5s
     animation-delay: 1s
@@ -786,16 +813,25 @@ a
     width: 80%
 
   .col-primary
-    flex-direction: column
-    grid-column-gap: 0
     grid-row-gap: 30px
+  
+  .col-primary-inner-container
+    .primary-item
+      h1
+        font-size: 2.6rem
+        line-height: 2rem
+  .col-primary-inner-container
+    .primary-item
+      p
+        font-size: 2.2rem
+        line-height: 2.4rem
 
   .col-primary-inner-container
     .primary-item
       .mentors
         h1
-          font-size: 2.2rem
-          line-height: 1.7rem
+          font-size: 2.5rem
+          line-height: 2rem
   
   .col-primary-inner-container
     .primary-item
@@ -812,6 +848,9 @@ a
   .volume
     img
       width: 50px
+  
+  .col-primary-inner-container
+    flex: 100%
 
 @media screen and (max-width: 600px)
   .inner-container
@@ -864,7 +903,7 @@ a
     .item
       h1
         font-size: 2.75rem
-        line-height: 2.25rem
+        line-height: 2.5rem
   .primary-item
     h1
       font-size: 2.25rem
@@ -888,8 +927,33 @@ a
     font-size: 20px
     line-height: 2.75rem
   .primary-item p
-    font-size: 25px
-    line-height: 2rem
+    font-size: 1.8rem
+    line-height: 2.2rem
+  
+  .col-primary-inner-container
+    .primary-item
+      h1
+        font-size: 1.8rem
+        line-height: 1.6rem
+  .col-primary-inner-container
+    .primary-item
+      p
+        font-size: 1.8rem
+        line-height: 1.9rem
+
+  .col-primary-inner-container
+    .primary-item
+      .mentors
+        h1
+          font-size: 1.8rem
+          line-height: 1.6rem
+  .col-primary-inner-container
+    .primary-item
+      .mentors
+        p
+          font-size: 1.8rem
+          line-height: 1.9rem
+  
   .roadrunner,
   .roadrunner-1,
   .roadrunner-2
