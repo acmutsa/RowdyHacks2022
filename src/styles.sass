@@ -1,16 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import './src/components/variables.sass'
 
-html
-  //background: url('../src/assets/images/background.jpg')
-  background: url('../src/assets/images/repeating-background_1200w.png')
-  //background-size: cover
-  //overflow: hidden // removes scroll bar
+html, body
+  margin: 0
+  padding: 0
+  height: 100%
+  width: 100%
 
 body
   font-size: 1rem
   line-height: 0
   text-rendering: optimizeLegibility
+  background: url('./assets/images/repeating-background_1200w.png')
     
 body, ul, ol, dl
   margin: 0
@@ -26,23 +27,41 @@ h1, h2, h3, h4, h5, h6
 p, a
   font-family: $font-secondary
 
+p
+  color: #fec859
+  text-shadow: 0 0 10px black
+
+a
+  color: #71e8d2
+
 ::selection, ::-moz-selection
   background: $dark-bubblegum
 
+/* ----------------- Dividers and Spacing ---------------- */
+
 .spacing
   float: left
-  width:1.5vh
+  width: 1.75vh
 
-.purple-block
+.pixel-purple-block
   width: 100%
-  height: 25px
-  background: #280959
+  height: 10px
+  background-color: #280959
   position: fixed
   bottom: 0
+  background: url(assets/images/pixels.png)
+
+.yellow-short-block
+  height: 5px
+  background: #fec859
 
 .magenta-block
   height: 5px
   background: #fa448c
+
+.cyan-block
+  height: 5px
+  background: #71e8d2
 
 .half-cyan-block
   display: inline-block
@@ -57,7 +76,7 @@ p, a
   background: #fa448c
 
 .yellow-block
-  height: 10px
+  height: 5px
   background: #fec859
 
 .cyan-background
@@ -71,10 +90,23 @@ p, a
 .yellow-background
   background: #fec859
 
+/* ----------------- Header and Layout ---------------- */
+
+#page-container
+  position: relative
+  min-height: 100vh
+
+#content-wrap
+  padding-bottom: 10rem
+  overflow-x: hidden
+
+.layoutadj
+  padding-top: 70px
+
 .header
   background-color: #ffe4ac
-  border-top: solid 25px #280959
-  border-bottom: solid 25px #280959
+  border-top: solid 20px #280959
+  border-bottom: solid 20px #280959
 
 .main-container
   display: grid
@@ -82,7 +114,7 @@ p, a
   align-content: center
   justify-content: center
   align-items: center
-  min-height: 20vh
+  min-height: 25vh
   padding: 5% 0
 
 .inner-container
@@ -90,14 +122,13 @@ p, a
   align-content: center
   justify-content: center
   align-items: center
-  margin: auto
   flex-wrap: wrap
   flex-direction: row
 
 .item
   display: inline-block
   font-weight: normal
-  font-size: 42px
+  font-size: 2.75rem
   text-align: center
   color: #280959
   line-height: 5rem
@@ -107,59 +138,545 @@ p, a
   font-weight: bold
   font-size: 65px
 
-.body
-  width: 75%
+.show
+  cursor: pointer
+
+.arrows
+  width: 2rem
+  cursor: pointer
+
+.arrow-up
+  cursor: pointer
+  transform: rotate(0deg)
+
+.arrow-down
+  cursor: pointer
+  transform: rotate(90deg)
+
+.arrow-left
+  cursor: pointer
+  transform: rotate(180deg)
+
+/* ----------------- Body ---------------- */
+
+.primary
+  width: 80%
   display: grid
   grid-gap:10px
-  margin: 60px auto 75px auto
+  margin: 60px auto 50px auto
 
-.body-inner-container
-  background-color: #481e8a
+.end
+  margin: 60px auto 210px auto
+
+.col-primary
+  display: inline-flex
+  grid-row-gap: 20px
+  grid-column-gap: 2%
+  flex-wrap: wrap
+  align-items: center
+  // margin-bottom: 50px
+  // align-items: flex-start
+
+.col-primary.callouts
+  display: inline-flex
+  grid-row-gap: 20px
+  grid-column-gap: 2%
+  flex-wrap: wrap
+  align-items: unset
+
+.primary-inner-container
   border: solid 2px #280959
-  margin: 25px 0
+  margin-bottom: 10px
+  background-color: #481e8a
 
-.body .item h1
-    text-align: center
-    font-size: 45px
-    line-height: 2.5rem
-    color: #280959
+.col-primary-inner-container
+  border: solid 2px #280959
+  background-color: #481e8a
+  border-bottom: solid 5px #fec859
+  flex: 1 0 30%
 
-.body-item
-  padding: 3.5%
+.col-primary-inner-container.mentors
+  display: flex
+  border: solid 2px #280959
+  background-color: #481e8a
+  border-bottom: solid 5px #fec859
+  flex: 1 0 30%
+
+
+.primary
+  .item
+    h1
+      text-align: center
+      font-size: 3.25rem
+      line-height: 2.75rem
+      color: #280959
+
+.primary-item
+  padding: 3%
   display: grid
   grid-gap:20px
 
-.body-item p
-  font-size: 55px
-  line-height: 4rem
-  text-align: center
-  color: #fec859
+.primary-item
+  p
+    font-size: 55px
+    line-height: 4rem
+    text-align: center
+    color: #fec859
 
-.body-item h1
-  text-align: center
-  font-size: 45px
-  line-height: 2.5rem
-  color: #280959
+.primary-item
+  h1
+    text-align: center
+    font-size: 3rem
+    line-height: 2.5rem
+    color: #280959
 
-//footer
+.col-primary-inner-container
+  .primary-item
+    justify-items: center
+
+
+.col-primary-inner-container
+  .primary-item
+    h1
+      text-align: center
+      font-size: 2.4rem
+      line-height: 2rem
+      color: #280959
+
+.col-primary-inner-container
+  .primary-item
+    h2
+      text-align: center
+      font-size: 2rem
+      line-height:1.7rem
+      color: #280959
+
+.col-primary-inner-container
+  .primary-item
+    p
+      text-align: center
+      font-size: 2rem
+      line-height: 2.1rem
+
+.col-primary-inner-container
+  img
+    width: 50%
+    margin: 0 auto
+
+.section-container
   width: 100%
-  height: 25px
-  background: #280959
+  background-color: #ffe4ac
+  border-bottom: solid 20px #280959
+  border-top: solid 20px #280959
+
+.section-container
+  .primary-item
+    padding: 3%
+
+.col-primary-inner-container
+  .mentors
+    .item
+      line-height: 0rem
+
+.texture-3op
+  background: url(assets/images/pixels-3op.png)
+
+.texture-5op
+  background: url(assets/images/pixels-5op.png)
+
+.texture-7op
+  background: url(assets/images/pixels-7op.png)
+
+.sponsor-links
+  display: flex
+
+#map
+  width: 100%
+  height: 550px
+
+.frame
+  border: solid 3px #fa448c
+
+.location
+  img
+    width: 100%
+
+/* ---------------- Volume ----------------- */
+.volume
+  width: 98%
+  display: grid
+  position: absolute
+  justify-items: end
+  top: 120px
+
+.volume
+  img
+    cursor: pointer
+    opacity:.8
+
+.volume
+  img:hover
+    opacity:1
+
+/* ---------------- Sponsors ---------------- */
+.sponsors-background
+  background-color: #fff2d6
+  border-bottom: none
+
+.sponsors-background
+  img
+    width: 90%
+
+/* ----------------- arrow scroll --------------*/
+#arrowscroll
   position: fixed
+  cursor: pointer
+  opacity: .7
+  right: 1%
+  z-index: 9
+  bottom: 3%
+  display: grid
+  justify-items: center
+
+#arrowscroll
+  p
+    margin-bottom: 15px
+
+#arrowscroll:hover
+    opacity: 1
+
+
+/* ----------------- Footer ---------------- */
+
+footer
+  position: absolute
   bottom: 0
+  width: 100%
+  overflow-x: hidden
+
+.footer-holder
+  border-top: solid 20px #280959
+  background-color: #4e2a87
+
+.footer-container
+  display: grid
+  grid-gap: 15px
+  align-content: center
+  justify-content: center
+  align-items: center
   padding: 50px 0
 
-@media screen and (max-width: 1255px)
-  .item
-    font-size: 40px
-  .body-item p
-    font-size: 50px
-    line-height: 3.5rem
+.footer-container
+  .inner-container
+    display: inline-flex
+    grid-column-gap: 15px
 
-@media screen and (max-width: 1120px)
+.footer-container
+  .inner-container
+    img
+      border: solid 4px #280959
+      border-radius: 12px
+
+.footer-container
+  .inner-container
+    h1
+      font-size: 2.5rem
+      line-height: 1.75rem
+
+/* ----------------- Button ----------------*/
+$white: #fff
+$white-darkest: #dde3e6
+
+$black-lightest: #485f67
+$black-light: #222a2c
+$black: #000
+
+// COLORS
+
+$magenta: #fa448c
+$magenta-darker: #ac275b
+
+$pink: #fa55ca
+
+a
+  text-decoration: none
+  transition: color 0.3s
+
+.btn
+  position: relative
+  display: inline-block
+  margin: 5px 10px
+  padding: 17px 22px
+  min-width: 50%
+  z-index: 1
+  border: 0
+  outline: 0
+  cursor: pointer
+  text-shadow: 0 0 10px black
+
+  color: $white
+  text-align: center
+  line-height: normal
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  font-weight: bold
+  
+  .hover
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: -1
+    overflow: hidden
+
+    span
+      position: relative
+      display: block
+      left: -15px
+      height: 10px
+      width: 0
+      content: ''
+    
+    span:after
+      position: absolute
+      display: block
+      right: -10px
+      width: 10px
+      height: 10px
+      background: $white
+      content: ''
+
+    span:nth-child(odd)
+      &:after
+        background: rgba($black, 0.35)
+
+    span:first-child
+      left: -75px
+      transition: all 0.3s steps(8)
+
+    span:nth-child(2)
+      left: -45px
+      transition: all 0.325s steps(8)
+
+    span:nth-child(3)
+      left: -55px
+      transition: all 0.35s steps(8)
+
+    span:nth-child(4)
+      transition: all 0.4s steps(8)
+
+    span:nth-child(5)
+      left: -25px
+      transition: all 0.375s steps(8)
+
+  &:after 
+    position: absolute
+    right: 0
+    bottom: 0
+    left: 0
+    height: 5px
+    z-index: -2
+    content: ''
+
+  &:hover
+    color: $white
+
+  &:hover,
+  &:focus
+    color: $white
+
+    .hover
+      span:first-child 
+        width: calc(100% + 76px)
+        &:after
+          animation: whiteBlack 0.3s 0s 1
+
+      span:nth-child(2)
+        width: calc(100% + 46px)
+        transition: all 0.375s steps(8)
+        &:after
+          animation: whiteBlack 0.3s 0.06s 1 reverse backwards
+
+      span:nth-child(3)
+        width: calc(100% + 56px)
+        transition: all 0.35s steps(8)
+        &:after
+          animation: whiteBlack 0.3s 0.05s 1 forwards
+
+      span:nth-child(4)
+        width: calc(100% + 16px)
+        transition: all 0.3s steps(8)
+        &:after
+          animation: whiteBlack 0.3s 0s 1 reverse backwards
+
+      span:nth-child(5)
+        width: calc(100% + 26px)
+        transition: all 0.325s steps(8)
+        &:after
+          animation: whiteBlack 0.3s 0.07s 1 forwards
+
+  &.btn-magenta 
+    background: $magenta
+
+    span,
+    &:after
+      background: $magenta-darker
+
+@-webkit-keyframes whiteBlack 
+  0%,
+  24%
+    background:  $white
+
+  25%,
+  49%
+    background: rgba($black, 0.35)
+
+  50%,
+  74%
+    background: $white
+
+  75%,
+  100%
+    background: rgba($black, 0.35)
+
+@-moz-keyframes whiteBlack
+  0%,
+  24%
+    background:  $white
+
+  25%,
+  49%
+    background: rgba($black, 0.35)
+
+  50%,
+  74%
+    background: $white
+
+  75%,
+  100%
+    background: rgba($black, 0.35)
+
+@-ms-keyframes whiteBlack
+  0%,
+  24%
+    background:  $white
+    
+  25%,
+  49%
+    background: rgba($black, 0.35)
+
+  50%,
+  74%
+    background: $white
+
+  75%,
+  100%
+    background: rgba($black, 0.35)
+
+@keyframes whiteBlack
+  0%,
+  24%
+    background:  $white
+  
+  25%,
+  49%
+    background: rgba($black, 0.35)
+
+  50%,
+  74%
+    background: $white
+
+  75%,
+  100%
+    background: rgba($black, 0.35)
+
+
+/* ----------------- Animation ----------------- */
+.roadrunner,
+.roadrunner-1,
+.roadrunner-2
+  width: 200px
+  left:-15%
+  position: relative
+  animation-name: roadrunner
+  animation-duration: 9s
+  animation-timing-function: linear
+  animation-delay: 3s
+  animation-iteration-count: infinite
+
+.roadrunner
+  animation-duration: 9s
+  animation-delay: 3s
+
+.roadrunner-1
+  animation-duration: 12s
+  animation-delay: 4s
+
+.roadrunner-2
+  animation-duration: 9s
+  animation-delay: 2s
+
+@keyframes roadrunner
+  25%
+    left:25%
+  50%
+    left:50%
+  75% 
+    left:75%
+  100%
+    left:100%
+
+
+.roadrunner,
+.roadrunner-1,
+.roadrunner-2
+  img
+    width: 100%
+
+/* ----------------- Responsive ---------------- */
+// @media screen and (min-width: 1700px)
+//   .primary
+//     width: 70%
+
+@media screen and (max-width: 1500px)
+  .primary
+    width: 85%
   .item
-    font-size:35px
-    line-height: 4rem
+    font-size: 2.5rem
+  .primary-item p
+    font-size: 2rem
+    line-height: 2.2rem
+  .roadrunner,
+  .roadrunner-1,
+  .roadrunner-2
+    left: -20%
+
+@media screen and (max-width: 1180px)
+  .item
+    font-size: 2.2rem
+    line-height: 3rem
+  .col-primary-inner-container
+    .primary-item
+      h1
+        font-size: 1.5rem
+        line-height: 1.3rem
+  .col-primary-inner-container
+    .primary-item
+      p
+        font-size: 1.4rem
+        line-height: 1.6rem
+  .roadrunner
+    animation-duration: 7s
+    animation-delay: 1s
+
+  .roadrunner-1
+    animation-duration: 6s
+    animation-delay: 2s
+
+  .roadrunner-2
+    animation-duration: 8s
+    animation-delay: 2s
 
 @media screen and (max-width: 1000px)
   .item
@@ -167,14 +684,173 @@ p, a
     line-height: 3rem
   .item h3
     font-size: 50px
+  .arrows
+    width: 1.5rem
+  .primary
+    .btn
+      width: 75%
+      padding: 10px 10px 15px 10px
+  .nav-top
+    li
+      a
+        font-size: 1.1rem !important
 
 @media screen and (max-width: 880px)
+  // .col-primary-inner-container
+  //   .primary-item
+  //     h1
+  //       font-size: 1.6rem
+  //       line-height: 1.2rem
+  
+  // .col-primary-inner-container
+  //   .primary-item
+  //     h2
+  //       font-size: 1.3rem
+  //       line-height: 1.1rem
+
+  .col-primary-inner-container
+    .primary-item
+      p
+        font-size: 1.4rem
+        line-height: 1.4rem
   .item
     font-size:29px
-  .body-item p
-    font-size: 40px
-    line-height: 3rem
 
+  .primary-item
+    p
+      font-size: 40px
+      line-height: 3rem
+
+  .footer-container
+    .inner-container
+      h1
+        font-size: 2rem
+        line-height: 1.5rem
+  .roadrunner,
+  .roadrunner-1,
+  .roadrunner-2
+    left: -30%
+  
+  .mentors-spacing
+    display: none
+
+@media screen and (max-width: 840px)
+  .col-primary-inner-container
+    .primary-item
+      .mentors
+        h1
+          font-size: 1.3rem
+          line-height: 1rem
+  .col-primary
+    align-items: unset
+
+  .col-primary-inner-container
+    flex: 1 0 35%
+  
+  .col-primary-inner-container.callouts
+    flex: 1 0 30%
+
+  .roadrunner
+    animation-duration: 5s
+    animation-delay: 1s
+  .roadrunner-1
+    animation-duration: 4s
+    animation-delay: 1s
+  .roadrunner-2
+    animation-duration: 6s
+    animation-delay: 1s
+    
+  .full-menu
+    height:100%
+    overflow: hidden
+    display: grid
+    align-items: center
+
+  .icon
+    display: block !important
+    position: fixed
+    top: 10px
+    right: 10px
+
+  .menu-hide
+    display: none
+    
+  .menu-show
+    display: block
+
+  .nav-top
+    li:not(:first-child)
+      display: none
+
+  .right
+    float: none!important
+    min-height: 0!important
+
+  .responsive
+    position: relative
+    display: block !important
+
+  .responsive
+    li
+      display: grid !important
+      justify-items: center
+  
+  .nav-top
+    li
+      a
+        font-size: 2.3rem !important
+        line-height: 2rem
+  
+  .logo
+    padding: 10px!important
+    line-height: 0!important
+  
+  .img-adj
+    width: 80px
+
+@media screen and (max-width: 675px)
+  .primary
+    width: 80%
+
+  .col-primary
+    grid-row-gap: 30px
+  
+  .col-primary-inner-container
+    .primary-item
+      h1
+        font-size: 2.6rem
+        line-height: 2rem
+  .col-primary-inner-container
+    .primary-item
+      p
+        font-size: 2.2rem
+        line-height: 2.4rem
+
+  .col-primary-inner-container
+    .primary-item
+      .mentors
+        h1
+          font-size: 2.5rem
+          line-height: 2rem
+  
+  .col-primary-inner-container
+    .primary-item
+      .mentors
+        h2
+          font-size: 2rem
+          line-height: 1.6rem
+
+  .roadrunner,
+  .roadrunner-1,
+  .roadrunner-2
+    left: -32%
+  
+  .volume
+    img
+      width: 50px
+  
+  .col-primary-inner-container
+    flex: 100%
 
 @media screen and (max-width: 600px)
   .inner-container
@@ -189,32 +865,96 @@ p, a
     float: none
   .item
     font-size: 26px
-  .body-item p
+  .primary-item p
     font-size: 35px
     line-height: 2.5rem
   .spacing
     display: none
+  .sponsors-background
+    img
+      width: 60%
+  .roadrunner
+    animation-duration: 2s
+    animation-delay: 0s
+  .roadrunner-1
+    animation-duration: 2s
+    animation-delay: 0s
+  .roadrunner-2
+    animation-duration: 2s
+    animation-delay: 0s
 
 @media screen and (max-width: 530px)
   .item
     font-size: 22px
-  .item h3
-    font-size: 40px
-  .body
+  .item
+    h3
+      font-size: 40px
+  .primary-item
+    p
+      font-size: 35px
+      line-height: 2.5rem
+  .arrows
+    width: 1.25rem
+
+@media screen and (max-width: 450px)
+  .primary
     width: 90%
-    margin: 0 auto 25px auto
-  .body-inner-container
-    margin-top:30px
-  .body-item
-    padding:3%
-  .body-item p
-    font-size: 35px
-    line-height: 2.5rem
+  .primary
+    .item
+      h1
+        font-size: 2.75rem
+        line-height: 2.5rem
+  .primary-item
+    h1
+      font-size: 2.25rem
+      line-height: 2rem
+  .roadrunner,
+  .roadrunner-1,
+  .roadrunner-2
+    left: -55%
+  .roadrunner
+    animation-duration: 2s
+    animation-delay: 1s
+  .roadrunner-1
+    animation-duration: 2s
+    animation-delay: 1s
+  .roadrunner-2
+    animation-duration: 2s
+    animation-delay: 1s
 
 @media screen and (max-width: 374px)
   .item
     font-size: 20px
     line-height: 2.75rem
-  .body-item p
-    font-size: 25px
-    line-height: 2rem
+  .primary-item p
+    font-size: 1.8rem
+    line-height: 2.2rem
+  
+  .col-primary-inner-container
+    .primary-item
+      h1
+        font-size: 1.8rem
+        line-height: 1.6rem
+  .col-primary-inner-container
+    .primary-item
+      p
+        font-size: 1.8rem
+        line-height: 1.9rem
+
+  .col-primary-inner-container
+    .primary-item
+      .mentors
+        h1
+          font-size: 1.8rem
+          line-height: 1.6rem
+  .col-primary-inner-container
+    .primary-item
+      .mentors
+        p
+          font-size: 1.8rem
+          line-height: 1.9rem
+  
+  .roadrunner,
+  .roadrunner-1,
+  .roadrunner-2
+    left: -65%
