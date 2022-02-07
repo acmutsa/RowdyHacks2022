@@ -96,7 +96,7 @@ function arrowScrollUp(){
 }
 
 function initMap() {
-    var UTSA = { lat: 29.5827351, lng: -98.6188974 };
+    var UTSA = { lat: 29.5829, lng: -98.62015 };
 
     var map = new google.maps.Map(document.getElementById("map"), {
         mapId: "994332be080ad6ed" ,
@@ -107,9 +107,9 @@ function initMap() {
     '<div id="content">' +
     '<div id="siteNotice">' +
     "</div>" +
-    '<h1 id="firstHeading" class="firstHeading" style="text-align: left; font-size:1.2rem;">UTSA</h1>' +
-    '<p style="text-align:left; font-size: .9rem; line-height:1rem; color: black; text-shadow:none">1 UTSA Circle <br/>San Antonio, TX 78249</p>' +
-    '<a style="font-size:.8rem;color:#fa448c;" href="https://maps.google.com/maps?ll=29.582735,-98.618897&z=15&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=2658632929587635980" target="_blank">View on Google Maps</a>' +
+    '<h1 id="firstHeading" class="firstHeading" style="text-align: left; font-size:0.9rem;line-height:1.1rem;">UTSA <br/> Student Union</h1>' +
+    '<p style="text-align:left; font-size: .9rem; line-height:1rem; color: black; text-shadow:none">H-E-B University Center <br/> 1 UTSA Circle <br/>San Antonio, TX 78249</p>' +
+    '<a style="font-size:.8rem;color:#fa448c;" href="https://www.google.com/maps?ll=29.582842,-98.620139&z=19&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=17592173578294516198" target="_blank">View on Google Maps</a>' +
     "</div>" +
     "</div>";
     const infowindow = new google.maps.InfoWindow({
@@ -123,10 +123,17 @@ function initMap() {
         title: "UTSA",
     });
 
-    infowindow.open({
-        anchor: marker,
-        map,
-        shouldFocus: false,
+    function displayInfo(){
+        infowindow.open({
+            anchor: marker,
+            map,
+            shouldFocus: false,
+        });
+    }
+
+    displayInfo();
+    marker.addListener("click", () => {
+        displayInfo();
     });
     
 }
