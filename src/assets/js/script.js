@@ -16,6 +16,7 @@ window.onload = function(){
     if(randomExists){
         getMentors();
     }
+    getCurrentPage();
 }
 
 function playSong(){
@@ -280,5 +281,13 @@ function getMentors(){
     })
     .catch(err => {
         throw err
+    });
+}
+
+function getCurrentPage(){
+    $('a').each(function(){
+        if ($(this).prop('href') == window.location.href) {
+            $(this).addClass('active'); $(this).parents('li').addClass('active');
+        }
     });
 }
