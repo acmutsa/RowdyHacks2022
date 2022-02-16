@@ -160,11 +160,16 @@ a
 .unhide
   display: none
 
+#banner
+  position: fixed
+  top: 0
+  right: 1%
+
 
 /* ----------------- Body ---------------- */
 
 .primary
-  width: 81%
+  width: 80%
   display: grid
   grid-gap: 2%
   margin: 60px auto 75px auto
@@ -306,11 +311,11 @@ a
 
 /* ---------------- Volume ----------------- */
 .volume
-  width: 98%
   display: grid
   position: absolute
   justify-items: end
   top: 120px
+  left: 2%
 
 .volume
   img
@@ -640,11 +645,11 @@ a
 /* ----------------- Responsive ---------------- */
 @media screen and (min-width: 1700px)
   .primary
-    width: 70%
+    width: 65%
 
 @media screen and (max-width: 1500px)
   .primary
-    width: 80%
+    width: 75%
 
   .item
     font-size: 2.5rem
@@ -688,6 +693,10 @@ a
   .roadrunner-2
     animation-duration: 8s
     animation-delay: 2s
+  .nav-top
+    li
+      a
+        font-size: 1.1rem !important
 
 @media screen and (max-width: 1000px)
   .item
@@ -704,7 +713,10 @@ a
   .nav-top
     li
       a
-        font-size: 1.1rem !important
+        font-size: 0.9rem !important
+  #banner
+    img
+      width: 75px
 
 @media screen and (max-width: 880px)
   .callouts
@@ -821,6 +833,9 @@ a
   
   .img-adj
     width: 80px
+  
+  #banner
+    right: 20%
 
 @media screen and (max-width: 675px)
   .primary
