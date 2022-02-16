@@ -76,6 +76,8 @@ function showMenu() {
         $('#logo-img').toggleClass('img-adj');
         $('#xmenu').toggleClass('menu-show');
         $('#noxmenu').toggleClass('menu-hide');
+        $('#banner').toggleClass("banner-adjust");
+
     });
 }
 
