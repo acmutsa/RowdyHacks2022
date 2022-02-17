@@ -1,16 +1,10 @@
 @import './src/components/variables.sass'
-
 .col-primary.faq
   display: inline-flex
   grid-row-gap: 20px
   grid-column-gap: 2%
   flex-wrap: wrap
   align-items: flex-start
-
-
-.faq
-    display: grid
-    grid-gap:20px
 
 .faq
     p
@@ -32,10 +26,27 @@
 
 .faq
     img
-        width:85%
+        width:68%
 
+.arrows
+  width: 2rem
+  cursor: pointer
+
+.arrow-up
+  cursor: pointer
+  transform: rotate(0deg)
+
+.arrow-down
+  cursor: pointer
+  transform: rotate(90deg)
+
+.arrow-left
+  cursor: pointer
+  transform: rotate(180deg)
 
 @media screen and (max-width: 770px)
+    .col-primary.faq
+        display: grid
     .faq
         h1
             font-size: 1.75rem
@@ -44,6 +55,9 @@
         p
             font-size: 30px
             line-height: 2.15rem
+    .faq
+        img
+            width: 60%
 
 @media screen and (max-width: 600px)
     .faq

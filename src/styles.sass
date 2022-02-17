@@ -40,7 +40,7 @@ a:hover
 ::selection, ::-moz-selection
   background: $dark-bubblegum
 
-/* ----------------- Dividers and Spacing ---------------- */
+/* ----------------- Dividers, Textures, and Spacing ---------------- */
 
 .spacing
   float: left
@@ -93,6 +93,15 @@ a:hover
 .yellow-background
   background: #fec859
 
+.texture-3op
+  background: url(assets/images/pixels-3op.png)
+
+.texture-5op
+  background: url(assets/images/pixels-5op.png)
+
+.texture-7op
+  background: url(assets/images/pixels-7op.png)
+
 /* ----------------- Header and Layout ---------------- */
 
 #page-container
@@ -100,7 +109,7 @@ a:hover
   min-height: 100vh
 
 #content-wrap
-  padding-bottom: 10rem
+  padding-bottom: 14rem
   overflow-x: hidden
 
 .layoutadj
@@ -144,37 +153,8 @@ a:hover
 .show
   cursor: pointer
 
-.arrows
-  width: 2rem
-  cursor: pointer
-
-.arrow-up
-  cursor: pointer
-  transform: rotate(0deg)
-
-.arrow-down
-  cursor: pointer
-  transform: rotate(90deg)
-
-.arrow-left
-  cursor: pointer
-  transform: rotate(180deg)
-
 .unhide
   display: none
-
-#banner
-  position: fixed
-  top: 0
-  right: 0.8%
-
-#banner
-  img
-    filter: drop-shadow(0 5px 2px rgb(40 9 89 / 0.4))
-
-.banner-adjust
-  right: 0
-  left: 2%
 
 /* ----------------- Body ---------------- */
 
@@ -219,20 +199,50 @@ a:hover
   border-bottom: solid 5px #fec859
   flex: 1 0 30%
 
-
-.primary
-  .item
-    h1
-      text-align: center
-      font-size: 3.25rem
-      line-height: 2.75rem
-      color: #280959
-
 .primary-item
   padding: 3%
   display: grid
   grid-gap:20px
 
+.col-primary-inner-container
+  .primary-item
+    justify-items: center
+
+.section-container
+  width: 100%
+  background-color: #ffe4ac
+  border-bottom: solid 20px #280959
+  border-top: solid 20px #280959
+
+.section-container
+  .primary-item
+    padding: 3%
+
+.col-primary-inner-container
+  .mentors
+    .item
+      line-height: 0rem
+
+.sponsor-links
+  display: flex
+  width: 100%
+
+#map
+  width: 100%
+  height: 650px
+
+.frame
+  border: solid 3px #fa448c
+
+.col-primary-inner-container
+  img
+    width: 50%
+    margin: 0 auto
+
+.location
+  img
+    width: 100%
+  
 .location
   .col-primary
     align-items: flex-start
@@ -240,12 +250,22 @@ a:hover
 .primary-item.location
   grid-gap:0
 
-.primary-item
-  p
-    font-size: 55px
-    line-height: 4rem
-    text-align: center
-    color: #fec859
+.sponsors-background
+  background-color: #fff2d6
+  border-bottom: solid 4px #280959
+
+.sponsors-background
+  img
+    width: 100%
+
+/* ---------------- Typography ----------------- */
+.primary
+  .item
+    h1
+      text-align: center
+      font-size: 3.2rem
+      line-height: 2.75rem
+      color: #280959
 
 .primary-item
   h1
@@ -254,10 +274,12 @@ a:hover
     line-height: 2.5rem
     color: #280959
 
-.col-primary-inner-container
-  .primary-item
-    justify-items: center
-
+.primary-item
+  p
+    font-size: 3rem
+    line-height: 3.5rem
+    text-align: center
+    color: #fec859
 
 .col-primary-inner-container
   .primary-item
@@ -282,50 +304,6 @@ a:hover
       font-size: 2rem
       line-height: 2.1rem
 
-.col-primary-inner-container
-  img
-    width: 50%
-    margin: 0 auto
-
-.section-container
-  width: 100%
-  background-color: #ffe4ac
-  border-bottom: solid 20px #280959
-  border-top: solid 20px #280959
-
-.section-container
-  .primary-item
-    padding: 3%
-
-.col-primary-inner-container
-  .mentors
-    .item
-      line-height: 0rem
-
-.texture-3op
-  background: url(assets/images/pixels-3op.png)
-
-.texture-5op
-  background: url(assets/images/pixels-5op.png)
-
-.texture-7op
-  background: url(assets/images/pixels-7op.png)
-
-.sponsor-links
-  display: flex
-  width: 100%
-
-#map
-  width: 100%
-  height: 650px
-
-.frame
-  border: solid 3px #fa448c
-
-.location
-  img
-    width: 100%
-
 /* ---------------- Volume ----------------- */
 .volume
   display: grid
@@ -343,16 +321,7 @@ a:hover
   img:hover
     opacity:1
 
-/* ---------------- Sponsors ---------------- */
-.sponsors-background
-  background-color: #fff2d6
-  border-bottom: solid 4px #280959
-
-.sponsors-background
-  img
-    width: 100%
-
-/* ----------------- arrow scroll --------------*/
+/* ----------------- Arrow scroll --------------*/
 #arrowscroll
   position: fixed
   cursor: pointer
@@ -369,44 +338,6 @@ a:hover
 
 #arrowscroll:hover
     opacity: 1
-
-
-/* ----------------- Footer ---------------- */
-
-footer
-  position: absolute
-  bottom: 0
-  width: 100%
-  overflow-x: hidden
-
-.footer-holder
-  border-top: solid 20px #280959
-  background-color: #4e2a87
-
-.footer-container
-  display: grid
-  grid-gap: 15px
-  align-content: center
-  justify-content: center
-  align-items: center
-  padding: 50px 0
-
-.footer-container
-  .inner-container
-    display: inline-flex
-    grid-column-gap: 15px
-
-.footer-container
-  .inner-container
-    img
-      border: solid 4px #280959
-      border-radius: 12px
-
-.footer-container
-  .inner-container
-    h1
-      font-size: 2.5rem
-      line-height: 1.75rem
 
 /* ----------------- Button ----------------*/
 $white: #fff
@@ -732,62 +663,6 @@ a
     .btn
       width: 75%
       padding: 10px 10px 15px 10px
-  #banner
-    img
-      width: 75px
-  .mentors-spacing
-    display: none
-  
-  .full-menu
-    height:100%
-    overflow: hidden
-    display: grid
-    align-items: center
-
-  .icon
-    display: block !important
-    position: fixed
-    top: 10px
-    right: 3%
-
-  .menu-hide
-    display: none
-    
-  .menu-show
-    display: block
-
-  .nav-top
-    li:not(:first-child)
-      display: none
-
-  .right
-    float: none!important
-    min-height: 0!important
-
-  .responsive
-    position: relative
-    display: block !important
-
-  .responsive
-    li
-      display: grid !important
-      justify-items: center
-  
-  .nav-top
-    li
-      a
-        font-size: 2.3rem !important
-        line-height: 2rem
-  
-  .logo
-    padding: 10px!important
-    line-height: 0!important
-  
-  .img-adj
-    width: 80px
-  
-  #banner
-    right: 20%
 
 @media screen and (max-width: 880px)
   .callouts
@@ -931,6 +806,8 @@ a
     display: block
   .hide
     display: none
+  #arrowscroll
+    display: none !important
 
 @media screen and (max-width: 530px)
   .item
@@ -944,12 +821,14 @@ a
       line-height: 2.5rem
   .arrows
     width: 1.25rem
-  #arrowscroll
-    display: none !important
+  .sponsors-background
+    img
+      width: 100%
 
 @media screen and (max-width: 450px)
   .primary
     width: 90%
+    grid-gap: 0.5%
   .primary
     .item
       h1
