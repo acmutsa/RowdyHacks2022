@@ -4,14 +4,11 @@ window.onload = function(){
     var randomExists = document.getElementById("random");
     var mentorholder = document.getElementById("mentorsHolder");
 
+    getCurrentPage();
     arrowAppear();
     buttonAnimation();
     showFAQ();
     showMenu();
-
-    if(exists){
-        playSong();
-    }
 
     if(mapExists){
         initMap();
@@ -25,7 +22,9 @@ window.onload = function(){
         getMentors();
     }
 
-    getCurrentPage();
+    if(exists){
+        playSong();
+    }
 }
 
 function playSong(){
@@ -235,8 +234,10 @@ function getMentors(){
             var description = out[i].Description;
             var firstname = out[i].FirstName;
             var lastname = out[i].LastName;
-            var title = out[i].Title;
             var mentorImage = out[i].Image;
+            var link = out[i].Link;
+
+            link = link.slice(1);
 
             var divHolder = document.getElementById("mentorsHolder");
             var colPrimaryInnerContainer = document.createElement("div");
@@ -260,10 +261,10 @@ function getMentors(){
             var header2A = document.createElement("h2");
             var header2B = document.createElement("h2");
             var paragraph = document.createElement("p");
+            var anchor = document.createElement("a");
 
             var FN = document.createTextNode(firstname);
             var LN = document.createTextNode(lastname);
-            var titleText = document.createTextNode(title);
             var descText = document.createTextNode(description);
             var FL = document.createTextNode("Software");
             var SL = document.createTextNode("Engineer");
@@ -285,9 +286,11 @@ function getMentors(){
             colPrimaryInnerContainer.className = "col-primary-inner-container mentors";
             texture7op.className = "texture-7op";
             primaryItem.className = "primary-item mentors";
+            anchor.setAttribute("id", link);
 
             divHolder.appendChild(colPrimaryInnerContainer);
             colPrimaryInnerContainer.appendChild(texture7op);
+
             texture7op.appendChild(primaryItem);
             primaryItem.appendChild(img);
             primaryItem.appendChild(innercontainer);
@@ -323,11 +326,30 @@ function getMentors(){
                 paragraph.appendChild(descText);
                 primaryItem.appendChild(paragraph);
             }
-
+            texture7op.appendChild(anchor);
         }
+        scrollToMentor();
     }).catch(err => {
         throw err
     });
+}
+
+function scrollToMentor(){
+    var url = (document.URL);
+    var mentorsAnchor = url.split("/")[3];
+    mentorsAnchor = mentorsAnchor.split("#")[1];
+    mentorsAnchor = "#" + mentorsAnchor;
+    if(mentorsAnchor == "#mentor4" || mentorsAnchor == "#mentor5" || mentorsAnchor == "#mentor6"){
+        $('html, body').animate({
+            scrollTop: $(mentorsAnchor).offset().top - 400
+        },1200);
+    }
+    if(mentorsAnchor == "#mentor1" || mentorsAnchor == "#mentor2" || mentorsAnchor == "#mentor3"){
+        $('html, body').animate({
+            scrollTop: $(mentorsAnchor).offset().top - 500
+        },1200);
+    }
+    // console.log(mentorsAnchor);
 }
 
 function getCurrentPage(){
