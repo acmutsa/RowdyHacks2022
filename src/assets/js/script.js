@@ -289,6 +289,7 @@ function getMentors(){
             anchor.setAttribute("id", link);
 
             divHolder.appendChild(colPrimaryInnerContainer);
+            colPrimaryInnerContainer.appendChild(anchor);
             colPrimaryInnerContainer.appendChild(texture7op);
 
             texture7op.appendChild(primaryItem);
@@ -326,31 +327,32 @@ function getMentors(){
                 paragraph.appendChild(descText);
                 primaryItem.appendChild(paragraph);
             }
-            texture7op.appendChild(anchor);
         }
-        scrollToMentor();
+        var url = (document.URL);
+        var mentorsAnchor = url.split("/")[3];
+        mentorsAnchor = mentorsAnchor.split("#")[1];
+        document.getElementById(mentorsAnchor).scrollIntoView();
     }).catch(err => {
         throw err
     });
 }
 
-function scrollToMentor(){
-    var url = (document.URL);
-    var mentorsAnchor = url.split("/")[3];
-    mentorsAnchor = mentorsAnchor.split("#")[1];
-    mentorsAnchor = "#" + mentorsAnchor;
-    if(mentorsAnchor == "#mentor4" || mentorsAnchor == "#mentor5" || mentorsAnchor == "#mentor6"){
-        $('html, body').animate({
-            scrollTop: $(mentorsAnchor).offset().top - 400
-        },1200);
-    }
-    if(mentorsAnchor == "#mentor1" || mentorsAnchor == "#mentor2" || mentorsAnchor == "#mentor3"){
-        $('html, body').animate({
-            scrollTop: $(mentorsAnchor).offset().top - 500
-        },1200);
-    }
-    // console.log(mentorsAnchor);
-}
+// function scrollToMentor(){
+//     var url = (document.URL);
+//     var mentorsAnchor = url.split("/")[3];
+//     mentorsAnchor = mentorsAnchor.split("#")[1];
+//     // var mentorsAnchorID = "#" + mentorsAnchor;
+//     if(mentorsAnchorID == "#mentor4" || mentorsAnchorID == "#mentor5" || mentorsAnchorID == "#mentor6"){
+//         $('html, body').animate({
+//             scrollTop: $(mentorsAnchorID).offset().top - 50
+//         },1200);
+//     }
+//     if(mentorsAnchorID == "#mentor1" || mentorsAnchorID == "#mentor2" || mentorsAnchorID == "#mentor3"){
+//         $('html, body').animate({
+//             scrollTop: $(mentorsAnchorID).offset().top - 500
+//         },1200);
+//     }
+// }
 
 function getCurrentPage(){
     $('a').each(function(){
