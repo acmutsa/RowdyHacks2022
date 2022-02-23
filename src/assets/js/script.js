@@ -30,6 +30,7 @@ window.onload = function(){
 function playSong(){
     var song = document.getElementById("song");
     var icon = document.getElementById("volumeIcon");
+    song.pause();
     var playPromise = song.play();
 
     if (playPromise !== undefined) {
