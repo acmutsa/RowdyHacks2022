@@ -4,34 +4,157 @@
   Navigation bar pulled from
   https://www.w3schools.com/css/css_navbar_horizontal.asp
 
+.top
+  background-color: rgba(40, 9, 89,0.9)
+  filter: drop-shadow(0 2px 2px rgb(40 9 89 / 0.5))
+
+.nav-holder
+  display: grid
+
+.main-nav
+  position: fixed
+  width: 100%
+  min-height: 90px
+  z-index: 10
+
+.icon
+  display: none
+
+.icon
+  img
+    cursor: pointer
+
 ul
-  &.nav
-    &-top
-      list-style-type: none
-      margin: 0
+  &.nav-top
+    list-style-type: none
+    display: inline-flex
+    align-items: center
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    & a
+      display: block
+      color: $white
+      text-align: center
       padding: 10px
-      overflow: hidden
-      background-color: #5cdcc5
-      & li
-        float: left
-        &:first-child a
-          padding: 0
-        & a
-          display: block
-          color: $white
-          text-align: center
-          padding: 20px 22px
-          text-decoration: none
-          font-size: 16px
-        & a:hover:not(.active)
-          color: $deep-dark-purple
-        &.right
-          float: right
-.nav-logo
-  width: 52px
-  height: 52px
-  background: url('../assets/images/logos/rh_city_logo_white.png') no-repeat
-  background-size: contain
-  &:hover
-    background: url('../assets/images/logos/RowdyHacks_City_Logo.png') no-repeat
-    background-size: contain
+      text-decoration: none
+      font-size:1.4rem
+    & a:hover:not(.active)
+      color: #71e8d2
+    &.right
+      float: right
+      min-height: 70px
+    & a.active
+      color: #71e8d2
+
+#banner
+  position: fixed
+  top: 0
+  right: 0.8%
+
+#banner
+  img
+    filter: drop-shadow(0 5px 2px rgb(40 9 89 / 0.4))
+
+.banner-adjust
+  right: 0
+  left: 2%
+
+
+/* ----------------- Footer ---------------- */
+
+footer
+  position: absolute
+  bottom: 0
+  width: 100%
+  overflow-x: hidden
+
+.footer-holder
+  border-top: solid 20px #280959
+  background-color: #4e2a87
+
+.footer-container
+  display: grid
+  grid-gap: 15px
+  align-content: center
+  justify-content: center
+  align-items: center
+  padding: 50px 0
+
+.footer-container
+  .inner-container
+    display: inline-flex
+    grid-column-gap: 15px
+
+.footer-container
+  .inner-container
+    img
+      border: solid 4px #280959
+      border-radius: 12px
+
+.footer-container
+  .inner-container
+    h1
+      font-size: 2.5rem
+      line-height: 1.75rem
+
+/* -------------------- Responsive -------------------*/
+
+@media screen and (max-width: 1000px)
+  #banner
+    right: 18%
+
+  #banner
+    img
+      width: 68px
+  
+  .full-menu
+    height:100%
+    overflow: hidden
+    display: grid
+    align-items: center
+
+  .icon
+    display: block !important
+    position: fixed
+    top: 10px
+    right: 3%
+
+  .menu-hide
+    display: none
+    
+  .menu-show
+    display: block
+
+  .nav-top
+    li:not(:first-child)
+      display: none
+
+  .right
+    float: none!important
+    min-height: 0!important
+
+  .responsive
+    position: relative
+    display: block !important
+
+  .responsive
+    li
+      display: grid !important
+      justify-items: center
+  
+  .nav-holder
+    justify-items: center
+  
+  .nav-top
+    li
+      a
+        font-size: 2.3rem !important
+        line-height: 2rem
+  
+  .logo
+    padding: 10px!important
+    line-height: 0!important
+  
+  .img-adj
+    width: 80px

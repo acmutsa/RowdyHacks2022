@@ -1,34 +1,68 @@
 @import './src/components/variables.sass'
+.col-primary.faq
+  display: inline-flex
+  grid-row-gap: 20px
+  grid-column-gap: 2%
+  flex-wrap: wrap
+  align-items: flex-start
 
 .faq
-    display: grid
-    grid-gap:20px
+    p
+        font-size: 2rem
+        line-height:2.2rem
+        margin-bottom: 20px
+        text-align: left
 
-.faq p
-    font-size: 40px
-    line-height:2.75rem
+.faq
+    h1
+        text-align: center
+        font-size: 2.1rem
+        line-height: 1.5rem
+        color: #280959
 
-.faq h1
-    text-align: center
-    font-size: 45px
-    line-height: 2.5rem
-    color: #280959
+.faq
+    .item
+        line-height: 2.5rem
 
-.faq .item
-    line-height: 3rem
+.faq
+    img
+        width:68%
 
+.arrows
+  width: 2rem
+  cursor: pointer
 
-@media screen and (max-width: 1100px)
-    .faq h1
-        font-size: 35px
-        line-height: 2rem
-    .faq p
-        font-size: 30px
-        line-height: 2.15rem
+.arrow-up
+  cursor: pointer
+  transform: rotate(0deg)
+
+.arrow-down
+  cursor: pointer
+  transform: rotate(90deg)
+
+.arrow-left
+  cursor: pointer
+  transform: rotate(180deg)
+
+@media screen and (max-width: 770px)
+    .col-primary.faq
+        display: grid
+    .faq
+        h1
+            font-size: 1.75rem
+            line-height: 1.2rem
+    .faq
+        p
+            font-size: 30px
+            line-height: 2.15rem
+    .faq
+        img
+            width: 60%
 
 @media screen and (max-width: 600px)
-    .faq .inner-container
-        display: inline-flex
+    .faq
+        .inner-container
+            display: inline-flex
 
 @media screen and (max-width: 530px)
     .faq .item
