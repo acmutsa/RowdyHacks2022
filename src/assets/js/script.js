@@ -368,6 +368,8 @@ function getMentors(){
                     primaryItem.appendChild(social);
                     social.appendChild(anchorLinkedIn);
                     anchorLinkedIn.appendChild(imgLinkedIn);
+                    
+                    break;
                 case 'Senior Student':
                     FL = document.createTextNode("Senior");
                     SL = document.createTextNode("Student");
