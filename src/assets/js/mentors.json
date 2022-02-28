@@ -1,62 +1,24 @@
  [
     {
         "Number": 1,
-        "Image": "people-guy-2.png",
-        "FirstName": "FirstName",
-        "LastName": "LastName",
-        "Link": "#mentor1",
-        "Title": "Software Engineering",
-        "Category": 1,
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
+        "Image": "beltran-blaine.jpg",
+        "FirstName": "Blaine",
+        "LastName": "Beltran",
+        "Link": "#mentor2",
+        "Title": "iOS Developer",
+        "LinkedIn": "https://www.linkedin.com/in/blainebeltran/",
+        "Proficient": "Python, Swift, iOS App Dev, Testing, wire framing, project brainstorming and User centered design",
+        "Description": "He/Him - I am an iOS developer. I previously worked at JPMorgan Chase and Lululemon as a Mobile Software Engineer. I enjoy learning new things, building apps, working out, and hanging out with friends. The main reason I want to be a mentor is to help others succeed in any way I can. My mentors have been a big help during my journey in software, so I want to be able to do that for someone else."
     },
     {
         "Number": 2,
-        "Image": "people-guy-3.png",
-        "FirstName": "FirstName",
-        "LastName": "LastName",
-        "Link": "#mentor2",
-        "Title": "Software Engineering",
-        "Category": 1,
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
-    },
-    {
-        "Number": 3,
-        "Image": "people-guy-1.png",
-        "FirstName": "FirstName",
-        "LastName": "LastName",
-        "Link": "#mentor3",
-        "Title": "Software Engineering",
-        "Category": 1,
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
-    },
-    {
-        "Number": 4,
-        "Image": "people-gal-1.png",
-        "FirstName": "FirstName",
-        "LastName": "LastName",
-        "Link": "#mentor4",
-        "Title": "Software Engineering",
-        "Category": 1,
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
-    },
-    {
-        "Number": 5,
-        "Image": "people-gal-3.png",
-        "FirstName": "FirstName",
-        "LastName": "LastName",
-        "Link": "#mentor5",
-        "Title": "Software Engineering",
-        "Category": 1,
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
-    },
-    {
-        "Number": 6,
-        "Image": "people-gal-2.png",
-        "FirstName": "FirstName",
-        "LastName": "LastName",
-        "Link": "#mentor6",
-        "Title": "Software Engineering",
-        "Category": 1,
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris pariatur."
+        "Image": "people-gal-4.png",
+        "FirstName": "Bhavya",
+        "LastName": "Gokana",
+        "Link": "#mentor1",
+        "Title": "Senior Student",
+        "LinkedIn": "https://www.linkedin.com/in/bhavya-gokana-41a2821b8/",
+        "Proficient": "Project brainstorming, User-testing, design feedback, java, C",
+        "Description": "She/Her - Hi everyone! My name is Bhavya. I moved to San Antonio five years ago and love it here. During my free time I either play tennis with my sister or just paint."
     }
 ]

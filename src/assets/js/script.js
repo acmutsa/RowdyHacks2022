@@ -155,13 +155,14 @@ function getMentorsHome(){
     .then(res => res.json())
     .then((out) => {
         var randomNumHolder = [];
-        for(i = 0; i < 3; i++){
-            var random = Math.floor(Math.random() * 6);
-            randomNumHolder.forEach(function(randomNum){
-                while(random == randomNum){
-                    random = Math.floor(Math.random() * 6);
-                }
-            })
+        for(i = 0; i < 2; i++){
+            random = i;
+            // var random = Math.floor(Math.random() * 3);
+            // randomNumHolder.forEach(function(randomNum){
+            //     while(random == randomNum){
+            //         random = Math.floor(Math.random() * 3);
+            //     }
+            // })
             randomNumHolder.push(random);
             var link = out[random].Link;
             var firstname = out[random].FirstName;
@@ -176,8 +177,10 @@ function getMentorsHome(){
             var innercontainer = document.createElement("div");
             var item1 = document.createElement("div");
             var item2 = document.createElement("div");
+            var itemSpacing = document.createElement("div");
             var cyanBackground = document.createElement("div");
             var magentaBackground = document.createElement("div");
+            var spacingDiv = document.createElement("div");
             var img = document.createElement("img");
             var header1A = document.createElement("h1");
             var header1B = document.createElement("h1");
@@ -188,6 +191,7 @@ function getMentorsHome(){
             var LN = document.createTextNode(lastname);
             var titleText = document.createTextNode(title);
             var readMore = document.createTextNode("Read More");
+            var nbs = document.createTextNode("\xa0");
 
             img.src = "../assets/images/mentors/"+mentorImage;
             alink.href = "/mentors/"+link;
@@ -195,6 +199,7 @@ function getMentorsHome(){
             innercontainer.className = "inner-container mentors";
             item1.className = "item";
             item2.className = "item";
+            itemSpacing.className = "spacing";
             cyanBackground.className = "cyan-background";
             magentaBackground.className = "magenta-background";
             colPrimaryInnerContainer.className = "col-primary-inner-container callouts";
@@ -210,6 +215,10 @@ function getMentorsHome(){
             item1.appendChild(header1A);
             header1A.appendChild(cyanBackground);
             cyanBackground.appendChild(FN);
+
+            innercontainer.appendChild(itemSpacing);
+            itemSpacing.appendChild(spacingDiv);
+            spacingDiv.appendChild(nbs);
 
             innercontainer.appendChild(item2);
             item2.appendChild(header1B);
@@ -233,10 +242,13 @@ function getMentors(){
     fetch('/assets/js/mentors.json').then(res => res.json()).then((out) => {
         for(i = 0; i <= 5; i++){
             var description = out[i].Description;
+            var title = out[i].Title;
+            var proficient = out[i].Proficient;
             var firstname = out[i].FirstName;
             var lastname = out[i].LastName;
             var mentorImage = out[i].Image;
             var link = out[i].Link;
+            var linkedInlink = out[i].LinkedIn;
 
             link = link.slice(1);
 
@@ -251,27 +263,36 @@ function getMentors(){
             var item3 = document.createElement("div");
             var item4 = document.createElement("div");
             var item5 = document.createElement("div");
+            var itemSpacing = document.createElement("div");
+            var proficientDiv = document.createElement("div");
             var yellowBackground = document.createElement("div");
             var yellowBackground2 = document.createElement("div");
             var cyanBackground = document.createElement("div");
             var magentaBackground = document.createElement("div");
             var spacing = document.createElement("div");
+            var social = document.createElement("div");
+
             var img = document.createElement("img");
             var header1A = document.createElement("h1");
             var header1B = document.createElement("h1");
             var header2A = document.createElement("h2");
             var header2B = document.createElement("h2");
             var paragraph = document.createElement("p");
+            var paragraph2 = document.createElement("p");
             var anchor = document.createElement("a");
+            var anchorLinkedIn = document.createElement("a");
+            var imgLinkedIn = document.createElement("img");
 
             var FN = document.createTextNode(firstname);
             var LN = document.createTextNode(lastname);
             var descText = document.createTextNode(description);
-            var FL = document.createTextNode("Software");
-            var SL = document.createTextNode("Engineer");
+            var profText = document.createTextNode("Proficient: " + proficient);
             var nbs = document.createTextNode("\xa0");
+            var nbs2 = document.createTextNode("\xa0");
 
             img.src = "../assets/images/mentors/"+mentorImage;
+            anchorLinkedIn.href = linkedInlink;
+            imgLinkedIn.src = "../assets/images/linkedin-icon-y.png";
             innercontainer.className = "inner-container mentors";
             innercontainer2.className = "inner-container mentors";
             item1.className = "item";
@@ -279,6 +300,10 @@ function getMentors(){
             item3.className = "item";
             item4.className = "item";
             item5.className = "item";
+            itemSpacing.className = "spacing";
+            social.className = "linkedIn"
+
+            proficientDiv.className = "proficient";
             spacing.className = "mentors-spacing";
             yellowBackground.className = "yellow-background";
             yellowBackground2.className = "yellow-background";
@@ -302,31 +327,118 @@ function getMentors(){
             header1A.appendChild(cyanBackground);
             cyanBackground.appendChild(FN);
 
+            innercontainer.appendChild(itemSpacing);
+            // itemSpacing.appendChild(spacingDiv);
+            // spacingDiv.appendChild(nbs);
+
             innercontainer.appendChild(item2);
             item2.appendChild(header1B);
             header1B.appendChild(magentaBackground);
             magentaBackground.appendChild(LN);
 
-            // software engineer
-            if(description = "Software Engineer"){
-                primaryItem.appendChild(innercontainer2);
+            var FL;
+            var SL;
+            switch(title){
+                case 'Senior Student':
+                    FL = document.createTextNode("Senior");
+                    SL = document.createTextNode("Student");
+                    primaryItem.appendChild(innercontainer2);
 
-                innercontainer2.appendChild(item3);
-                item3.appendChild(header2A);
-                header2A.appendChild(yellowBackground);
-                yellowBackground.appendChild(FL);
+                    innercontainer2.appendChild(item3);
+                    item3.appendChild(header2A);
+                    header2A.appendChild(yellowBackground);
+                    yellowBackground.appendChild(FL);
 
-                innercontainer2.appendChild(item4);
-                item4.appendChild(spacing);
-                spacing.appendChild(nbs);
+                    innercontainer2.appendChild(item4);
+                    item4.appendChild(spacing);
+                    spacing.appendChild(nbs2);
 
-                innercontainer2.appendChild(item5);
-                item5.appendChild(header2B);
-                header2B.appendChild(yellowBackground2);
-                yellowBackground2.appendChild(SL);
+                    innercontainer2.appendChild(item5);
+                    item5.appendChild(header2B);
+                    header2B.appendChild(yellowBackground2);
+                    yellowBackground2.appendChild(SL);
 
-                paragraph.appendChild(descText);
-                primaryItem.appendChild(paragraph);
+                    paragraph.appendChild(descText);
+                    primaryItem.appendChild(paragraph);
+
+                    primaryItem.appendChild(proficientDiv);
+                    proficientDiv.appendChild(paragraph2);
+                    paragraph2.appendChild(profText);
+
+                    primaryItem.appendChild(social);
+                    social.appendChild(anchorLinkedIn);
+                    anchorLinkedIn.appendChild(imgLinkedIn);
+
+                    break;
+                case 'Software Engineer':
+                    FL = document.createTextNode("Software");
+                    SL = document.createTextNode("Engineer");
+                    primaryItem.appendChild(innercontainer2);
+
+                    innercontainer2.appendChild(item3);
+                    item3.appendChild(header2A);
+                    header2A.appendChild(yellowBackground);
+                    yellowBackground.appendChild(FL);
+
+                    innercontainer2.appendChild(item4);
+                    item4.appendChild(spacing);
+                    spacing.appendChild(nbs2);
+
+                    innercontainer2.appendChild(item5);
+                    item5.appendChild(header2B);
+                    header2B.appendChild(yellowBackground2);
+                    yellowBackground2.appendChild(SL);
+
+                    paragraph.appendChild(descText);
+                    primaryItem.appendChild(paragraph);
+
+                    primaryItem.appendChild(proficientDiv);
+                    proficientDiv.appendChild(paragraph2);
+                    paragraph2.appendChild(profText);
+
+                    primaryItem.appendChild(social);
+                    social.appendChild(anchorLinkedIn);
+                    anchorLinkedIn.appendChild(imgLinkedIn);
+
+                    break;
+                case 'iOS Developer':
+                    FL = document.createTextNode("iOS");
+                    SL = document.createTextNode("Developer");
+                    primaryItem.appendChild(innercontainer2);
+
+                    innercontainer2.appendChild(item3);
+                    item3.appendChild(header2A);
+                    header2A.appendChild(yellowBackground);
+                    yellowBackground.appendChild(FL);
+
+                    innercontainer2.appendChild(item4);
+                    item4.appendChild(spacing);
+                    spacing.appendChild(nbs2);
+
+                    innercontainer2.appendChild(item5);
+                    item5.appendChild(header2B);
+                    header2B.appendChild(yellowBackground2);
+                    yellowBackground2.appendChild(SL);
+
+                    paragraph.appendChild(descText);
+                    primaryItem.appendChild(paragraph);
+
+                    primaryItem.appendChild(proficientDiv);
+                    proficientDiv.appendChild(paragraph2);
+                    paragraph2.appendChild(profText);
+
+                    primaryItem.appendChild(social);
+                    social.appendChild(anchorLinkedIn);
+                    anchorLinkedIn.appendChild(imgLinkedIn);
+
+                    break;
+                default:
+                    primaryItem.appendChild(innercontainer2);
+                    paragraph.appendChild(descText);
+                    paragraph2.appendChild(profText);
+                    primaryItem.appendChild(paragraph);
+                    primaryItem.appendChild(paragraph2);
+
             }
         }
         var url = (document.URL);
