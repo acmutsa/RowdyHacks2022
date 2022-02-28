@@ -339,6 +339,35 @@ function getMentors(){
             var FL;
             var SL;
             switch(title){
+                case 'Junior Mentor':
+                    FL = document.createTextNode("Junior");
+                    SL = document.createTextNode("Mentor");
+                    primaryItem.appendChild(innercontainer2);
+
+                    innercontainer2.appendChild(item3);
+                    item3.appendChild(header2A);
+                    header2A.appendChild(yellowBackground);
+                    yellowBackground.appendChild(FL);
+
+                    innercontainer2.appendChild(item4);
+                    item4.appendChild(spacing);
+                    spacing.appendChild(nbs2);
+
+                    innercontainer2.appendChild(item5);
+                    item5.appendChild(header2B);
+                    header2B.appendChild(yellowBackground2);
+                    yellowBackground2.appendChild(SL);
+
+                    paragraph.appendChild(descText);
+                    primaryItem.appendChild(paragraph);
+
+                    primaryItem.appendChild(proficientDiv);
+                    proficientDiv.appendChild(paragraph2);
+                    paragraph2.appendChild(profText);
+
+                    primaryItem.appendChild(social);
+                    social.appendChild(anchorLinkedIn);
+                    anchorLinkedIn.appendChild(imgLinkedIn);
                 case 'Senior Student':
                     FL = document.createTextNode("Senior");
                     SL = document.createTextNode("Student");
