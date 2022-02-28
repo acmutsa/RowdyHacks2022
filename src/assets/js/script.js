@@ -240,7 +240,7 @@ function getMentorsHome(){
 
 function getMentors(){
     fetch('/assets/js/mentors.json').then(res => res.json()).then((out) => {
-        for(i = 0; i <= 5; i++){
+        for(i = 0; i < 2; i++){
             var description = out[i].Description;
             var title = out[i].Title;
             var proficient = out[i].Proficient;
@@ -443,8 +443,10 @@ function getMentors(){
         }
         var url = (document.URL);
         var mentorsAnchor = url.split("/")[3];
-        mentorsAnchor = mentorsAnchor.split("#")[1];
-        document.getElementById(mentorsAnchor).scrollIntoView();
+        if(mentorsAnchor != "mentors"){
+            mentorsAnchor = mentorsAnchor.split("#")[1];
+            document.getElementById(mentorsAnchor).scrollIntoView();
+        }
     }).catch(err => {
         throw err
     });
