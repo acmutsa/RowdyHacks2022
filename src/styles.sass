@@ -173,7 +173,7 @@ img
   margin: 60px auto 75px auto
 
 .end
-  margin-bottom: 325px
+  margin-bottom: 375px
 
 .col-primary
   display: inline-flex
@@ -305,7 +305,7 @@ img
 
 .primary-item
   p
-    font-size: 3.1rem
+    font-size: 3.15rem
     line-height: 3.5rem
     text-align: center
     color: #fec859
@@ -705,6 +705,11 @@ a
     font-size: 50px
   .arrows
     width: 1.5rem
+  .full-menu
+    height:100%
+    overflow: hidden
+    display: grid
+    align-items: center
 
 @media screen and (max-width: 880px)
   .callouts
@@ -770,9 +775,10 @@ a
 @media screen and (max-width: 675px)
   .primary
     width: 80%
+    grid-gap: 15px
 
   .col-primary
-    grid-row-gap: 30px
+    grid-row-gap: 10px
   
   .col-primary-inner-container
     .primary-item
@@ -802,6 +808,10 @@ a
   .col-primary-inner-container
     flex: auto !important
   
+  .partner-background
+    img
+      width: 60%
+  
   .magenta-background
     float: none
   .cyan-background
@@ -830,9 +840,6 @@ a
     line-height: 2.5rem
   .spacing
     display: none
-  .partner-background
-    img
-      width: 60%
   .roadrunner
     animation-duration: 2s
     animation-delay: 0s
@@ -848,8 +855,6 @@ a
     display: none
   #arrowscroll
     display: none !important
-  .primary
-    grid-gap: 0.5%
 
 
 @media screen and (max-width: 530px)
