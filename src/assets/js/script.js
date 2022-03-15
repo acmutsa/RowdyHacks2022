@@ -465,7 +465,7 @@ function getPartners() {
             link.target = "_blank";
             link.className = "partner-links";
             partnerImage.src = "../assets/images/partners/" + image;
-            partnerImage.style = "max-height: 195px;"
+            partnerImage.style = "max-height: 150px;"
             partnerImage.alt = altText + " Logo";
 
             // combine elemnts and return
