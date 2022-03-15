@@ -18,6 +18,12 @@
         "altText": "TD Synnex"
     },
     {
+        "tier": "partner",
+        "image": "acm-logo.png",
+        "partnerLink": "acmutsa.org",
+        "altText": "ACM UTSA"
+    },
+    {
         "tier": "bronze",
         "image": "valero-logo.svg",
         "partnerLink": "www.valero.com",

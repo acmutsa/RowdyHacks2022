@@ -411,12 +411,41 @@ function getPartners() {
         // get length of json object
         const partnerLength = Object.keys(out).length;
 
+        // sort partners
+        var partnerPartner = [];
+        var bronzePartner = [];
+        var silverPartner = [];
+        var goldPartner = [];
+        var defaultPartner = [];
         for( i = 0; i < partnerLength; i++) {
+            switch(out[i].tier) {
+                case 'partner':
+                    partnerPartner.push(out[i]);
+                    break;
+                case 'bronze':
+                    bronzePartner.push(out[i]);
+                    break;
+                case 'silver':
+                    silverPartner.push(out[i]);
+                    break;
+                case 'gold':
+                    goldPartner.push(out[i]);
+                    break;
+                default:
+                    defaultPartner.push(out[i]);
+                    break;
+            }
+        }
+
+        // combine partners back into one array
+        const rhPartners = [ ...goldPartner, ...silverPartner, ...bronzePartner, ...partnerPartner, ...defaultPartner];
+
+        for( i = 0; i < rhPartners.length; i++) {
             // fill json values
-            var tier = out[i].tier; // not used in creation process currently
-            var image = out[i].image;
-            var partnerLink = out[i].partnerLink;
-            var altText = out[i].altText;
+            var tier = rhPartners[i].tier; // not used in creation process currently
+            var image = rhPartners[i].image;
+            var partnerLink = rhPartners[i].partnerLink;
+            var altText = rhPartners[i].altText;
 
             // create elements
             var partnerHolder = document.getElementById('partners');
@@ -430,6 +459,7 @@ function getPartners() {
             colInner.style, colTexture.style = "height: 200px; justify-content: center; align-items: center; display: flex;"
             colInner.className = "col-primary-inner-container partner-background";
             colTexture.className = "texture-3op";
+            colTexture.title = altText;
             item.className = "primary-item";
             link.href = "https://" + partnerLink;
             link.target = "_blank";
