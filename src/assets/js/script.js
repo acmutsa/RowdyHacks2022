@@ -3,6 +3,7 @@ window.onload = function(){
     var mapExists = document.getElementById("map");
     var randomExists = document.getElementById("random");
     var mentorholder = document.getElementById("mentorsHolder");
+    var partners = document.getElementById("partners");
 
     getCurrentPage();
     arrowAppear();
@@ -24,6 +25,10 @@ window.onload = function(){
 
     if(exists){
         playSong();
+    }
+
+    if(partners) {
+        getPartners();
     }
 }
 
@@ -395,6 +400,80 @@ function getMentors(){
         if(mentorsAnchor != "mentors"){
             mentorsAnchor = mentorsAnchor.split("#")[1];
             document.getElementById(mentorsAnchor).scrollIntoView();
+        }
+    }).catch(err => {
+        throw err
+    });
+}
+
+function getPartners() {
+    fetch('/assets/js/partners.json').then(res => res.json()).then((out) => {
+        // get length of json object
+        const partnerLength = Object.keys(out).length;
+
+        // sort partners
+        var partnerPartner = [];
+        var bronzePartner = [];
+        var silverPartner = [];
+        var goldPartner = [];
+        var defaultPartner = [];
+        for( i = 0; i < partnerLength; i++) {
+            switch(out[i].tier) {
+                case 'partner':
+                    partnerPartner.push(out[i]);
+                    break;
+                case 'bronze':
+                    bronzePartner.push(out[i]);
+                    break;
+                case 'silver':
+                    silverPartner.push(out[i]);
+                    break;
+                case 'gold':
+                    goldPartner.push(out[i]);
+                    break;
+                default:
+                    defaultPartner.push(out[i]);
+                    break;
+            }
+        }
+
+        // combine partners back into one array
+        const rhPartners = [ ...goldPartner, ...silverPartner, ...bronzePartner, ...partnerPartner, ...defaultPartner];
+
+        for( i = 0; i < rhPartners.length; i++) {
+            // fill json values
+            var tier = rhPartners[i].tier; // not used in creation process currently
+            var image = rhPartners[i].image;
+            var partnerLink = rhPartners[i].partnerLink;
+            var altText = rhPartners[i].altText;
+
+            // create elements
+            var partnerHolder = document.getElementById('partners');
+            var colInner = document.createElement('div');
+            var colTexture = document.createElement('div');
+            var item = document.createElement('div');
+            var link = document.createElement('a');
+            var partnerImage = document.createElement('img');
+
+            // populate created elements
+            colInner.style, colTexture.style = "height: 200px; justify-content: center; align-items: center; display: flex;"
+            colInner.className = "col-primary-inner-container partner-background";
+            colTexture.className = "texture-3op";
+            colTexture.title = altText;
+            item.className = "primary-item";
+            link.href = "https://" + partnerLink;
+            link.target = "_blank";
+            link.className = "partner-links";
+            partnerImage.src = "../assets/images/partners/" + image;
+            partnerImage.style = "max-height: 150px;"
+            partnerImage.alt = altText + " Logo";
+
+            // combine elemnts and return
+            partnerHolder.appendChild(colInner);
+            colInner.appendChild(colTexture);
+            colTexture.appendChild(item);
+            item.appendChild(link);
+            link.appendChild(partnerImage);
         }
     }).catch(err => {
         throw err
