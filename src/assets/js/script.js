@@ -3,6 +3,7 @@ window.onload = function(){
     var mapExists = document.getElementById("map");
     var randomExists = document.getElementById("random");
     var mentorholder = document.getElementById("mentorsHolder");
+    var partners = document.getElementById("partners");
 
     getCurrentPage();
     arrowAppear();
@@ -24,6 +25,10 @@ window.onload = function(){
 
     if(exists){
         playSong();
+    }
+
+    if(partners) {
+        getPartners();
     }
 }
 
@@ -395,6 +400,50 @@ function getMentors(){
         if(mentorsAnchor != "mentors"){
             mentorsAnchor = mentorsAnchor.split("#")[1];
             document.getElementById(mentorsAnchor).scrollIntoView();
+        }
+    }).catch(err => {
+        throw err
+    });
+}
+
+function getPartners() {
+    fetch('/assets/js/partners.json').then(res => res.json()).then((out) => {
+        // get length of json object
+        const partnerLength = Object.keys(out).length;
+
+        for( i = 0; i < partnerLength; i++) {
+            // fill json values
+            var tier = out[i].tier; // not used in creation process currently
+            var image = out[i].image;
+            var partnerLink = out[i].partnerLink;
+            var altText = out[i].altText;
+
+            // create elements
+            var partnerHolder = document.getElementById('partners');
+            var colInner = document.createElement('div');
+            var colTexture = document.createElement('div');
+            var item = document.createElement('div');
+            var link = document.createElement('a');
+            var partnerImage = document.createElement('img');
+
+            // populate created elements
+            colInner.style, colTexture.style = "height: 200px; justify-content: center; align-items: center; display: flex;"
+            colInner.className = "col-primary-inner-container partner-background";
+            colTexture.className = "texture-3op";
+            item.className = "primary-item";
+            link.href = "https://" + partnerLink;
+            link.target = "_blank";
+            link.className = "partner-links";
+            partnerImage.src = "../assets/images/partners/" + image;
+            partnerImage.style = "max-height: 195px;"
+            partnerImage.alt = altText + " Logo";
+
+            // combine elemnts and return
+            partnerHolder.appendChild(colInner);
+            colInner.appendChild(colTexture);
+            colTexture.appendChild(item);
+            item.appendChild(link);
+            link.appendChild(partnerImage);
         }
     }).catch(err => {
         throw err
