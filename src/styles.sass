@@ -1,5 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import './src/components/variables.sass'
+@import './components/variables.sass'
+
+::-webkit-scrollbar
+  width:10px
+
+::-webkit-scrollbar-thumb
+  background-color: #f73281
+  // border: solid 1px #ac275b
+
+
+::-webkit-scrollbar-track
+  background-color: #ffe2ee
+  border: solid 1px #e2c2cf
 
 html, body
   margin: 0
@@ -52,7 +64,7 @@ img
 
 .spacing
   float: left
-  width: 1.75vh
+  width: 1.5vh
 
 .pixel-purple-block
   width: 100%
@@ -205,7 +217,7 @@ img
   border: solid 3px #280959
   background-color: #481e8a
   border-bottom: solid 5px #fec859
-  flex: 1 0 30%
+  flex: 1 0 100%
 
 .primary-item
   padding: 3%
@@ -259,25 +271,41 @@ img
   grid-gap:0
 
 .mentors-adj
+  .col-primary-inner-container
+    .primary-item
+      justify-items: left
+
+.mentors-adj
   .col-primary
     align-items: flex-start
 
-.mentors.col-primary-inner-container
-  .primary-item
-    padding: 5%
+.mentorLayout
+  display: flex
+  align-items: flex-start
+  padding: 2%
+
+.mentors
+  .col-primary-inner-container
+    img
+      width: 100%
 
 .proficient
-  width:95%
+  width: 100%
   border-top: solid 1px #280959
-  border-bottom: solid 1px #280959
-  padding: 3%
+  padding-top: 3%
 
-.linkedIn
+.socials
+  display: flex
+  width: 100%
+  border-top: solid 1px #280959
+  padding-top: 3%
+
+.socials
   img
     border: solid 3px #280959
     border-radius: 9px
     cursor: pointer
-    width: 80%
+    width: 80% !important
 
 .partner-background
   background-color: #fff2d6
@@ -322,7 +350,7 @@ img
   .primary-item
     h2
       text-align: center
-      font-size: 2rem
+      font-size: 1.8rem
       line-height:1.7rem
       color: #280959
 
@@ -808,9 +836,12 @@ a
   .col-primary-inner-container
     flex: 1 0 100%
   
+  .col-primary-inner-container.callouts
+    flex: 1 0 100%
+  
   .partner-background
     img
-      width: 60%
+      width: 100%
   
   .magenta-background
     float: none
@@ -825,6 +856,19 @@ a
   .volume
     img
       width: 50px
+
+  .mentors-adj
+    .col-primary-inner-container
+      .primary-item
+        justify-items: center
+
+  .mentorLayout
+    flex-direction: column
+  
+  .mentors-adj
+    .col-primary-inner-container
+      img
+        width: 100%
 
 @media screen and (max-width: 600px)
   .inner-container
@@ -869,9 +913,6 @@ a
       line-height: 2.2rem
   .arrows
     width: 1.25rem
-  .partner-background
-    img
-      width: 100%
 
 @media screen and (max-width: 450px)
   .primary

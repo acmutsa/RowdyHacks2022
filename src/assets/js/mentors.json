@@ -12,7 +12,7 @@
     },
     {
         "Number": 2,
-        "Image": "bhavya_gokana.png",
+        "Image": "bhavya-gokana.jpg",
         "FirstName": "Bhavya",
         "LastName": "Gokana",
         "Link": "#mentor1",
@@ -20,5 +20,48 @@
         "LinkedIn": "https://www.linkedin.com/in/bhavya-gokana-41a2821b8/",
         "Proficient": "Project brainstorming, User-testing, design feedback, java, C",
         "Description": "She/Her - Hi everyone! My name is Bhavya. I moved to San Antonio five years ago and love it here. During my free time I either play tennis with my sister or just paint."
+    },
+    {
+        "Number": 3,
+        "Image": "people-guy-2.png",
+        "FirstName": "Trey",
+        "LastName": "D'Amico",
+        "Link": "#mentor3",
+        "Title": "Industry Mentor",
+        "Description": "Hello! I am the former Executive Director of RowdyHacks for 2021, and I am excited to return and mentor! I really love helping hackers brainstorm and optimize their projects with the goal of completing them. Outside of the hacking space, I like to play D&D, play video games, go on hikes, and hang out with friends."
+    },
+    
+    {
+        "Number": 4,
+        "Image": "Anna_Arroyo.jpg",
+        "FirstName": "Anna",
+        "LastName": "Arroyo",
+        "Link": "#mentor4",
+        "Twitter": "https://twitter.com/annaarroyoo",
+        "Title": "Software Engineer",
+        "Proficient": "Android software enginering",
+        "Description": "I'm a Software Engineer at Twitter and a UTSA Alumna based in Austin, TX. I work on building and improving the media experience on the Twitter Android App. I led RowdyHacks in 2020 and I am happy to be back as a mentor!"
+    },
+    {
+        "Number": 5,
+        "Image": "Jada_Ebong.jpg",
+        "FirstName": "Jada",
+        "LastName": "Ebong",
+        "Link": "#mentor5",
+        "LinkedIn":  "https://www.linkedin.com/in/jadaebong",
+        "Twitter": "https://twitter.com/Jada_Ebong",
+        "Instagram": "https://www.instagram.com/jadaebong/",
+        "Title": "Industry Mentor",
+        "Description": "Hi I'm Jada! I went to UTSA 2016-2020 and was on the 2019-2020 RowdyHacks and ACM exec teams. I am currently working as a SEP at JPMC. Prior to RH22, I've hacked ay 11 hackathons, judged for 3, was a company sponsor, and have been to Hackcon twice but this will be the first time I've mentored! Fun facts are: lived in SA from K-16th grade (aka college); I love Rottweilers; I own every PlayStation; & I don't typically use cases for my phones"
+    },
+    {
+        "Number": 6,
+        "Image": "Retro_Manishimwe.jpg",
+        "FirstName": "Retro",
+        "LastName": "Manishimwe",
+        "Link": "#mentor6",
+        "LinkedIn": "https://www.linkedin.com/in/retrouvailles-manishimwe-441a61bb",
+        "Title": "Software Engineer",
+        "Description": "Hi I'm Retro! I work for Scratch, an online programming website. I like to read and watch YouTube videos in my free time!"
     }
 ]
