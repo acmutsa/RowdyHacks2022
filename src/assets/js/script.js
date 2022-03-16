@@ -311,6 +311,12 @@ function getMentors(){
             imgLinkedIn.src = "../assets/images/linkedin-icon-y.png";
             imgTwitter.src = "../assets/images/twitter-icon-y.png";
             imgInsta.src = "../assets/images/instagram-icon-y.png";
+            imgLinkedIn.setAttribute("onmouseover", "this.src='../assets/images/linkedin-icon-c.png';");
+            imgLinkedIn.setAttribute("onmouseout", "this.src='../assets/images/linkedin-icon-y.png';");
+            imgTwitter.setAttribute("onmouseover", "this.src='../assets/images/twitter-icon-c.png';");
+            imgTwitter.setAttribute("onmouseout", "this.src='../assets/images/twitter-icon-y.png';");
+            imgInsta.setAttribute("onmouseover", "this.src='../assets/images/instagram-icon-c.png';");
+            imgInsta.setAttribute("onmouseout", "this.src='../assets/images/instagram-icon-y.png';");
             innercontainer.className = "inner-container mentors";
             innercontainer2.className = "inner-container mentors";
             item1.className = "item";
