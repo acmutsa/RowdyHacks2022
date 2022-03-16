@@ -160,14 +160,15 @@ function getMentorsHome(){
     .then(res => res.json())
     .then((out) => {
         var randomNumHolder = [];
-        for(i = 0; i < 2; i++){
+        var mentorLength = Object.keys(out).length;
+        for(i = 0; i < 3; i++){
             random = i;
-            // var random = Math.floor(Math.random() * 3);
-            // randomNumHolder.forEach(function(randomNum){
-            //     while(random == randomNum){
-            //         random = Math.floor(Math.random() * 3);
-            //     }
-            // })
+            var random = Math.floor(Math.random() * mentorLength);
+            randomNumHolder.forEach(function(randomNum){
+                while(random == randomNum){
+                    random = Math.floor(Math.random() * mentorLength);
+                }
+            })
             randomNumHolder.push(random);
             var link = out[random].Link;
             var firstname = out[random].FirstName;
@@ -245,7 +246,8 @@ function getMentorsHome(){
 
 function getMentors(){
     fetch('/assets/js/mentors.json').then(res => res.json()).then((out) => {
-        for(i = 0; i < 2; i++){
+        var mentorLength = Object.keys(out).length;
+        for(i = 0; i < mentorLength; i++){
             var description = out[i].Description;
             var title = out[i].Title;
             var proficient = out[i].Proficient;
@@ -254,12 +256,15 @@ function getMentors(){
             var mentorImage = out[i].Image;
             var link = out[i].Link;
             var linkedInlink = out[i].LinkedIn;
+            var twitterLink = out[i].Twitter;
+            var instaLink = out[i].Instagram;
 
             link = link.slice(1);
 
             var divHolder = document.getElementById("mentorsHolder");
             var colPrimaryInnerContainer = document.createElement("div");
             var texture7op = document.createElement("div");
+            var mentorLayout = document.createElement("div");
             var primaryItem = document.createElement("div");
             var innercontainer = document.createElement("div");
             var innercontainer2 = document.createElement("div");
@@ -286,7 +291,11 @@ function getMentors(){
             var paragraph2 = document.createElement("p");
             var anchor = document.createElement("a");
             var anchorLinkedIn = document.createElement("a");
+            var anchorTwitter = document.createElement("a");
+            var anchorInsta = document.createElement("a");
             var imgLinkedIn = document.createElement("img");
+            var imgTwitter = document.createElement("img");
+            var imgInsta = document.createElement("img");
 
             var FN = document.createTextNode(firstname);
             var LN = document.createTextNode(lastname);
@@ -297,7 +306,11 @@ function getMentors(){
 
             img.src = "../assets/images/mentors/"+mentorImage;
             anchorLinkedIn.href = linkedInlink;
+            anchorTwitter.href = twitterLink;
+            anchorInsta.href = instaLink;
             imgLinkedIn.src = "../assets/images/linkedin-icon-y.png";
+            imgTwitter.src = "../assets/images/twitter-icon-y.png";
+            imgInsta.src = "../assets/images/instagram-icon-y.png";
             innercontainer.className = "inner-container mentors";
             innercontainer2.className = "inner-container mentors";
             item1.className = "item";
@@ -306,7 +319,7 @@ function getMentors(){
             item4.className = "item";
             item5.className = "item";
             itemSpacing.className = "spacing";
-            social.className = "linkedIn"
+            social.className = "socials"
 
             proficientDiv.className = "proficient";
             spacing.className = "mentors-spacing";
@@ -316,15 +329,20 @@ function getMentors(){
             magentaBackground.className = "magenta-background";
             colPrimaryInnerContainer.className = "col-primary-inner-container mentors";
             texture7op.className = "texture-7op";
+            mentorLayout.className = "mentorLayout";
             primaryItem.className = "primary-item mentors";
             anchor.setAttribute("id", link);
+            anchorLinkedIn.setAttribute("target", "_blank");
+            anchorTwitter.setAttribute("target", "_blank");
+            anchorInsta.setAttribute("target", "_blank");
 
             divHolder.appendChild(colPrimaryInnerContainer);
             colPrimaryInnerContainer.appendChild(anchor);
             colPrimaryInnerContainer.appendChild(texture7op);
 
-            texture7op.appendChild(primaryItem);
-            primaryItem.appendChild(img);
+            texture7op.appendChild(mentorLayout);
+            mentorLayout.appendChild(img);
+            mentorLayout.appendChild(primaryItem);
             primaryItem.appendChild(innercontainer);
 
             innercontainer.appendChild(item1);
@@ -364,8 +382,13 @@ function getMentors(){
                     SL = document.createTextNode("Developer");
 
                     break;
+                case 'Android Developer':
+                    FL = document.createTextNode("Android");
+                    SL = document.createTextNode("Developer");
+
+                    break;
                 default:
-                    FL = document.createTextNode("Senior");
+                    FL = document.createTextNode("Industry");
                     SL = document.createTextNode("Mentor");
 
             }
@@ -387,13 +410,25 @@ function getMentors(){
             paragraph.appendChild(descText);
             primaryItem.appendChild(paragraph);
 
-            primaryItem.appendChild(proficientDiv);
-            proficientDiv.appendChild(paragraph2);
-            paragraph2.appendChild(profText);
+            if(proficient){
+                primaryItem.appendChild(proficientDiv);
+                proficientDiv.appendChild(paragraph2);
+                paragraph2.appendChild(profText);
+            }
 
             primaryItem.appendChild(social);
-            social.appendChild(anchorLinkedIn);
-            anchorLinkedIn.appendChild(imgLinkedIn);
+            if(linkedInlink){
+                social.appendChild(anchorLinkedIn);
+                anchorLinkedIn.appendChild(imgLinkedIn);
+            }
+            if(twitterLink){
+                social.appendChild(anchorTwitter);
+                anchorTwitter.appendChild(imgTwitter);
+            }
+            if(instaLink){
+                social.appendChild(anchorInsta);
+                anchorInsta.appendChild(imgInsta);
+            }
         }
         var url = (document.URL);
         var mentorsAnchor = url.split("/")[3];
