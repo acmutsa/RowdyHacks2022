@@ -4,6 +4,7 @@ window.onload = function(){
     var randomExists = document.getElementById("random");
     var mentorholder = document.getElementById("mentorsHolder");
     var partners = document.getElementById("partners");
+    var eventTimes = document.getElementById("hacker-schedule");
 
     getCurrentPage();
     arrowAppear();
@@ -29,6 +30,10 @@ window.onload = function(){
 
     if(partners) {
         getPartners();
+    }
+
+    if(eventTimes) {
+        getSchedule();
     }
 }
 
@@ -483,7 +488,6 @@ function getPartners() {
 
         for( i = 0; i < rhPartners.length; i++) {
             // fill json values
-            var tier = rhPartners[i].tier; // not used in creation process currently
             var image = rhPartners[i].image;
             var partnerLink = rhPartners[i].partnerLink;
             var altText = rhPartners[i].altText;
@@ -544,4 +548,46 @@ function getCurrentPage(){
             $(this).addClass('active'); $(this).parents('li').addClass('active');
         }
     });
+}
+
+function getSchedule() {
+    // build hacker event schedule
+    fetch('/assets/js/schedule.json').then(res => res.json()).then((out) => {
+        // get element where schedule will live
+        var hackerSchedule = document.getElementById('hacker-schedule');
+
+        // populate saturday events
+        const saturdaySchedule = out['saturday'];
+        populateSchedule(hackerSchedule, 'Saturday, March 26th', saturdaySchedule);
+
+        // populate sunday events
+        const sundaySchedule = out['sunday'];
+        populateSchedule(hackerSchedule, 'Sunday, March 27th', sundaySchedule);
+    });
+}
+
+function populateSchedule(hackerSchedule, dayHeader, daySchedule) {    
+    // create event day header
+    var header = document.createElement('div');
+    header.className = "grid-title grid-title-date texture-3op";
+    header.textContent = dayHeader;
+    hackerSchedule.appendChild(header);
+
+    // populate all events after the header
+    for(const day of daySchedule) {
+        var scheduleTime = document.createElement('div');
+        var scheduleEvent = document.createElement('div');
+        var scheduleLocation = document.createElement('div');
+
+        scheduleTime.className = "grid-item grid-item-time texture-5op";
+        scheduleTime.textContent = day.time;
+        scheduleEvent.className = "grid-item grid-item-event texture-5op";
+        scheduleEvent.textContent = day.event;
+        scheduleLocation.className = "grid-item grid-item-location texture-5op";
+        scheduleLocation.textContent = day.location;
+
+        hackerSchedule.appendChild(scheduleTime);
+        hackerSchedule.appendChild(scheduleEvent);
+        hackerSchedule.appendChild(scheduleLocation);
+    }
 }
