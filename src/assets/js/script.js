@@ -4,7 +4,7 @@ window.onload = function(){
     var randomExists = document.getElementById("random");
     var mentorholder = document.getElementById("mentorsHolder");
     var partners = document.getElementById("partners");
-    var eventTimes = document.getElementById("schedule");
+    // var eventTimes = document.getElementById("schedule");
 
     getCurrentPage();
     arrowAppear();
@@ -32,9 +32,9 @@ window.onload = function(){
         getPartners();
     }
 
-    if(eventTimes) {
-        getSchedule();
-    }
+    // if(eventTimes) {
+    //     getSchedule();
+    // }
 }
 
 function playSong(){
