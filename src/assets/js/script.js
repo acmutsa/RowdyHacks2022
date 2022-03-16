@@ -4,7 +4,7 @@ window.onload = function(){
     var randomExists = document.getElementById("random");
     var mentorholder = document.getElementById("mentorsHolder");
     var partners = document.getElementById("partners");
-    // var eventTimes = document.getElementById("schedule");
+    var eventTimes = document.getElementById("hacker-schedule");
 
     getCurrentPage();
     arrowAppear();
@@ -32,9 +32,9 @@ window.onload = function(){
         getPartners();
     }
 
-    // if(eventTimes) {
-    //     getSchedule();
-    // }
+    if(eventTimes) {
+        getSchedule();
+    }
 }
 
 function playSong(){
@@ -510,56 +510,43 @@ function getCurrentPage(){
 }
 
 function getSchedule() {
-    // create container and saturday header
-    var scheduleHolder = document.getElementById('schedule');
-    var scheduleTable = document.createElement('table');
-    var saturdayHeader = document.createElement('thead');
-    var scheduleRow = document.createElement('tr');
-    var saturdayDate = document.createElement('th');
-    var saturdayDateP = document.createElement('p');
-    var saturdayDay = document.createElement('th');
-    var saturdayDayP = document.createElement('p');
+    // build hacker event schedule
+    fetch('/assets/js/schedule.json').then(res => res.json()).then((out) => {
+        // get element where schedule will live
+        var hackerSchedule = document.getElementById('hacker-schedule');
 
-    scheduleRow.className = "partner-background texture-3op";
-    saturdayDate.colSpan = "2"
+        // populate saturday events
+        const saturdaySchedule = out['saturday'];
+        populateSchedule(hackerSchedule, 'Saturday, March 26th', saturdaySchedule);
 
-    scheduleHolder.appendChild(scheduleTable);
-    scheduleTable.appendChild(saturdayHeader);
-    saturdayHeader.appendChild(scheduleRow);
-    scheduleRow.appendChild(saturdayDate);
-    saturdayDate.appendChild(saturdayDateP);
-    scheduleRow.appendChild(saturdayDay);
-    saturdayDay.appendChild(saturdayDayP);
-
-    // build Saturday schedule
-    fetch('/assets/js/saturdaySchedule.json').then(res => res.json()).then((out) => {
-        // get length of json object
-        const dayLength = Object.keys(out).length;
-
-        for( i = 0; i < dayLength; i++ ) {
-            // fill json values
-            var time = rhPartners[i].time;
-            var event = rhPartners[i].event;
-            var location = rhPartners[i].location;
-
-            var scheduleTime = document.createElement('td');
-            var scheduleEvent = document.createElement('td');
-            var scheduleLocation = document.createElement('td');
-
-            scheduleTime.className = "schedule-time";
-            scheduleEvent.className = "schedule-event";
-            scheduleLocation.className = "schedule-location";
-
-            scheduleTable.appendChild(scheduleRow);
-            scheduleRow.appendChild(scheduleTime);
-            scheduleRow.appendChild(scheduleEvent);
-            scheduleRow.appendChild(scheduleLocation);
-        }
+        // populate sunday events
+        const sundaySchedule = out['sunday'];
+        populateSchedule(hackerSchedule, 'Sunday, March 27th', sundaySchedule);
     });
+}
 
-    // build Sunday schedule
-    // fetch('/assets/js/sundaySchedule.json').then(res => res.json()).then((out) => {
-    //     // get length of json object
-    //     const dayLength = Object.keys(out).length;
-    // });
+function populateSchedule(hackerSchedule, dayHeader, daySchedule) {    
+    // create event day header
+    var header = document.createElement('div');
+    header.className = "grid-title grid-title-date texture-3op";
+    header.textContent = dayHeader;
+    hackerSchedule.appendChild(header);
+
+    // populate all events after the header
+    for(const day of daySchedule) {
+        var scheduleTime = document.createElement('div');
+        var scheduleEvent = document.createElement('div');
+        var scheduleLocation = document.createElement('div');
+
+        scheduleTime.className = "grid-item grid-item-time texture-5op";
+        scheduleTime.textContent = day.time;
+        scheduleEvent.className = "grid-item grid-item-event texture-5op";
+        scheduleEvent.textContent = day.event;
+        scheduleLocation.className = "grid-item grid-item-location texture-5op";
+        scheduleLocation.textContent = day.location;
+
+        hackerSchedule.appendChild(scheduleTime);
+        hackerSchedule.appendChild(scheduleEvent);
+        hackerSchedule.appendChild(scheduleLocation);
+    }
 }
