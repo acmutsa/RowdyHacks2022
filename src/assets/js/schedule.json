@@ -1,0 +1,131 @@
+{
+    "saturday": [
+        {
+            "time": "9:00 AM",
+            "event": "Hacker Checkin",
+            "location": "Galleria"
+        },
+        {
+            "time": "9:00 AM",
+            "event": "Partner Tabling",
+            "location": "Galleria"
+        },
+        {
+            "time": "11:00 AM",
+            "event": "Opening Ceremonies",
+            "location": "Ballroom"
+        },
+        {
+            "time": "12:00 PM",
+            "event": "Hacking Begins",
+            "location": ""
+        },
+        {
+            "time": "12:00 PM",
+            "event": "Team-Building: Half Baked",
+            "location": "Bexar"
+        },
+        {
+            "time": "1:00 PM",
+            "event": "Lunch",
+            "location": "Galleria"
+        },
+        {
+            "time": "3:00 PM",
+            "event": "Intro to Python",
+            "location": "Harris"
+        },
+        {
+            "time": "3:00 PM",
+            "event": "3D Printing Design",
+            "location": "Travis"
+        },
+        {
+            "time": "4:00 PM",
+            "event": "Bob Ross MS Paint",
+            "location": "Bexar"
+        },
+        {
+            "time": "5:00 PM",
+            "event": "R with Dr. Troia",
+            "location": "Harris"
+        },
+        {
+            "time": "5:00 PM",
+            "event": "MITRE ATT&CK Framework",
+            "location": "Travis"
+        },
+        {
+            "time": "7:00 PM",
+            "event": "Dinner",
+            "location": "Galleria"
+        },
+        {
+            "time": "9:00 PM",
+            "event": "GameDev with Unity",
+            "location": "Harris"
+        },
+        {
+            "time": "9:00 PM",
+            "event": "Docker: Zero to Hero",
+            "location": "Travis"
+        },
+        {
+            "time": "10:00 PM",
+            "event": "Trivia",
+            "location": "Bexar"
+        },
+        {
+            "time": "10:00 PM",
+            "event": "Late Night Snack",
+            "location": "Galleria"
+        },
+        {
+            "time": "11:00 PM",
+            "event": "Organizer Meet n Greet",
+            "location": "Bexar"
+        }
+    ],
+    "sunday": [
+        {
+            "time": "12:00 AM",
+            "event": "Cupstacking",
+            "location": "Galleria"
+        },
+        {
+            "time": "7:00 AM",
+            "event": "Breakfast",
+            "location": "Galleria"
+        },
+        {
+            "time": "8:00 AM",
+            "event": "Pitch Workshop",
+            "location": "Harris + Travis"
+        },
+        {
+            "time": "12:00 PM",
+            "event": "Submissions Due",
+            "location": ""
+        },
+        {
+            "time": "12:30 PM",
+            "event": "Lunch",
+            "location": "Galleria"
+        },
+        {
+            "time": "1:30 PM",
+            "event": "Judging Begins",
+            "location": "Ballroom"
+        },
+        {
+            "time": "4:00 PM",
+            "event": "Loteria",
+            "location": "Ballroom"
+        },
+        {
+            "time": "5:00 PM",
+            "event": "Closing Ceremonies",
+            "location": "Retama Theatre"
+        }
+    ]
+}
