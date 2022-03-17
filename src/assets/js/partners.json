@@ -12,7 +12,7 @@
         "altText": "Paycom"
     },
     {
-        "tier": "partner",
+        "tier": "silver",
         "image": "tdsynnex-logo.svg",
         "partnerLink": "www.tdsynnex.com",
         "altText": "TD Synnex"
@@ -30,9 +30,9 @@
         "altText": "Valero"
     },
     {
-        "tier": "partner",
+        "tier": "bronze",
         "image": "google-logo.svg",
-        "partnerLink": "cloud.google.com",
+        "partnerLink": "careers.google.com/students",
         "altText": "Google"
     },
     {
