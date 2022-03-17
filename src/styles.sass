@@ -192,7 +192,7 @@ img
   grid-row-gap: 20px
   grid-column-gap: 2%
   flex-wrap: wrap
-  align-items: center
+  align-items: flex-start
 
 .col-primary.callouts
   display: inline-flex
@@ -257,7 +257,6 @@ img
 .col-primary-inner-container
   img
     width: 50%
-    margin: 0 auto
 
 .location
   img
@@ -284,10 +283,16 @@ img
   align-items: flex-start
   padding: 2%
 
+.mentorLayout
+  img
+    border: solid 2px #280959
+
 .mentors
   .col-primary-inner-container
     img
       width: 100%
+      max-width: 500px
+      border: solid 2px #280959
 
 .proficient
   width: 100%
@@ -342,7 +347,7 @@ img
   .primary-item
     h1
       text-align: center
-      font-size: 2.4rem
+      font-size: 2.25rem
       line-height: 2rem
       color: #280959
 
@@ -739,13 +744,13 @@ a
     display: grid
     align-items: center
 
-@media screen and (max-width: 880px)
   .callouts
     .primary-item
       h1
         font-size: 1.5rem
         line-height: 1.1rem
 
+@media screen and (max-width: 880px)
   .col-primary-inner-container
     .primary-item
       p

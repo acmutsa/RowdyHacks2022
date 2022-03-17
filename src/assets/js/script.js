@@ -579,11 +579,11 @@ function populateSchedule(hackerSchedule, dayHeader, daySchedule) {
         var scheduleEvent = document.createElement('div');
         var scheduleLocation = document.createElement('div');
 
-        scheduleTime.className = "grid-item grid-item-time texture-5op";
+        scheduleTime.className = "grid-item grid-item-time texture-3op";
         scheduleTime.textContent = day.time;
-        scheduleEvent.className = "grid-item grid-item-event texture-5op";
+        scheduleEvent.className = "grid-item grid-item-event texture-3op";
         scheduleEvent.textContent = day.event;
-        scheduleLocation.className = "grid-item grid-item-location texture-5op";
+        scheduleLocation.className = "grid-item grid-item-location texture-3op";
         scheduleLocation.textContent = day.location;
 
         hackerSchedule.appendChild(scheduleTime);
