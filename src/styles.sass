@@ -285,6 +285,7 @@ img
 
 .mentorLayout
   img
+    max-width: 500px
     border: solid 2px #280959
 
 .mentors
@@ -308,7 +309,7 @@ img
 .socials
   img
     border: solid 3px #280959
-    border-radius: 9px
+    border-radius: 12px
     cursor: pointer
     width: 80% !important
 
@@ -665,6 +666,48 @@ a
   img
     width: 100%
 
+/* ----------------- Schedule Grid ---------------- */
+.grid
+  &-container
+      display: grid
+      width: 100%
+      font-family: "Pixellari", sans-serif
+      text-align: left
+      // grid-template-columns: repeat(6, 1fr)
+      // max-width: 1200px
+      // height: 900px
+      // overflow: hidden
+      // overflow-y: scroll
+  &-title
+      background-color: #FA448C
+      padding: 1.5%
+      font-size: 1.8rem
+      line-height: 1.8rem
+      // color: #FEC859
+      color: $white
+      &-date
+          text-align: center
+
+          grid-column-start: 1
+          grid-column-end: 7
+  &-item
+    color: #280959
+    background-color: #FFFFFF
+    font-size: 1.3em
+    line-height: 1.3em
+    border: dotted 1px #e2e2e2
+    &-time
+        grid-column-start: 1
+        grid-column-end: 2
+        padding: 4%
+    &-event
+        grid-column-start: 2
+        grid-column-end: 6
+        padding: 1%
+    &-location
+        padding: 3%
+
+
 /* ----------------- Responsive ---------------- */
 @media screen and (min-width: 1700px)
   .primary
@@ -874,6 +917,15 @@ a
     .col-primary-inner-container
       img
         width: 100%
+  
+  .grid
+    &-container
+    &-title
+      font-size: 1.4rem
+      line-height: 1.4rem
+    &-item
+      font-size: 1em
+      line-height: 1em
 
 @media screen and (max-width: 600px)
   .inner-container
@@ -983,46 +1035,3 @@ a
   .roadrunner-1,
   .roadrunner-2
     left: -65%
-
-/* ----------------- Schedule Grid ---------------- */
-.grid
-  &-container
-      display: grid
-      grid-template-columns: repeat(6, 1fr)
-      width: 100%
-      max-width: 1200px
-      line-height: 1em
-      height: 500px
-      overflow: hidden
-      overflow-y: scroll
-      font-family: "Pixellari", sans-serif
-  &-title
-      background-color: #FA448C
-      padding: 5px
-      font-size: 1.5rem
-      line-height: 1.7rem
-      color: #FEC859
-      &-date
-          text-align: center
-          padding-left: 20px
-          grid-column-start: 1
-          grid-column-end: 7
-  &-item
-      background-color: #FFFFFF
-      padding: 5px
-      font-size: 30px
-      font-size: 1.2em
-      line-height: 1.3em
-      &-time
-          text-align: left
-          padding-left: 20px
-          grid-column-start: 1
-          grid-column-end: 2
-      &-event
-          text-align: left
-          padding-left: 20px
-          grid-column-start: 2
-          grid-column-end: 6
-      &-location
-          text-align: right
-          padding-right: 20px
