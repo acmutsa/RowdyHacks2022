@@ -167,13 +167,10 @@ function getMentorsHome(){
         var randomNumHolder = [];
         var mentorLength = Object.keys(out).length;
         for(i = 0; i < 3; i++){
-            random = i;
             var random = Math.floor(Math.random() * mentorLength);
-            randomNumHolder.forEach(function(randomNum){
-                while(random == randomNum){
-                    random = Math.floor(Math.random() * mentorLength);
-                }
-            })
+            while (randomNumHolder.includes(random) === true){
+                random = Math.floor(Math.random() * mentorLength);
+            }
             randomNumHolder.push(random);
             var link = out[random].Link;
             var firstname = out[random].FirstName;

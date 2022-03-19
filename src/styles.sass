@@ -66,6 +66,10 @@ img
   float: left
   width: 1.5vh
 
+.mentors
+  .spacing
+    width:0.8vh
+
 .pixel-purple-block
   width: 100%
   height: 10px
@@ -217,12 +221,12 @@ img
   border: solid 3px #280959
   background-color: #481e8a
   border-bottom: solid 5px #fec859
-  flex: 1 0 100%
+  flex: 1 0 98%
 
 .primary-item
   padding: 3%
   display: grid
-  grid-gap:20px
+  grid-gap: 18px
 
 .col-primary-inner-container
   .primary-item
@@ -286,14 +290,16 @@ img
 .mentorLayout
   img
     max-width: 500px
-    border: solid 2px #280959
+    border: solid 3px #280959
+    background-color: #fec859
 
 .mentors
   .col-primary-inner-container
     img
       width: 100%
       max-width: 500px
-      border: solid 2px #280959
+      border: solid 3px #280959
+      background-color: #fec859
 
 .proficient
   width: 100%
@@ -311,7 +317,8 @@ img
     border: solid 3px #280959
     border-radius: 12px
     cursor: pointer
-    width: 80% !important
+    width: 75% !important
+    background: transparent
 
 .partner-background
   background-color: #fff2d6
@@ -348,8 +355,8 @@ img
   .primary-item
     h1
       text-align: center
-      font-size: 2.25rem
-      line-height: 2rem
+      font-size: 1.95rem
+      line-height: 1.8rem
       color: #280959
 
 .col-primary-inner-container
@@ -882,10 +889,10 @@ a
           line-height: 1.6rem
 
   .col-primary-inner-container
-    flex: 1 0 100%
+    flex: 1 0 98%
   
   .col-primary-inner-container.callouts
-    flex: 1 0 100%
+    flex: 1 0 98%
   
   .partner-background
     img
@@ -912,6 +919,7 @@ a
 
   .mentorLayout
     flex-direction: column
+    align-items: center
   
   .mentors-adj
     .col-primary-inner-container
@@ -1014,9 +1022,15 @@ a
         line-height: 1.6rem
   .col-primary-inner-container
     .primary-item
+      .mentors
+        h2
+          font-size: 1.6rem
+          line-height: 1.6rem
+  .col-primary-inner-container
+    .primary-item
       p
-        font-size: 1.8rem
-        line-height: 1.9rem
+        font-size: 1.5rem
+        line-height: 1.7rem
 
   .col-primary-inner-container
     .primary-item
