@@ -1,0 +1,75 @@
+@import './src/components/variables.sass'
+.col-primary.faq
+  display: inline-flex
+  grid-row-gap: 20px
+  grid-column-gap: 2%
+  flex-wrap: wrap
+  align-items: flex-start
+
+.faq
+    p
+        font-size: 2rem
+        line-height:2.2rem
+        margin-bottom: 20px
+        text-align: left
+
+.faq
+    h1
+        text-align: center
+        font-size: 2.1rem
+        line-height: 1.5rem
+        color: #280959
+
+.faq
+    .item
+        line-height: 2.5rem
+
+.faq
+    img
+        width:68%
+
+.arrows
+  width: 2rem
+  cursor: pointer
+
+.arrow-up
+  cursor: pointer
+  transform: rotate(0deg)
+
+.arrow-down
+  cursor: pointer
+  transform: rotate(90deg)
+
+.arrow-left
+  cursor: pointer
+  transform: rotate(180deg)
+
+@media screen and (max-width: 770px)
+    .col-primary.faq
+        display: grid
+    .faq
+        h1
+            font-size: 1.75rem
+            line-height: 1.2rem
+    .faq
+        p
+            font-size: 30px
+            line-height: 2.15rem
+    .faq
+        img
+            width: 60%
+
+@media screen and (max-width: 600px)
+    .faq
+        .inner-container
+            display: inline-flex
+
+@media screen and (max-width: 530px)
+    .faq .item
+        line-height: 2rem
+    .faq h1
+        font-size: 25px
+        line-height: 1rem
+    .faq p
+        font-size: 20px
+        line-height: 1.5rem
