@@ -679,40 +679,61 @@ a
       display: grid
       width: 100%
       font-family: "Pixellari", sans-serif
+      grid-template-columns: repeat(6, 1fr)
+      max-width: 1200px
       text-align: left
-      // grid-template-columns: repeat(6, 1fr)
-      // max-width: 1200px
-      // height: 900px
-      // overflow: hidden
-      // overflow-y: scroll
   &-title
       background-color: #FA448C
       padding: 1.5%
       font-size: 1.8rem
-      line-height: 1.8rem
-      // color: #FEC859
-      color: $white
+      line-height: 2rem
+      color: #FFFFFF
+      text-shadow: 0 0 10px #000000
       &-date
-          text-align: center
-
-          grid-column-start: 1
-          grid-column-end: 7
+        text-align: center
+        grid-column-start: 1
+        grid-column-end: 7
+  &-footer
+    background-color: #FA448C
+    padding: 1.5%
+    font-size: 1.8rem
+    line-height: 1.9rem
+    text-align: center
+    grid-column-start: 1
+    grid-column-end: 7
+    text-shadow: 0 0 10px #000000
+    &-key
+      color: #FFFFFF
+    &-sideEvent
+      color: #43b5a0
+    &-workshop
+      color: #FEC859
   &-item
     color: #280959
     background-color: #FFFFFF
     font-size: 1.3em
-    line-height: 1.3em
-    border: dotted 1px #e2e2e2
+    line-height: 1.4em
+    border-bottom: dotted 1px #E2E2E2
     &-time
         grid-column-start: 1
         grid-column-end: 2
         padding: 4%
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
     &-event
         grid-column-start: 2
         grid-column-end: 6
         padding: 1%
+        text-align: center
     &-location
+        text-align: right
         padding: 3%
+  &-type
+    &-sideEvent
+      color: #43B5A0
+    &-workshop
+      color: #FEC859
 
 
 /* ----------------- Responsive ---------------- */
@@ -927,7 +948,6 @@ a
         width: 100%
   
   .grid
-    &-container
     &-title
       font-size: 1.4rem
       line-height: 1.4rem
