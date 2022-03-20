@@ -3,86 +3,109 @@
         {
             "time": "9:00 AM",
             "event": "Hacker Checkin",
+            "type": "",
             "location": "Galleria"
         },
         {
             "time": "9:00 AM",
             "event": "Partner Tabling",
+            "type": "",
             "location": "Galleria"
         },
         {
             "time": "11:00 AM",
             "event": "Opening Ceremonies",
+            "type": "",
             "location": "Ballroom"
         },
         {
             "time": "12:00 PM",
             "event": "Hacking Begins",
+            "type": "",
             "location": ""
         },
         {
             "time": "12:00 PM",
             "event": "Team-Building: Half Baked",
+            "type": "sideEvent",
             "location": "Bexar"
         },
         {
             "time": "1:00 PM",
             "event": "Lunch",
+            "type": "",
             "location": "Galleria"
         },
         {
             "time": "3:00 PM",
             "event": "Intro to Python",
+            "type": "workshop",
             "location": "Harris"
         },
         {
             "time": "3:00 PM",
             "event": "3D Printing Design",
+            "type": "workshop",
             "location": "Travis"
         },
         {
             "time": "4:00 PM",
             "event": "Bob Ross MS Paint",
+            "type": "sideEvent",
             "location": "Bexar"
+        },
+        {
+            "time": "4:00 PM",
+            "event": "Frost Bank Capture the Flag",
+            "type": "sideEvent",
+            "location": "Travis"
         },
         {
             "time": "5:00 PM",
             "event": "R with Dr. Troia",
+            "type": "workshop",
             "location": "Harris"
         },
         {
             "time": "5:00 PM",
             "event": "MITRE ATT&CK Framework",
+            "type": "workshop",
             "location": "Travis"
         },
         {
             "time": "7:00 PM",
             "event": "Dinner",
+            "type": "",
             "location": "Galleria"
         },
         {
             "time": "9:00 PM",
             "event": "GameDev with Unity",
+            "type": "workshop",
             "location": "Harris"
         },
         {
             "time": "9:00 PM",
             "event": "Docker: Zero to Hero",
+            "type": "workshop",
             "location": "Travis"
         },
         {
             "time": "10:00 PM",
             "event": "Trivia",
+            "type": "sideEvent",
             "location": "Bexar"
         },
         {
             "time": "10:00 PM",
             "event": "Late Night Snack",
+            "type": "",
             "location": "Galleria"
         },
         {
             "time": "11:00 PM",
             "event": "Organizer Meet n Greet",
+            "type": "sideEvent",
             "location": "Bexar"
         }
     ],
@@ -90,41 +113,49 @@
         {
             "time": "12:00 AM",
             "event": "Cupstacking",
+            "type": "sideEvent",
             "location": "Galleria"
         },
         {
             "time": "7:00 AM",
             "event": "Breakfast",
+            "type": "",
             "location": "Galleria"
         },
         {
             "time": "8:00 AM",
             "event": "Pitch Workshop",
+            "type": "workshop",
             "location": "Harris + Travis"
         },
         {
             "time": "12:00 PM",
             "event": "Submissions Due",
+            "type": "",
             "location": ""
         },
         {
             "time": "12:30 PM",
             "event": "Lunch",
+            "type": "",
             "location": "Galleria"
         },
         {
             "time": "1:30 PM",
             "event": "Judging Begins",
+            "type": "",
             "location": "Ballroom"
         },
         {
             "time": "4:00 PM",
             "event": "Loteria",
+            "type": "sideEvent",
             "location": "Ballroom"
         },
         {
             "time": "5:00 PM",
             "event": "Closing Ceremonies",
+            "type": "",
             "location": "Retama Theatre"
         }
     ]

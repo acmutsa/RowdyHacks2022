@@ -66,6 +66,10 @@ img
   float: left
   width: 1.5vh
 
+.mentors
+  .spacing
+    width:0.8vh
+
 .pixel-purple-block
   width: 100%
   height: 10px
@@ -192,7 +196,7 @@ img
   grid-row-gap: 20px
   grid-column-gap: 2%
   flex-wrap: wrap
-  align-items: center
+  align-items: flex-start
 
 .col-primary.callouts
   display: inline-flex
@@ -217,12 +221,12 @@ img
   border: solid 3px #280959
   background-color: #481e8a
   border-bottom: solid 5px #fec859
-  flex: 1 0 100%
+  flex: 1 0 98%
 
 .primary-item
   padding: 3%
   display: grid
-  grid-gap:20px
+  grid-gap: 15px
 
 .col-primary-inner-container
   .primary-item
@@ -257,7 +261,6 @@ img
 .col-primary-inner-container
   img
     width: 50%
-    margin: 0 auto
 
 .location
   img
@@ -284,10 +287,19 @@ img
   align-items: flex-start
   padding: 2%
 
+.mentorLayout
+  img
+    max-width: 500px
+    border: solid 3px #280959
+    background-color: #fec859
+
 .mentors
   .col-primary-inner-container
     img
       width: 100%
+      max-width: 500px
+      border: solid 3px #280959
+      background-color: #fec859
 
 .proficient
   width: 100%
@@ -303,9 +315,10 @@ img
 .socials
   img
     border: solid 3px #280959
-    border-radius: 9px
+    border-radius: 12px
     cursor: pointer
-    width: 80% !important
+    width: 75% !important
+    background: transparent
 
 .partner-background
   background-color: #fff2d6
@@ -334,7 +347,7 @@ img
 .primary-item
   p
     font-size: 3.15rem
-    line-height: 3.5rem
+    line-height: 3.3rem
     text-align: center
     color: #fec859
 
@@ -342,8 +355,8 @@ img
   .primary-item
     h1
       text-align: center
-      font-size: 2.4rem
-      line-height: 2rem
+      font-size: 1.95rem
+      line-height: 1.8rem
       color: #280959
 
 .col-primary-inner-container
@@ -660,6 +673,71 @@ a
   img
     width: 100%
 
+/* ----------------- Schedule Grid ---------------- */
+.grid
+  &-container
+      display: grid
+      width: 100%
+      font-family: "Pixellari", sans-serif
+      grid-template-columns: repeat(6, 1fr)
+      max-width: 1750px
+      text-align: left
+      margin: 0 auto
+  &-title
+      background-color: #FA448C
+      padding: 1%
+      font-size: 1.8rem
+      line-height: 2rem
+      color: #FFFFFF
+      text-shadow: 0 0 8px #000000
+      &-date
+        text-align: center
+        grid-column-start: 1
+        grid-column-end: 7
+  &-footer
+    background-color: #481e8a
+    padding: 3%
+    font-size: 1.8rem
+    line-height: 1.9rem
+    text-align: center
+    grid-column-start: 1
+    grid-column-end: 7
+    text-shadow: 0 0 8px #000000
+    &-key
+      color: #FFFFFF
+    &-sideEvent
+      color: #28dab9
+    &-workshop
+      color: #FA448C
+  &-item
+    color: #481e8a
+    background-color: #fafafa
+    font-size: 1.3em
+    line-height: 1.4em
+    border: dotted 1px #E2E2E2
+    &-time
+        grid-column-start: 1
+        grid-column-end: 2
+        padding: 4%
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
+    &-event
+        grid-column-start: 2
+        grid-column-end: 6
+        padding: 1%
+        text-align: center
+    &-location
+        text-align: right
+        padding: 3%
+  &-type
+    &-sideEvent
+      color: #28dab9
+      text-shadow: 0 0 1px #909090
+    &-workshop
+      color: #FA448C
+
+
 /* ----------------- Responsive ---------------- */
 @media screen and (min-width: 1700px)
   .primary
@@ -667,7 +745,8 @@ a
 
 @media screen and (max-width: 1500px)
   .item
-    font-size: 2.5rem
+    font-size: 2.3rem
+    line-height: 4rem
 
   .roadrunner,
   .roadrunner-1,
@@ -682,11 +761,11 @@ a
 @media screen and (max-width: 1275px)
   .primary-item
     p
-      font-size: 2.5rem
-      line-height: 2.7rem
-  .item
-    font-size: 2.2rem
-    line-height: 3rem
+      font-size: 2.3rem
+      line-height: 2.5rem
+  // .item
+  //   font-size: 2.2rem
+  //   line-height: 3rem
   .col-primary-inner-container
     .primary-item
       h1
@@ -739,25 +818,20 @@ a
     display: grid
     align-items: center
 
-@media screen and (max-width: 880px)
   .callouts
     .primary-item
       h1
         font-size: 1.5rem
         line-height: 1.1rem
 
-  .col-primary-inner-container
-    .primary-item
-      p
-        font-size: 1.2rem
-        line-height: 1.3rem
+@media screen and (max-width: 880px)
   .item
     font-size:29px
 
   .primary-item
     p
-      font-size: 2.2rem
-      line-height: 2.3rem
+      font-size: 2.1rem
+      line-height: 2.2rem
 
   .footer-container
     .inner-container
@@ -816,8 +890,8 @@ a
   .col-primary-inner-container
     .primary-item
       p
-        font-size: 1.8rem
-        line-height: 1.8rem
+        font-size: 1.9rem
+        line-height: 2rem
 
   .col-primary-inner-container
     .primary-item
@@ -834,10 +908,10 @@ a
           line-height: 1.6rem
 
   .col-primary-inner-container
-    flex: 1 0 100%
+    flex: 1 0 98%
   
   .col-primary-inner-container.callouts
-    flex: 1 0 100%
+    flex: 1 0 98%
   
   .partner-background
     img
@@ -864,11 +938,20 @@ a
 
   .mentorLayout
     flex-direction: column
+    align-items: center
   
   .mentors-adj
     .col-primary-inner-container
       img
         width: 100%
+  
+  .grid
+    &-title
+      font-size: 1.4rem
+      line-height: 1.4rem
+    &-item
+      font-size: 1em
+      line-height: 1em
 
 @media screen and (max-width: 600px)
   .inner-container
@@ -957,9 +1040,15 @@ a
         line-height: 1.6rem
   .col-primary-inner-container
     .primary-item
+      .mentors
+        h2
+          font-size: 1.6rem
+          line-height: 1.6rem
+  .col-primary-inner-container
+    .primary-item
       p
-        font-size: 1.8rem
-        line-height: 1.9rem
+        font-size: 1.5rem
+        line-height: 1.7rem
 
   .col-primary-inner-container
     .primary-item
@@ -978,46 +1067,3 @@ a
   .roadrunner-1,
   .roadrunner-2
     left: -65%
-
-/* ----------------- Schedule Grid ---------------- */
-.grid
-  &-container
-      display: grid
-      grid-template-columns: repeat(6, 1fr)
-      width: 100%
-      max-width: 1200px
-      line-height: 1em
-      height: 500px
-      overflow: hidden
-      overflow-y: scroll
-      font-family: "Pixellari", sans-serif
-  &-title
-      background-color: #FA448C
-      padding: 5px
-      font-size: 1.5rem
-      line-height: 1.7rem
-      color: #FEC859
-      &-date
-          text-align: center
-          padding-left: 20px
-          grid-column-start: 1
-          grid-column-end: 7
-  &-item
-      background-color: #FFFFFF
-      padding: 5px
-      font-size: 30px
-      font-size: 1.2em
-      line-height: 1.3em
-      &-time
-          text-align: left
-          padding-left: 20px
-          grid-column-start: 1
-          grid-column-end: 2
-      &-event
-          text-align: left
-          padding-left: 20px
-          grid-column-start: 2
-          grid-column-end: 6
-      &-location
-          text-align: right
-          padding-right: 20px

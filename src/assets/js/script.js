@@ -167,13 +167,10 @@ function getMentorsHome(){
         var randomNumHolder = [];
         var mentorLength = Object.keys(out).length;
         for(i = 0; i < 3; i++){
-            random = i;
             var random = Math.floor(Math.random() * mentorLength);
-            randomNumHolder.forEach(function(randomNum){
-                while(random == randomNum){
-                    random = Math.floor(Math.random() * mentorLength);
-                }
-            })
+            while (randomNumHolder.includes(random) === true){
+                random = Math.floor(Math.random() * mentorLength);
+            }
             randomNumHolder.push(random);
             var link = out[random].Link;
             var firstname = out[random].FirstName;
@@ -554,36 +551,58 @@ function getSchedule() {
     // build hacker event schedule
     fetch('/assets/js/schedule.json').then(res => res.json()).then((out) => {
         // get element where schedule will live
-        var hackerSchedule = document.getElementById('hacker-schedule');
+        let hackerSchedule = document.getElementById('hacker-schedule');
 
         // populate saturday events
-        const saturdaySchedule = out['saturday'];
-        populateSchedule(hackerSchedule, 'Saturday, March 26th', saturdaySchedule);
+        populateSchedule(hackerSchedule, 'Saturday, March 26th', out['saturday']);
 
         // populate sunday events
-        const sundaySchedule = out['sunday'];
-        populateSchedule(hackerSchedule, 'Sunday, March 27th', sundaySchedule);
+        populateSchedule(hackerSchedule, 'Sunday, March 27th', out['sunday']);
+
+        // add footer key
+        let footerKey = document.createElement('div');
+        let key = document.createElement('b');
+        let sideEvent = document.createElement('b');
+        let workshop = document.createElement('b');
+        footerKey.className = "texture-7op grid-footer";
+        key.textContent = "Key: ";
+        key.className = "grid-footer-key";
+        sideEvent.textContent = "Side Event, ";
+        sideEvent.className = "grid-footer-sideEvent";
+        workshop.textContent = "Workshop";
+        workshop.className = "grid-footer-workshop";
+        footerKey.appendChild(key);
+        footerKey.appendChild(sideEvent);
+        footerKey.appendChild(workshop);
+        hackerSchedule.appendChild(footerKey);
     });
 }
 
 function populateSchedule(hackerSchedule, dayHeader, daySchedule) {    
     // create event day header
-    var header = document.createElement('div');
-    header.className = "grid-title grid-title-date texture-3op";
+    let header = document.createElement('div');
+    header.className = "texture-5op grid-title grid-title-date";
     header.textContent = dayHeader;
     hackerSchedule.appendChild(header);
 
     // populate all events after the header
+    let defaultItemClasses = "texture-3op grid-item";
     for(const day of daySchedule) {
-        var scheduleTime = document.createElement('div');
-        var scheduleEvent = document.createElement('div');
-        var scheduleLocation = document.createElement('div');
+        let scheduleTime = document.createElement('div');
+        let scheduleEvent = document.createElement('div');
+        let scheduleLocation = document.createElement('div');
 
-        scheduleTime.className = "grid-item grid-item-time texture-5op";
+        scheduleTime.className = defaultItemClasses + " grid-item-time";
         scheduleTime.textContent = day.time;
-        scheduleEvent.className = "grid-item grid-item-event texture-5op";
+        scheduleEvent.className = defaultItemClasses + " grid-item-event";
+        if(day.type === "workshop") {
+            scheduleEvent.className += " grid-type-workshop"
+        }
+        if(day.type === "sideEvent") {
+            scheduleEvent.className += " grid-type-sideEvent";
+        }
         scheduleEvent.textContent = day.event;
-        scheduleLocation.className = "grid-item grid-item-location texture-5op";
+        scheduleLocation.className = defaultItemClasses + " grid-item-location";
         scheduleLocation.textContent = day.location;
 
         hackerSchedule.appendChild(scheduleTime);
