@@ -446,7 +446,21 @@ function getMentors(){
             aTag.setAttribute("name", mentorsAnchor);
             aTag = $(aTag);
             // document.getElementById(mentorsAnchor).scrollIntoView();
-            $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+            var topAdjust = aTag.offset().top;
+            if(topAdjust > 1000){
+                topAdjust = topAdjust + 100;
+            }
+            if(topAdjust > 2000){
+                topAdjust = topAdjust + 250;
+            }
+            if(topAdjust > 2500){
+                topAdjust = topAdjust + 400;
+            }
+            if(topAdjust > 3000){
+                topAdjust = topAdjust - 200;
+            }
+            console.log(topAdjust);
+            $('html,body').animate({scrollTop: topAdjust},'slow');
         }
     }).catch(err => {
         throw err
