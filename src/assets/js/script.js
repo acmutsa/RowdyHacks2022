@@ -564,7 +564,7 @@ function getSchedule() {
         let key = document.createElement('b');
         let sideEvent = document.createElement('b');
         let workshop = document.createElement('b');
-        footerKey.className = "texture-3op grid-footer";
+        footerKey.className = "texture-7op grid-footer";
         key.textContent = "Key: ";
         key.className = "grid-footer-key";
         sideEvent.textContent = "Side Event, ";
@@ -581,7 +581,7 @@ function getSchedule() {
 function populateSchedule(hackerSchedule, dayHeader, daySchedule) {    
     // create event day header
     let header = document.createElement('div');
-    header.className = "texture-3op grid-title grid-title-date";
+    header.className = "texture-5op grid-title grid-title-date";
     header.textContent = dayHeader;
     hackerSchedule.appendChild(header);
 
