@@ -4,19 +4,19 @@
             "time": "9:00 AM",
             "event": "Hacker Checkin",
             "type": "",
-            "location": "Galleria"
+            "location": "Ghost Gang Hall"
         },
         {
             "time": "9:00 AM",
             "event": "Partner Tabling",
             "type": "",
-            "location": "Galleria"
+            "location": "Ghost Gang Hall"
         },
         {
             "time": "11:00 AM",
             "event": "Opening Ceremonies",
             "type": "",
-            "location": "Ballroom"
+            "location": "Pacman Ballroom"
         },
         {
             "time": "12:00 PM",
@@ -28,85 +28,85 @@
             "time": "12:00 PM",
             "event": "Team-Building: Half Baked",
             "type": "sideEvent",
-            "location": "Bexar"
+            "location": "Tetris Lounge"
         },
         {
             "time": "1:00 PM",
             "event": "Lunch",
             "type": "",
-            "location": "Galleria"
+            "location": "Ghost Gang Hall"
         },
         {
             "time": "3:00 PM",
             "event": "Intro to Python",
             "type": "workshop",
-            "location": "Harris"
+            "location": "Dig Dug"
         },
         {
             "time": "3:00 PM",
             "event": "3D Printing Design",
             "type": "workshop",
-            "location": "Travis"
+            "location": "Galaga"
         },
         {
             "time": "4:00 PM",
             "event": "Bob Ross MS Paint",
             "type": "sideEvent",
-            "location": "Bexar"
+            "location": "Tetris Lounge"
         },
         {
             "time": "4:00 PM",
             "event": "Frost Bank Capture the Flag",
             "type": "sideEvent",
-            "location": "Travis"
+            "location": "Galaga"
         },
         {
             "time": "5:00 PM",
             "event": "R with Dr. Troia",
             "type": "workshop",
-            "location": "Harris"
+            "location": "Dig Dug"
         },
         {
             "time": "5:00 PM",
             "event": "MITRE ATT&CK Framework",
             "type": "workshop",
-            "location": "Travis"
+            "location": "Galaga"
         },
         {
             "time": "7:00 PM",
             "event": "Dinner",
             "type": "",
-            "location": "Galleria"
+            "location": "Ghost Gang Hall"
         },
         {
             "time": "9:00 PM",
             "event": "GameDev with Unity",
             "type": "workshop",
-            "location": "Harris"
+            "location": "Dig Dug"
         },
         {
             "time": "9:00 PM",
             "event": "Docker: Zero to Hero",
             "type": "workshop",
-            "location": "Travis"
+            "location": "Galaga"
         },
         {
             "time": "10:00 PM",
             "event": "Trivia",
             "type": "sideEvent",
-            "location": "Bexar"
+            "location": "Tetris Lounge"
         },
         {
             "time": "10:00 PM",
             "event": "Late Night Snack",
             "type": "",
-            "location": "Galleria"
+            "location": "Ghost Gang Hall"
         },
         {
             "time": "11:00 PM",
             "event": "Organizer Meet n Greet",
             "type": "sideEvent",
-            "location": "Bexar"
+            "location": "Tetris Lounge"
         }
     ],
     "sunday": [
@@ -114,19 +114,19 @@
             "time": "12:00 AM",
             "event": "Cupstacking",
             "type": "sideEvent",
-            "location": "Galleria"
+            "location": "Ghost Gang Hall"
         },
         {
             "time": "7:00 AM",
             "event": "Breakfast",
             "type": "",
-            "location": "Galleria"
+            "location": "Ghost Gang Hall"
         },
         {
             "time": "8:00 AM",
             "event": "Pitch Workshop",
             "type": "workshop",
-            "location": "Harris + Travis"
+            "location": "Dig Dug + Galaga"
         },
         {
             "time": "12:00 PM",
@@ -138,25 +138,25 @@
             "time": "12:30 PM",
             "event": "Lunch",
             "type": "",
-            "location": "Galleria"
+            "location": "Ghost Gang Hall"
         },
         {
             "time": "1:30 PM",
             "event": "Judging Begins",
             "type": "",
-            "location": "Ballroom"
+            "location": "Pacman Ballroom"
         },
         {
             "time": "4:00 PM",
             "event": "Loteria",
             "type": "sideEvent",
-            "location": "Ballroom"
+            "location": "Pacman Ballroom"
         },
         {
             "time": "5:00 PM",
             "event": "Closing Ceremonies",
             "type": "",
-            "location": "Retama Theatre"
+            "location": "Donky Kong Theatre"
         }
     ]
 }

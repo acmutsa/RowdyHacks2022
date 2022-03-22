@@ -442,7 +442,25 @@ function getMentors(){
         var mentorsAnchor = url.split("/")[3];
         if(mentorsAnchor != "mentors"){
             mentorsAnchor = mentorsAnchor.split("#")[1];
-            document.getElementById(mentorsAnchor).scrollIntoView();
+            var aTag = document.getElementById(mentorsAnchor);
+            aTag.setAttribute("name", mentorsAnchor);
+            aTag = $(aTag);
+            // document.getElementById(mentorsAnchor).scrollIntoView();
+            var topAdjust = aTag.offset().top;
+            if(topAdjust > 1000){
+                topAdjust = topAdjust + 100;
+            }
+            if(topAdjust > 2000){
+                topAdjust = topAdjust + 250;
+            }
+            if(topAdjust > 2500){
+                topAdjust = topAdjust + 400;
+            }
+            if(topAdjust > 3000){
+                topAdjust = topAdjust - 200;
+            }
+            console.log(topAdjust);
+            $('html,body').animate({scrollTop: topAdjust},'slow');
         }
     }).catch(err => {
         throw err
@@ -526,17 +544,9 @@ function getPartners() {
 //     var url = (document.URL);
 //     var mentorsAnchor = url.split("/")[3];
 //     mentorsAnchor = mentorsAnchor.split("#")[1];
-//     // var mentorsAnchorID = "#" + mentorsAnchor;
-//     if(mentorsAnchorID == "#mentor4" || mentorsAnchorID == "#mentor5" || mentorsAnchorID == "#mentor6"){
-//         $('html, body').animate({
-//             scrollTop: $(mentorsAnchorID).offset().top - 50
-//         },1200);
-//     }
-//     if(mentorsAnchorID == "#mentor1" || mentorsAnchorID == "#mentor2" || mentorsAnchorID == "#mentor3"){
-//         $('html, body').animate({
-//             scrollTop: $(mentorsAnchorID).offset().top - 500
-//         },1200);
-//     }
+//     var mentorsAnchorID = "#" + mentorsAnchor;
+//     $('html,body').animate({scrollTop: mentorsAnchor.offset().top},'slow');
+    
 // }
 
 function getCurrentPage(){
