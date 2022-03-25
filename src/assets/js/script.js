@@ -407,7 +407,18 @@ function getMentors(){
                     FL = document.createTextNode("Cybersecurity");
                     SL = document.createTextNode("Specialist");
     
+                    break;
 
+                case 'Cloud Engineer':
+                    FL = document.createTextNode("Cloud");
+                    SL = document.createTextNode("Engineer");
+    
+                    break;
+                
+                case 'Front-End Developer':
+                    FL = document.createTextNode("Front-End");
+                    SL = document.createTextNode("Developer");
+    
                     break;
                 default:
                     FL = document.createTextNode("Industry");
@@ -459,7 +470,6 @@ function getMentors(){
             var aTag = document.getElementById(mentorsAnchor);
             aTag.setAttribute("name", mentorsAnchor);
             aTag = $(aTag);
-            // document.getElementById(mentorsAnchor).scrollIntoView();
             var topAdjust = aTag.offset().top;
             // console.log(topAdjust);
             if(mobileCheck == true){
@@ -540,7 +550,7 @@ function getMentors(){
                     topAdjust = topAdjust + 200;
                 }
                 if(topAdjust > 5500){
-                    topAdjust = topAdjust + 300;
+                    topAdjust = topAdjust + 250;
                 }
                 if(topAdjust > 6000){
                     topAdjust = topAdjust + 200;
@@ -549,7 +559,10 @@ function getMentors(){
                     topAdjust = topAdjust + 130;
                 }
                 if(topAdjust > 7000){
-                    topAdjust = topAdjust + 200;
+                    topAdjust = topAdjust + 100;
+                }
+                if(topAdjust > 7400){
+                    topAdjust = topAdjust + 150;
                 }
                 if(topAdjust > 7800){
                     topAdjust = topAdjust + 350;
@@ -641,15 +654,6 @@ function getPartners() {
         throw err
     });
 }
-
-// function scrollToMentor(){
-//     var url = (document.URL);
-//     var mentorsAnchor = url.split("/")[3];
-//     mentorsAnchor = mentorsAnchor.split("#")[1];
-//     var mentorsAnchorID = "#" + mentorsAnchor;
-//     $('html,body').animate({scrollTop: mentorsAnchor.offset().top},'slow');
-    
-// }
 
 function getCurrentPage(){
     $('a').each(function(){
