@@ -628,7 +628,7 @@ function populateSchedule(hackerSchedule, dayHeader, daySchedule) {
 
 function mentorsAnchorPlace(topAdjust){
     var width = $(window).width();
-    if(width < 430){
+    if(width < 430 && width > 377){
         if(topAdjust > 1000){
             topAdjust = topAdjust + 260;
         }
@@ -676,6 +676,52 @@ function mentorsAnchorPlace(topAdjust){
         }
         if(topAdjust > 12300){
             topAdjust = topAdjust + 400;
+        }
+    }else if(width < 377){
+        if(topAdjust > 1200){
+            topAdjust = topAdjust + 300;
+        }
+        if(topAdjust > 2000){
+            topAdjust = topAdjust + 300;
+        }
+        if(topAdjust > 2800){
+            topAdjust = topAdjust + 300;
+        }
+        if(topAdjust > 3800){
+            topAdjust = topAdjust + 340;
+        }
+        if(topAdjust > 4800){
+            topAdjust = topAdjust + 350;
+        }
+        if(topAdjust > 5500){
+            topAdjust = topAdjust + 300;
+        }
+        if(topAdjust > 6400){
+            topAdjust = topAdjust + 325;
+        }
+        if(topAdjust > 7000){
+            topAdjust = topAdjust + 325;
+        }
+        if(topAdjust > 7600){
+            topAdjust = topAdjust + 350;
+        }
+        if(topAdjust > 8500){
+            topAdjust = topAdjust + 350;
+        }
+        if(topAdjust > 9500){
+            topAdjust = topAdjust + 300;
+        }
+        if(topAdjust > 10300){
+            topAdjust = topAdjust + 300;
+        }
+        if(topAdjust > 10900){
+            topAdjust = topAdjust + 350;
+        }
+        if(topAdjust > 11500){
+            topAdjust = topAdjust + 350;
+        }
+        if(topAdjust > 12000){
+            topAdjust = topAdjust + 300;
         }
     }else if(width > 2000){
         if(topAdjust > 1500){
