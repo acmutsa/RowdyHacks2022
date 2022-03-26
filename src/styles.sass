@@ -119,12 +119,15 @@ img
 
 .texture-3op
   background: url(assets/images/pixels-3op.png)
+  width: 100%
 
 .texture-5op
   background: url(assets/images/pixels-5op.png)
+  width: 100%
 
 .texture-7op
   background: url(assets/images/pixels-7op.png)
+  width: 100%
 
 /* ----------------- Header and Layout ---------------- */
 
@@ -876,7 +879,7 @@ a
 
 @media screen and (max-width: 675px)
   .primary
-    width: 80%
+    width: 85%
     grid-gap: 15px
 
   .col-primary
@@ -885,27 +888,27 @@ a
   .col-primary-inner-container
     .primary-item
       h1
-        font-size: 2.6rem
+        font-size: 2.5rem
         line-height: 2rem
   .col-primary-inner-container
     .primary-item
       p
-        font-size: 1.9rem
-        line-height: 2rem
+        font-size: 1.5rem
+        line-height: 1.7rem
 
   .col-primary-inner-container
     .primary-item
       .mentors
         h1
-          font-size: 2.2rem
+          font-size: 2.1rem
           line-height: 2rem
   
   .col-primary-inner-container
     .primary-item
       .mentors
         h2
-          font-size: 2rem
-          line-height: 1.6rem
+          font-size: 1.65rem
+          line-height: 1.5rem
 
   .col-primary-inner-container
     flex: 1 0 98%
@@ -915,7 +918,7 @@ a
   
   .partner-background
     img
-      width: 100%
+      width: 100% !important
   
   .magenta-background
     float: none
@@ -943,8 +946,14 @@ a
   .mentors-adj
     .col-primary-inner-container
       img
-        width: 100%
+        width: 100% !important
+        max-width: fit-content
   
+  .mentorLayout
+    img
+      width: 100% !important
+      max-width: fit-content
+
   .grid
     &-title
       font-size: 1.4rem
@@ -999,7 +1008,7 @@ a
 
 @media screen and (max-width: 450px)
   .primary
-    width: 90%
+    width: 93%
   .primary
     .item
       h1
