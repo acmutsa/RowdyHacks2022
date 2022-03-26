@@ -9,7 +9,7 @@ window.onload = function(){
     getCurrentPage();
     arrowAppear();
     buttonAnimation();
-    showFAQ();
+    showText();
     showMenu();
 
     if(mapExists){
@@ -79,7 +79,7 @@ function buttonAnimation(){
     $('.btn').prepend('<div class="hover"><span></span><span></span><span></span><span></span><span></span><span></span></div>');
 }
 
-function showFAQ(){
+function showText(){
     $('.show').click( function() {
         $(this).children(".arrows").toggleClass('arrow-down');
         $(this).next().slideToggle();
@@ -246,6 +246,13 @@ function getMentorsHome(){
     });
 }
 
+
+window.mobileCheck = function() {
+    let check = false;
+    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+    return check;
+  };
+
 function getMentors(){
     fetch('/assets/js/mentors.json').then(res => res.json()).then((out) => {
         var mentorLength = Object.keys(out).length;
@@ -395,6 +402,24 @@ function getMentors(){
                     SL = document.createTextNode("Developer");
 
                     break;
+                
+                case 'Cybersecurity Specialist':
+                    FL = document.createTextNode("Cybersecurity");
+                    SL = document.createTextNode("Specialist");
+    
+                    break;
+
+                case 'Cloud Engineer':
+                    FL = document.createTextNode("Cloud");
+                    SL = document.createTextNode("Engineer");
+    
+                    break;
+                
+                case 'Front-End Developer':
+                    FL = document.createTextNode("Front-End");
+                    SL = document.createTextNode("Developer");
+    
+                    break;
                 default:
                     FL = document.createTextNode("Industry");
                     SL = document.createTextNode("Mentor");
@@ -445,20 +470,9 @@ function getMentors(){
             var aTag = document.getElementById(mentorsAnchor);
             aTag.setAttribute("name", mentorsAnchor);
             aTag = $(aTag);
-            // document.getElementById(mentorsAnchor).scrollIntoView();
             var topAdjust = aTag.offset().top;
-            if(topAdjust > 1000){
-                topAdjust = topAdjust + 100;
-            }
-            if(topAdjust > 2000){
-                topAdjust = topAdjust + 250;
-            }
-            if(topAdjust > 2500){
-                topAdjust = topAdjust + 400;
-            }
-            if(topAdjust > 3000){
-                topAdjust = topAdjust - 200;
-            }
+            console.log(topAdjust);
+            topAdjust = mentorsAnchorPlace(topAdjust);
             console.log(topAdjust);
             $('html,body').animate({scrollTop: topAdjust},'slow');
         }
@@ -516,7 +530,7 @@ function getPartners() {
             var partnerImage = document.createElement('img');
 
             // populate created elements
-            colInner.style, colTexture.style = "height: 200px; justify-content: center; align-items: center; display: flex;"
+            colInner.style, colTexture.style = "height: 200px; width: 100%; justify-content: center; align-items: center; display: flex;"
             colInner.className = "col-primary-inner-container partner-background";
             colTexture.className = "texture-3op";
             colTexture.title = altText;
@@ -525,7 +539,7 @@ function getPartners() {
             link.target = "_blank";
             link.className = "partner-links";
             partnerImage.src = "../assets/images/partners/" + image;
-            partnerImage.style = "max-height: 150px;"
+            partnerImage.style = "max-height: 200px;"
             partnerImage.alt = altText + " Logo";
 
             // combine elemnts and return
@@ -539,15 +553,6 @@ function getPartners() {
         throw err
     });
 }
-
-// function scrollToMentor(){
-//     var url = (document.URL);
-//     var mentorsAnchor = url.split("/")[3];
-//     mentorsAnchor = mentorsAnchor.split("#")[1];
-//     var mentorsAnchorID = "#" + mentorsAnchor;
-//     $('html,body').animate({scrollTop: mentorsAnchor.offset().top},'slow');
-    
-// }
 
 function getCurrentPage(){
     $('a').each(function(){
@@ -619,4 +624,75 @@ function populateSchedule(hackerSchedule, dayHeader, daySchedule) {
         hackerSchedule.appendChild(scheduleEvent);
         hackerSchedule.appendChild(scheduleLocation);
     }
+}
+
+function mentorsAnchorPlace(topAdjust){
+    var width = $(window).width();
+    if(width < 430 && width > 377){
+        if(topAdjust > 1000){ topAdjust = topAdjust + 260; }
+        if(topAdjust > 1500){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 2000){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 2800){ topAdjust = topAdjust + 350; }
+        if(topAdjust > 3800){ topAdjust = topAdjust + 350; }
+        if(topAdjust > 4800){ topAdjust = topAdjust + 360; }
+        if(topAdjust > 5500){ topAdjust = topAdjust + 360; }
+        if(topAdjust > 6400){ topAdjust = topAdjust + 360; }
+        if(topAdjust > 7000){ topAdjust = topAdjust + 360; }
+        if(topAdjust > 7600){ topAdjust = topAdjust + 400; }
+        if(topAdjust > 8500){ topAdjust = topAdjust + 400; }
+        if(topAdjust > 9500){ topAdjust = topAdjust + 400; }
+        if(topAdjust > 10000){ topAdjust = topAdjust + 300; }
+        if(topAdjust > 11000){ topAdjust = topAdjust + 400; }
+        if(topAdjust > 11800){ topAdjust = topAdjust + 300; }
+        if(topAdjust > 12300){ topAdjust = topAdjust + 400; }
+    }else if(width < 377){
+        if(topAdjust > 1200){ topAdjust = topAdjust + 330; }
+        if(topAdjust > 2000){ topAdjust = topAdjust + 330; }
+        if(topAdjust > 2800){ topAdjust = topAdjust + 330; }
+        if(topAdjust > 3800){ topAdjust = topAdjust + 360; }
+        if(topAdjust > 4800){ topAdjust = topAdjust + 360; }
+        if(topAdjust > 5900){ topAdjust = topAdjust + 340; }
+        if(topAdjust > 6400){ topAdjust = topAdjust + 330; }
+        if(topAdjust > 7000){ topAdjust = topAdjust + 330; }
+        if(topAdjust > 7700){ topAdjust = topAdjust + 340; }
+        if(topAdjust > 8500){ topAdjust = topAdjust + 350; }
+        if(topAdjust > 9500){ topAdjust = topAdjust + 320; }
+        if(topAdjust > 10300){ topAdjust = topAdjust + 320; }
+        if(topAdjust > 10900){ topAdjust = topAdjust + 370; }
+        if(topAdjust > 11800){ topAdjust = topAdjust + 300; }
+        if(topAdjust > 12200){ topAdjust = topAdjust + 300; }
+    }else if(width > 2000){
+        if(topAdjust > 1500){ topAdjust = topAdjust + 125; }
+        if(topAdjust > 2000){ topAdjust = topAdjust + 125; }
+        if(topAdjust > 2700){ topAdjust = topAdjust + 125; }
+        if(topAdjust > 3200){ topAdjust = topAdjust + 125; }
+        if(topAdjust > 3800){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 4600){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 5000){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 5700){ topAdjust = topAdjust + 250; }
+        if(topAdjust > 6200){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 7000){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 7600){ topAdjust = topAdjust + 225; }
+        if(topAdjust > 8200){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 8800){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 9200){ topAdjust = topAdjust + 100; }
+        if(topAdjust > 9500){ topAdjust = topAdjust + 200; }
+    }else{
+        if(topAdjust > 1500){ topAdjust = topAdjust + 125; }
+        if(topAdjust > 2000){ topAdjust = topAdjust + 125; }
+        if(topAdjust > 2500){ topAdjust = topAdjust + 125; }
+        if(topAdjust > 3000){ topAdjust = topAdjust + 125; }
+        if(topAdjust > 3800){ topAdjust = topAdjust + 300; }
+        if(topAdjust > 4500){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 5000){ topAdjust = topAdjust + 250; }
+        if(topAdjust > 5500){ topAdjust = topAdjust + 250; }
+        if(topAdjust > 6200){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 6700){ topAdjust = topAdjust + 100; }
+        if(topAdjust > 7000){ topAdjust = topAdjust + 150; }
+        if(topAdjust > 7400){ topAdjust = topAdjust + 175; }
+        if(topAdjust > 7800){ topAdjust = topAdjust + 250; }
+        if(topAdjust > 8600){ topAdjust = topAdjust + 200; }
+        if(topAdjust > 9000){ topAdjust = topAdjust + 300; }
+    }
+    return topAdjust;
 }

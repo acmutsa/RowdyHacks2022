@@ -1,0 +1,94 @@
+@import './src/components/variables.sass'
+.col-primary.tracks
+  display: inline-flex
+  grid-row-gap: 20px
+  grid-column-gap: 2%
+  flex-wrap: wrap
+  align-items: flex-start
+
+.tracks
+    h1
+        text-align: center
+        font-size: 2.1rem
+        line-height: 2rem
+        color: #280959
+
+.tracks
+    h2
+        font-family: $font-secondary
+        text-align: center
+        font-size: 1.5rem
+        line-height: 1.7rem
+        letter-spacing: 3px
+        color: white
+        text-shadow: 0 0 8px black
+        text-align: left
+        margin: 20px 0 10px 0
+
+.tracks
+    li
+        font-size: 1.2rem
+        line-height:1.4rem
+        margin-bottom: 5px
+        text-align: left
+
+.tracks
+    p
+        font-size: 1.7rem
+        line-height:2rem
+        margin-bottom: 20px
+        text-align: left
+
+.tracks
+    .item
+        line-height: 2.5rem
+
+.tracks
+    img
+        width:68%
+
+.arrows
+  width: 2rem
+  cursor: pointer
+
+.arrow-up
+  cursor: pointer
+  transform: rotate(0deg)
+
+.arrow-down
+  cursor: pointer
+  transform: rotate(90deg)
+
+.arrow-left
+  cursor: pointer
+  transform: rotate(180deg)
+
+@media screen and (max-width: 770px)
+    .col-primary.tracks
+        display: grid
+    .tracks
+        h1
+            font-size: 1.75rem
+            line-height: 1.2rem
+    .tracks
+        p
+            font-size: 30px
+            line-height: 2.15rem
+    .tracks
+        img
+            width: 60%
+
+@media screen and (max-width: 600px)
+    .tracks
+        .inner-container
+            display: inline-flex
+
+@media screen and (max-width: 530px)
+    .tracks .item
+        line-height: 2rem
+    .tracks h1
+        font-size: 25px
+        line-height: 1rem
+    .tracks p
+        font-size: 20px
+        line-height: 1.5rem
