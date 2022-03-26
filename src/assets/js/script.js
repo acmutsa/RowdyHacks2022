@@ -679,13 +679,13 @@ function mentorsAnchorPlace(topAdjust){
         }
     }else if(width < 377){
         if(topAdjust > 1200){
-            topAdjust = topAdjust + 320;
+            topAdjust = topAdjust + 330;
         }
         if(topAdjust > 2000){
-            topAdjust = topAdjust + 320;
+            topAdjust = topAdjust + 330;
         }
         if(topAdjust > 2800){
-            topAdjust = topAdjust + 320;
+            topAdjust = topAdjust + 330;
         }
         if(topAdjust > 3800){
             topAdjust = topAdjust + 360;
@@ -694,25 +694,25 @@ function mentorsAnchorPlace(topAdjust){
             topAdjust = topAdjust + 360;
         }
         if(topAdjust > 5900){
-            topAdjust = topAdjust + 320;
+            topAdjust = topAdjust + 330;
         }
         if(topAdjust > 6400){
             topAdjust = topAdjust + 350;
         }
         if(topAdjust > 7000){
-            topAdjust = topAdjust + 325;
+            topAdjust = topAdjust + 330;
         }
         if(topAdjust > 7600){
-            topAdjust = topAdjust + 330;
+            topAdjust = topAdjust + 340;
         }
         if(topAdjust > 8500){
             topAdjust = topAdjust + 350;
         }
         if(topAdjust > 9500){
-            topAdjust = topAdjust + 300;
+            topAdjust = topAdjust + 320;
         }
         if(topAdjust > 10300){
-            topAdjust = topAdjust + 300;
+            topAdjust = topAdjust + 320;
         }
         if(topAdjust > 10900){
             topAdjust = topAdjust + 370;
