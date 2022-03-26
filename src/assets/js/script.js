@@ -471,110 +471,9 @@ function getMentors(){
             aTag.setAttribute("name", mentorsAnchor);
             aTag = $(aTag);
             var topAdjust = aTag.offset().top;
-            // console.log(topAdjust);
-            if(mobileCheck == true){
-                if(topAdjust > 1500){
-                    topAdjust = topAdjust + 300;
-                }
-                if(topAdjust > 2300){
-                    topAdjust = topAdjust + 300;
-                }
-                if(topAdjust > 3000){
-                    topAdjust = topAdjust + 100;
-                }
-                if(topAdjust > 3500){
-                    topAdjust = topAdjust + 300;
-                }
-                if(topAdjust > 4000){
-                    topAdjust = topAdjust + 200;
-                }
-                if(topAdjust > 4700){
-                    topAdjust = topAdjust + 200;
-                }
-                if(topAdjust > 5500){
-                    topAdjust = topAdjust + 300;
-                }
-                if(topAdjust > 6500){
-                    topAdjust = topAdjust + 300;
-                }
-                if(topAdjust > 7300){
-                    topAdjust = topAdjust + 400;
-                }
-                if(topAdjust > 8000){
-                    topAdjust = topAdjust + 400;
-                }
-                if(topAdjust > 8800){
-                    topAdjust = topAdjust + 400;
-                }
-                if(topAdjust > 9900){
-                    topAdjust = topAdjust + 200;
-                }
-                if(topAdjust > 11000){
-                    topAdjust = topAdjust + 400;
-                }
-                if(topAdjust > 11800){
-                    topAdjust = topAdjust + 300;
-                }
-                if(topAdjust > 12300){
-                    topAdjust = topAdjust + 400;
-                }
-                if(topAdjust > 13000){
-                    topAdjust = topAdjust + 300;
-                }
-                if(topAdjust > 13850){
-                    topAdjust = topAdjust + 400;
-                }
-            }else{
-                if(topAdjust > 1500){
-                    topAdjust = topAdjust + 125;
-                }
-                if(topAdjust > 2000){
-                    topAdjust = topAdjust + 125;
-                }
-                if(topAdjust > 2500){
-                    topAdjust = topAdjust + 125;
-                }
-                if(topAdjust > 3000){
-                    topAdjust = topAdjust + 125;
-                }
-                if(topAdjust > 3500){
-                    topAdjust = topAdjust + 300;
-                }
-                if(topAdjust > 4200){
-                    topAdjust = topAdjust + 200;
-                }
-                if(topAdjust > 4700){
-                    topAdjust = topAdjust + 100;
-                }
-                if(topAdjust > 5000){
-                    topAdjust = topAdjust + 200;
-                }
-                if(topAdjust > 5500){
-                    topAdjust = topAdjust + 250;
-                }
-                if(topAdjust > 6000){
-                    topAdjust = topAdjust + 200;
-                }
-                if(topAdjust > 6500){
-                    topAdjust = topAdjust + 130;
-                }
-                if(topAdjust > 7000){
-                    topAdjust = topAdjust + 100;
-                }
-                if(topAdjust > 7400){
-                    topAdjust = topAdjust + 150;
-                }
-                if(topAdjust > 7800){
-                    topAdjust = topAdjust + 350;
-                }
-                if(topAdjust > 8300){
-                    topAdjust = topAdjust + 200;
-                }
-                if(topAdjust > 8800){
-                    topAdjust = topAdjust + 200;
-                }
-            }
-            // console.log(topAdjust);
+            console.log(topAdjust);
+            topAdjust = mentorsAnchorPlace(topAdjust);
+            console.log(topAdjust);
             $('html,body').animate({scrollTop: topAdjust},'slow');
         }
     }).catch(err => {
@@ -725,4 +624,151 @@ function populateSchedule(hackerSchedule, dayHeader, daySchedule) {
         hackerSchedule.appendChild(scheduleEvent);
         hackerSchedule.appendChild(scheduleLocation);
     }
+}
+
+function mentorsAnchorPlace(topAdjust){
+    var width = $(window).width();
+    if(width < 430){
+        if(topAdjust > 1000){
+            topAdjust = topAdjust + 260;
+        }
+        if(topAdjust > 1500){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 2000){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 2800){
+            topAdjust = topAdjust + 350;
+        }
+        if(topAdjust > 3800){
+            topAdjust = topAdjust + 350;
+        }
+        if(topAdjust > 4800){
+            topAdjust = topAdjust + 360;
+        }
+        if(topAdjust > 5500){
+            topAdjust = topAdjust + 360;
+        }
+        if(topAdjust > 6400){
+            topAdjust = topAdjust + 360;
+        }
+        if(topAdjust > 7000){
+            topAdjust = topAdjust + 360;
+        }
+        if(topAdjust > 7600){
+            topAdjust = topAdjust + 400;
+        }
+        if(topAdjust > 8500){
+            topAdjust = topAdjust + 400;
+        }
+        if(topAdjust > 9500){
+            topAdjust = topAdjust + 400;
+        }
+        if(topAdjust > 10000){
+            topAdjust = topAdjust + 300;
+        }
+        if(topAdjust > 11000){
+            topAdjust = topAdjust + 400;
+        }
+        if(topAdjust > 11800){
+            topAdjust = topAdjust + 300;
+        }
+        if(topAdjust > 12300){
+            topAdjust = topAdjust + 400;
+        }
+    }else if(width > 2000){
+        if(topAdjust > 1500){
+            topAdjust = topAdjust + 125;
+        }
+        if(topAdjust > 2000){
+            topAdjust = topAdjust + 125;
+        }
+        if(topAdjust > 2700){
+            topAdjust = topAdjust + 125;
+        }
+        if(topAdjust > 3200){
+            topAdjust = topAdjust + 125;
+        }
+        if(topAdjust > 3800){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 4600){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 5000){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 5700){
+            topAdjust = topAdjust + 250;
+        }
+        if(topAdjust > 6200){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 7000){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 7600){
+            topAdjust = topAdjust + 225;
+        }
+        if(topAdjust > 8200){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 8800){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 9200){
+            topAdjust = topAdjust + 100;
+        }
+        if(topAdjust > 9500){
+            topAdjust = topAdjust + 200;
+        }
+    }else{
+        if(topAdjust > 1500){
+            topAdjust = topAdjust + 125;
+        }
+        if(topAdjust > 2000){
+            topAdjust = topAdjust + 125;
+        }
+        if(topAdjust > 2500){
+            topAdjust = topAdjust + 125;
+        }
+        if(topAdjust > 3000){
+            topAdjust = topAdjust + 125;
+        }
+        if(topAdjust > 3800){
+            topAdjust = topAdjust + 300;
+        }
+        if(topAdjust > 4500){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 5000){
+            topAdjust = topAdjust + 250;
+        }
+        if(topAdjust > 5500){
+            topAdjust = topAdjust + 250;
+        }
+        if(topAdjust > 6200){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 6700){
+            topAdjust = topAdjust + 100;
+        }
+        if(topAdjust > 7000){
+            topAdjust = topAdjust + 150;
+        }
+        if(topAdjust > 7400){
+            topAdjust = topAdjust + 175;
+        }
+        if(topAdjust > 7800){
+            topAdjust = topAdjust + 250;
+        }
+        if(topAdjust > 8600){
+            topAdjust = topAdjust + 200;
+        }
+        if(topAdjust > 9000){
+            topAdjust = topAdjust + 300;
+        }
+    }
+    return topAdjust;
 }
