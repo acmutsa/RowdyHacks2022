@@ -1,6 +1,5 @@
 {
-    "saturday": [
-        {
+    "saturday": [{
             "time": "9:00 AM",
             "event": "Hacker Checkin",
             "type": "",
@@ -44,9 +43,15 @@
         },
         {
             "time": "3:00 PM",
+            "event": "IBM Security x TD SYNNEX: Cyber Crisis: Can you hack it?",
+            "type": "sideEvent",
+            "location": "Galaga"
+        },
+        {
+            "time": "3:00 PM",
             "event": "3D Printing Design",
             "type": "workshop",
-            "location": "Galaga"
+            "location": "Donkey Kong Theater"
         },
         {
             "time": "4:00 PM",
@@ -109,8 +114,7 @@
             "location": "Tetris Lounge"
         }
     ],
-    "sunday": [
-        {
+    "sunday": [{
             "time": "12:00 AM",
             "event": "Cupstacking",
             "type": "sideEvent",
