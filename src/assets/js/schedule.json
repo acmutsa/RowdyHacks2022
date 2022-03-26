@@ -61,6 +61,12 @@
         },
         {
             "time": "4:00 PM",
+            "event": "3D printing session 1",
+            "type": "workshop",
+            "location": "Makerspace"
+        },
+        {
+            "time": "4:00 PM",
             "event": "Frost Bank Capture the Flag",
             "type": "sideEvent",
             "location": "Galaga"
@@ -73,15 +79,33 @@
         },
         {
             "time": "5:00 PM",
+            "event": "3D printing session 2",
+            "type": "workshop",
+            "location": "Makerspace"
+        },
+        {
+            "time": "5:00 PM",
             "event": "MITRE ATT&CK Framework",
             "type": "workshop",
             "location": "Galaga"
+        },
+        {
+            "time": "6:00 PM",
+            "event": "3D printing session 3",
+            "type": "workshop",
+            "location": "Makerspace"
         },
         {
             "time": "7:00 PM",
             "event": "Dinner",
             "type": "",
             "location": "Ghost Gang Hall"
+        },
+        {
+            "time": "8:00 PM",
+            "event": "Open 3D printing starts",
+            "type": "",
+            "location": "Makerspace"
         },
         {
             "time": "9:00 PM",
@@ -134,7 +158,7 @@
         },
         {
             "time": "12:00 PM",
-            "event": "Submissions Due",
+            "event": "Devpost Submissions Due",
             "type": "",
             "location": ""
         },
@@ -143,6 +167,12 @@
             "event": "Lunch",
             "type": "",
             "location": "Ghost Gang Hall"
+        },
+        {
+            "time": "1:30 PM",
+            "event": "Judging Orientation",
+            "type": "",
+            "location": "Dig Dug + Galaga"
         },
         {
             "time": "1:30 PM",
