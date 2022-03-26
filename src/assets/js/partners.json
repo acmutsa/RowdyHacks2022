@@ -106,5 +106,11 @@
         "image": "cos-scc-logo.png",
         "partnerLink": "www.utsa.edu/sciences/student-success",
         "altText": "UTSA College of Sciences Student Success Center"
+    },
+    {
+        "tier": "bronze",
+        "image": "ARA.svg",
+        "partnerLink": "https://www.ara.com/",
+        "altText": "Applied Research Associates, Inc"
     }
 ]
