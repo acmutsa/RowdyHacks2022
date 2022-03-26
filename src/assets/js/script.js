@@ -9,7 +9,7 @@ window.onload = function(){
     getCurrentPage();
     arrowAppear();
     buttonAnimation();
-    showFAQ();
+    showText();
     showMenu();
 
     if(mapExists){
@@ -79,7 +79,7 @@ function buttonAnimation(){
     $('.btn').prepend('<div class="hover"><span></span><span></span><span></span><span></span><span></span><span></span></div>');
 }
 
-function showFAQ(){
+function showText(){
     $('.show').click( function() {
         $(this).children(".arrows").toggleClass('arrow-down');
         $(this).next().slideToggle();

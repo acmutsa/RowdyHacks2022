@@ -24,10 +24,13 @@ body
   line-height: 0
   text-rendering: optimizeLegibility
   background: url('./assets/images/repeating-background_1200w.png')
-    
-body, ul, ol, dl
   margin: 0
   padding: 0
+    
+ul, ol, dl
+  margin: 0
+  padding: 0
+  line-height: normal
 
 body, div, h1, h2, h3, h4, h5, h6, p, a
   margin: 0
@@ -37,7 +40,7 @@ body, div, h1, h2, h3, h4, h5, h6, p, a
 h1, h2, h3, h4, h5, h6
   font-family: $font-primary
 
-p, a
+p, a, ol, ul, li
   font-family: $font-secondary
 
 p
@@ -49,6 +52,13 @@ a
 
 a:hover
   color: #fa448c
+
+li
+  color: #fec859
+  text-shadow: 0 0 10px black
+  list-style-position: inside
+  list-style-type: square
+  padding-left: 5px
 
 ::selection, ::-moz-selection
   background: $dark-bubblegum
