@@ -19,7 +19,7 @@
     },
     {
         "tier": "partner",
-        "image": "acm-logo.png",
+        "image": "acm-logo.svg",
         "partnerLink": "acmutsa.org",
         "altText": "ACM UTSA"
     },
@@ -40,12 +40,6 @@
         "image": "Helping_Here_Blk_Red.png",
         "partnerLink": "www.heb.com/static-page/Community-Involvement",
         "altText": "H-E-B"
-    },
-    {
-        "tier": "partner",
-        "image": "utsa-cs-logo.svg",
-        "partnerLink": "cs.utsa.edu",
-        "altText": "UTSA Computer Scince"
     },
     {
         "tier": "partner",
@@ -106,5 +100,11 @@
         "image": "cos-scc-logo.png",
         "partnerLink": "www.utsa.edu/sciences/student-success",
         "altText": "UTSA College of Sciences Student Success Center"
+    },
+    {
+        "tier": "bronze",
+        "image": "ARA.svg",
+        "partnerLink": "www.ara.com/",
+        "altText": "Applied Research Associates, Inc"
     }
 ]

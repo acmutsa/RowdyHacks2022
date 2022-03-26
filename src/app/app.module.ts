@@ -9,7 +9,7 @@ import { PartnersComponent } from './partners/partners.component';
 import { MentorsComponent } from './mentors/mentors.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { FaqComponent } from './faq/faq.component';
-import { ComingsoonComponent } from './coming-soon/coming-soon.component';
+import { TracksComponent } from './tracks/tracks.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { ComingsoonComponent } from './coming-soon/coming-soon.component';
     MentorsComponent,
     ScheduleComponent,
     FaqComponent,
-    ComingsoonComponent
+    TracksComponent
   ],
   imports: [
     BrowserModule,
