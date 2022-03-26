@@ -694,15 +694,15 @@ function mentorsAnchorPlace(topAdjust){
             topAdjust = topAdjust + 360;
         }
         if(topAdjust > 5900){
-            topAdjust = topAdjust + 330;
+            topAdjust = topAdjust + 340;
         }
         if(topAdjust > 6400){
-            topAdjust = topAdjust + 350;
+            topAdjust = topAdjust + 330;
         }
         if(topAdjust > 7000){
             topAdjust = topAdjust + 330;
         }
-        if(topAdjust > 7600){
+        if(topAdjust > 7700){
             topAdjust = topAdjust + 340;
         }
         if(topAdjust > 8500){
