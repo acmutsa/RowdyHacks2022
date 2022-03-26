@@ -530,7 +530,7 @@ function getPartners() {
             var partnerImage = document.createElement('img');
 
             // populate created elements
-            colInner.style, colTexture.style = "height: 200px; justify-content: center; align-items: center; display: flex;"
+            colInner.style, colTexture.style = "height: 200px; width: 100%; justify-content: center; align-items: center; display: flex;"
             colInner.className = "col-primary-inner-container partner-background";
             colTexture.className = "texture-3op";
             colTexture.title = altText;

@@ -43,12 +43,6 @@
     },
     {
         "tier": "partner",
-        "image": "utsa-cs-logo.svg",
-        "partnerLink": "cs.utsa.edu",
-        "altText": "UTSA Computer Scince"
-    },
-    {
-        "tier": "partner",
         "image": "utsa-cos.svg",
         "partnerLink": "www.utsa.edu/sciences",
         "altText": "UTSA College of Sciences"
