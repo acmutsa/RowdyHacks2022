@@ -1,5 +1,4 @@
-[
-    {
+[{
         "Number": 1,
         "Image": "beltran-blaine.jpg",
         "FirstName": "Blaine",
@@ -30,7 +29,7 @@
         "Title": "Industry Mentor",
         "Description": "Hello! I am the former Executive Director of RowdyHacks for 2021, and I am excited to return and mentor! I really love helping hackers brainstorm and optimize their projects with the goal of completing them. Outside of the hacking space, I like to play D&D, play video games, go on hikes, and hang out with friends."
     },
-    
+
     {
         "Number": 4,
         "Image": "Anna_Arroyo.jpg",
@@ -48,7 +47,7 @@
         "FirstName": "Jada",
         "LastName": "Ebong",
         "Link": "#mentor5",
-        "LinkedIn":  "https://www.linkedin.com/in/jadaebong",
+        "LinkedIn": "https://www.linkedin.com/in/jadaebong",
         "Twitter": "https://twitter.com/Jada_Ebong",
         "Instagram": "https://www.instagram.com/jadaebong/",
         "Title": "Industry Mentor",
@@ -141,19 +140,28 @@
     },
     {
         "Number": 15,
+        "Image": "phicc.png",
+        "FirstName": "Phicc",
+        "LastName": "",
+        "Link": "#mentor15",
+        "Title": "Rubber Duck",
+        "Description": "We can have a conversation"
+    },
+    {
+        "Number": 16,
         "Image": "people-guy-6.png",
         "FirstName": "Soe",
         "LastName": "Than",
-        "Link": "#mentor15",
+        "Link": "#mentor16",
         "Title": "Software Engineer",
         "Description": "Machine Learning"
     },
     {
-        "Number": 16,
+        "Number": 17,
         "Image": "people-guy-1.png",
         "FirstName": "Leon",
         "LastName": "Yuan",
-        "Link": "#mentor16",
+        "Link": "#mentor17",
         "Title": "Software Engineer",
         "Description": "I'll help with whatever"
     }
