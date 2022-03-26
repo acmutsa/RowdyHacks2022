@@ -61,7 +61,7 @@
         },
         {
             "time": "4:00 PM",
-            "event": "3D printing session 1",
+            "event": "3D printing session 1 - limited space",
             "type": "workshop",
             "location": "Makerspace"
         },
@@ -79,7 +79,7 @@
         },
         {
             "time": "5:00 PM",
-            "event": "3D printing session 2",
+            "event": "3D printing session 2 - limited space",
             "type": "workshop",
             "location": "Makerspace"
         },
@@ -91,7 +91,7 @@
         },
         {
             "time": "6:00 PM",
-            "event": "3D printing session 3",
+            "event": "3D printing session 3 - limited space",
             "type": "workshop",
             "location": "Makerspace"
         },
@@ -103,7 +103,7 @@
         },
         {
             "time": "8:00 PM",
-            "event": "Open 3D printing starts",
+            "event": "3D printing session 4 - limited space",
             "type": "",
             "location": "Makerspace"
         },
