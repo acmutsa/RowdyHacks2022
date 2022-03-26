@@ -679,10 +679,10 @@ function mentorsAnchorPlace(topAdjust){
         }
     }else if(width < 377){
         if(topAdjust > 1200){
-            topAdjust = topAdjust + 300;
+            topAdjust = topAdjust + 320;
         }
         if(topAdjust > 2000){
-            topAdjust = topAdjust + 300;
+            topAdjust = topAdjust + 320;
         }
         if(topAdjust > 2800){
             topAdjust = topAdjust + 300;
