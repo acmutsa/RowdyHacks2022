@@ -1,6 +1,5 @@
 {
-    "saturday": [
-        {
+    "saturday": [{
             "time": "9:00 AM",
             "event": "Hacker Checkin",
             "type": "",
@@ -44,15 +43,27 @@
         },
         {
             "time": "3:00 PM",
+            "event": "IBM Security x TD SYNNEX: Cyber Crisis: Can you hack it?",
+            "type": "sideEvent",
+            "location": "Galaga"
+        },
+        {
+            "time": "3:00 PM",
             "event": "3D Printing Design",
             "type": "workshop",
-            "location": "Galaga"
+            "location": "Donkey Kong Theater"
         },
         {
             "time": "4:00 PM",
             "event": "Bob Ross MS Paint",
             "type": "sideEvent",
             "location": "Tetris Lounge"
+        },
+        {
+            "time": "4:00 PM",
+            "event": "3D printing session 1 - limited space",
+            "type": "workshop",
+            "location": "Makerspace"
         },
         {
             "time": "4:00 PM",
@@ -68,15 +79,33 @@
         },
         {
             "time": "5:00 PM",
+            "event": "3D printing session 2 - limited space",
+            "type": "workshop",
+            "location": "Makerspace"
+        },
+        {
+            "time": "5:00 PM",
             "event": "MITRE ATT&CK Framework",
             "type": "workshop",
             "location": "Galaga"
+        },
+        {
+            "time": "6:00 PM",
+            "event": "3D printing session 3 - limited space",
+            "type": "workshop",
+            "location": "Makerspace"
         },
         {
             "time": "7:00 PM",
             "event": "Dinner",
             "type": "",
             "location": "Ghost Gang Hall"
+        },
+        {
+            "time": "8:00 PM",
+            "event": "3D printing session 4 - limited space",
+            "type": "",
+            "location": "Makerspace"
         },
         {
             "time": "9:00 PM",
@@ -109,8 +138,7 @@
             "location": "Tetris Lounge"
         }
     ],
-    "sunday": [
-        {
+    "sunday": [{
             "time": "12:00 AM",
             "event": "Cupstacking",
             "type": "sideEvent",
@@ -130,7 +158,7 @@
         },
         {
             "time": "12:00 PM",
-            "event": "Submissions Due",
+            "event": "Devpost Submissions Due",
             "type": "",
             "location": ""
         },
@@ -139,6 +167,12 @@
             "event": "Lunch",
             "type": "",
             "location": "Ghost Gang Hall"
+        },
+        {
+            "time": "1:30 PM",
+            "event": "Judging Orientation",
+            "type": "",
+            "location": "Dig Dug + Galaga"
         },
         {
             "time": "1:30 PM",

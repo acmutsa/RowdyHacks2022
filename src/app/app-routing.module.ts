@@ -5,8 +5,8 @@ import { LocationComponent } from './location/location.component';
 import { PartnersComponent } from './partners/partners.component';
 import { MentorsComponent } from './mentors/mentors.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { TracksComponent } from './tracks/tracks.component';
 import { FaqComponent } from './faq/faq.component';
-import { ComingsoonComponent } from './coming-soon/coming-soon.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,8 +15,8 @@ const routes: Routes = [
   { path: 'partners', component: PartnersComponent },
   { path: 'mentors', component: MentorsComponent },
   { path: 'schedule', component: ScheduleComponent },
+  { path: 'tracks', component: TracksComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'coming-soon', component: ComingsoonComponent }
 ];
 
 @NgModule({
