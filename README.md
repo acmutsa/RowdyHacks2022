@@ -1,3 +1,7 @@
+**Note: This Repository Is Now Archived.**
+
+A static version of the site is served through the `/docs` folder. Feel free to visit it [here](https://2022.rowdyhacks.org/)!
+
 # The RowdyHacks 2022 Website Repository! 💻
 
 Building an Angular based web application this year from scratch! Currently developing the project with this year's RowdyHacks 2022 Tech Team. If you have any input create an issue! For any other inquirers please reach out to us at **team@rowdyhacks.org**

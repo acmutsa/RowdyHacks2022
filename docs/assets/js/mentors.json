@@ -1,0 +1,168 @@
+[{
+        "Number": 1,
+        "Image": "beltran-blaine.jpg",
+        "FirstName": "Blaine",
+        "LastName": "Beltran",
+        "Link": "#mentor2",
+        "Title": "iOS Developer",
+        "LinkedIn": "https://www.linkedin.com/in/blainebeltran/",
+        "Proficient": "Python, Swift, iOS App Dev, Testing, wire framing, project brainstorming and User centered design",
+        "Description": "He/Him - I am an iOS developer. I previously worked at JPMorgan Chase and Lululemon as a Mobile Software Engineer. I enjoy learning new things, building apps, working out, and hanging out with friends. The main reason I want to be a mentor is to help others succeed in any way I can. My mentors have been a big help during my journey in software, so I want to be able to do that for someone else."
+    },
+    {
+        "Number": 2,
+        "Image": "bhavya-gokana.jpg",
+        "FirstName": "Bhavya",
+        "LastName": "Gokana",
+        "Link": "#mentor1",
+        "Title": "Junior Mentor",
+        "LinkedIn": "https://www.linkedin.com/in/bhavya-gokana-41a2821b8/",
+        "Proficient": "Project brainstorming, User-testing, design feedback, java, C",
+        "Description": "She/Her - Hi everyone! My name is Bhavya. I moved to San Antonio five years ago and love it here. During my free time I either play tennis with my sister or just paint."
+    },
+    {
+        "Number": 3,
+        "Image": "people-guy-3.png",
+        "FirstName": "Trey",
+        "LastName": "D'Amico",
+        "Link": "#mentor3",
+        "Title": "Industry Mentor",
+        "Description": "Hello! I am the former Executive Director of RowdyHacks for 2021, and I am excited to return and mentor! I really love helping hackers brainstorm and optimize their projects with the goal of completing them. Outside of the hacking space, I like to play D&D, play video games, go on hikes, and hang out with friends."
+    },
+
+    {
+        "Number": 4,
+        "Image": "Anna_Arroyo.jpg",
+        "FirstName": "Anna",
+        "LastName": "Arroyo",
+        "Link": "#mentor4",
+        "Twitter": "https://twitter.com/annaarroyoo",
+        "Title": "Software Engineer",
+        "Proficient": "Android software enginering",
+        "Description": "I'm a Software Engineer at Twitter and a UTSA Alumna based in Austin, TX. I work on building and improving the media experience on the Twitter Android App. I led RowdyHacks in 2020 and I am happy to be back as a mentor!"
+    },
+    {
+        "Number": 5,
+        "Image": "Jada_Ebong.jpg",
+        "FirstName": "Jada",
+        "LastName": "Ebong",
+        "Link": "#mentor5",
+        "LinkedIn": "https://www.linkedin.com/in/jadaebong",
+        "Twitter": "https://twitter.com/Jada_Ebong",
+        "Instagram": "https://www.instagram.com/jadaebong/",
+        "Title": "Industry Mentor",
+        "Description": "Hi I'm Jada! I went to UTSA 2016-2020 and was on the 2019-2020 RowdyHacks and ACM exec teams. I am currently working as a SEP at JPMC. Prior to RH22, I've hacked at 11 hackathons, judged for 3, was a company sponsor, and have been to Hackcon twice but this will be the first time I've mentored! Fun facts are: lived in SA from K-16th grade (aka college); I love Rottweilers; I own every PlayStation; & I don't typically use cases for my phones"
+    },
+    {
+        "Number": 6,
+        "Image": "Retro_Manishimwe.jpg",
+        "FirstName": "Retro",
+        "LastName": "Manishimwe",
+        "Link": "#mentor6",
+        "LinkedIn": "https://www.linkedin.com/in/retrouvailles-manishimwe-441a61bb",
+        "Title": "Software Engineer",
+        "Description": "Hi I'm Retro! I work for Scratch, an online programming website. I like to read and watch YouTube videos in my free time!"
+    },
+    {
+        "Number": 7,
+        "Image": "people-gal-5.png",
+        "FirstName": "Chihiro",
+        "LastName": "King",
+        "Link": "#mentor7",
+        "Title": "Front-End Developer",
+        "Description": "Java, some python, user-testing, design feedback, project brainstorming"
+    },
+    {
+        "Number": 8,
+        "Image": "ElliotAguilar.jpg",
+        "FirstName": "Elliot",
+        "LastName": "Aguilar",
+        "Link": "#mentor8",
+        "LinkedIn": "https://www.linkedin.com/in/elliott-aguilar-39a6b1197/",
+        "Title": "Cloud Engineer",
+        "Description": "Testing, brainstorming, software installation, design"
+    },
+    {
+        "Number": 9,
+        "Image": "people-guy-5.png",
+        "FirstName": "Pardeep",
+        "LastName": "Singh",
+        "Link": "#mentor9",
+        "Title": "Software Engineer",
+        "Description": "Java, Testing, Design Feedback, Project Brainstorming"
+    },
+    {
+        "Number": 10,
+        "Image": "people-guy-3.png",
+        "FirstName": "Ryan",
+        "LastName": "Vaughn",
+        "Link": "#mentor10",
+        "Title": "Cybersecurity Specialist",
+        "Description": "I am a gamer, I am a adrenaline junkie (skydive, cliff dive, BMX, MX, etc.) Robotics engineer, Cyber Security Engineer, Lab Tech, Lab Lead, AI architect, Drone Engineer, Clothing Tailor, I love to cook, AR/XR Researcher, SatCom Engineer, SDR Engineer, Biomechanical enthusiast and researcher focusing on HMI for Robotics"
+    },
+    {
+        "Number": 11,
+        "Image": "MikeMcFatridge.jpg",
+        "FirstName": "Mike",
+        "LastName": "McFatridge",
+        "Link": "#mentor11",
+        "Title": "Software Engineer",
+        "Description": "I am a Full-Stack Software Engineer at Valero Energy Corp. assigned to new project development in Valero's Information Services department. I am also part of Valero's Volunteer Council, the Valero I/S Recruiting Program, and I serve as a mentor to Valero I/S interns and entry-level developers. Looking to mentor and help out however I can! In my spare time I play golf, do programming side projects, play video games, volunteer, and travel."
+    },
+    {
+        "Number": 12,
+        "Image": "Andy.jpg",
+        "FirstName": "Andy",
+        "LastName": "Leong",
+        "Link": "#mentor12",
+        "LinkedIn": "https://www.linkedin.com/in/andyluong/",
+        "Title": "Software Engineer",
+        "Description": "I love playing board games, snowboarding, traveling, and eating delicious foods."
+    },
+    {
+        "Number": 13,
+        "Image": "people-guy-2.png",
+        "FirstName": "Xavier",
+        "LastName": "Ramos",
+        "Link": "#mentor13",
+        "Title": "Software Engineer",
+        "Description": "Python!"
+    },
+    {
+        "Number": 14,
+        "Image": "TaylorRiley.jpg",
+        "FirstName": "Taylor",
+        "LastName": "Riley",
+        "Link": "#mentor14",
+        "LinkedIn": "https://www.linkedin.com/in/taylorrileycs/",
+        "Title": "Software Engineer",
+        "Description": "I’m a Software Engineer at Valero Energy. Passionate about FOSS, UI/UX, and technology as a whole."
+    },
+    {
+        "Number": 15,
+        "Image": "phicc.png",
+        "FirstName": "Phicc",
+        "LastName": "Duck",
+        "Link": "#mentor15",
+        "Title": "Rubber Duck",
+        "Description": "We can have a conversation"
+    },
+    {
+        "Number": 16,
+        "Image": "people-guy-6.png",
+        "FirstName": "Soe",
+        "LastName": "Than",
+        "Link": "#mentor16",
+        "Title": "Software Engineer",
+        "Description": "Machine Learning"
+    },
+    {
+        "Number": 17,
+        "Image": "people-guy-1.png",
+        "FirstName": "Leon",
+        "LastName": "Yuan",
+        "Link": "#mentor17",
+        "Title": "Software Engineer",
+        "Description": "I'll help with whatever"
+    }
+]

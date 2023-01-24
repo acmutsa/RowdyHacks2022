@@ -1,0 +1,110 @@
+[
+    {
+        "tier": "silver",
+        "image": "mitre-logo.svg",
+        "partnerLink": "www.mitre.org",
+        "altText": "MITRE"
+    },
+    {
+        "tier": "bronze",
+        "image": "paycom-logo.svg",
+        "partnerLink": "www.paycom.com",
+        "altText": "Paycom"
+    },
+    {
+        "tier": "silver",
+        "image": "tdsynnex-logo.svg",
+        "partnerLink": "www.tdsynnex.com",
+        "altText": "TD Synnex"
+    },
+    {
+        "tier": "partner",
+        "image": "acm-logo.svg",
+        "partnerLink": "acmutsa.org",
+        "altText": "ACM UTSA"
+    },
+    {
+        "tier": "bronze",
+        "image": "valero-logo.svg",
+        "partnerLink": "www.valero.com",
+        "altText": "Valero"
+    },
+    {
+        "tier": "bronze",
+        "image": "google-logo.svg",
+        "partnerLink": "careers.google.com/students",
+        "altText": "Google"
+    },
+    {
+        "tier": "bronze",
+        "image": "Helping_Here_Blk_Red.png",
+        "partnerLink": "www.heb.com/static-page/Community-Involvement",
+        "altText": "H-E-B"
+    },
+    {
+        "tier": "partner",
+        "image": "utsa-cos.svg",
+        "partnerLink": "www.utsa.edu/sciences",
+        "altText": "UTSA College of Sciences"
+    },
+    {
+        "tier": "partner",
+        "image": "mlh-logo.svg",
+        "partnerLink": "mlh.io",
+        "altText": "MLH"
+    },
+    {
+        "tier": "partner",
+        "image": "sticker-mule-logo.svg",
+        "partnerLink": "hackp.ac/mlh-stickermule-hackathons",
+        "altText": "Sticker Mule"
+    },
+    {
+        "tier": "partner",
+        "image": "AssemblyAI_logo.svg",
+        "partnerLink": "www.assemblyai.com",
+        "altText": "AssemblyAI"
+    },
+    {
+        "tier": "partner",
+        "image": "wolfram.svg",
+        "partnerLink": "www.wolfram.com/wolfram-one",
+        "altText": "Wolfram"
+    },
+    {
+        "tier": "partner",
+        "image": "cake_logo_blue_gray.svg",
+        "partnerLink": "www.interviewcake.com",
+        "altText": "Interview Cake"
+    },
+    {
+        "tier": "partner",
+        "image": "Klesse-COEID.png",
+        "partnerLink": "ceid.utsa.edu",
+        "altText": "Klesse College of Engineering and Inegrated Design"
+    },
+    {
+        "tier": "partner",
+        "image": "makerspace-logo.png",
+        "partnerLink": "ceid.utsa.edu/makerspace",
+        "altText": "Makerspace Innovators"
+    },
+    {
+        "tier": "silver",
+        "image": "frost.svg",
+        "partnerLink": "careers.frostbank.com/us/en",
+        "altText": "Frost"
+    },
+    {
+        "tier": "partner",
+        "image": "cos-scc-logo.png",
+        "partnerLink": "www.utsa.edu/sciences/student-success",
+        "altText": "UTSA College of Sciences Student Success Center"
+    },
+    {
+        "tier": "bronze",
+        "image": "ARA.svg",
+        "partnerLink": "www.ara.com/",
+        "altText": "Applied Research Associates, Inc"
+    }
+]
